@@ -12,12 +12,12 @@ import Question1.PatternBuilderTest;
 @RunWith(Suite.class)
 
 @Suite.SuiteClasses({
-	   TestNumbers.class,
-	   TestSpaces.class,
-	   TestPyramid.class,
+	   NumbersTest.class,
+	   SpacesTest.class,
+	   PyramidTest.class,
 	   PatternBuilderTest.class
 	})
 
-public class TestSuite {
+public class SuiteTest {
 
 }
