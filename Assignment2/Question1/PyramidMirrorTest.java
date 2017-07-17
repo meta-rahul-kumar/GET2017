@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class PyramidMirrorTest {
 	PyramidMirror PyramidMirrorTest = new PyramidMirror();
-	String output="";
+	String output[];
    
 	@Test
 	public void testPyramid() {	
@@ -19,12 +19,14 @@ public class PyramidMirrorTest {
 				+ "12321\n"
 				+ " 121\n"
 				+ "  1\n";
-		assertEquals(expected, output);    // Positive Case
+		String[] test  = expected.split("\n");
+		assertArrayEquals(test, output);    // Positive Case
 		n = 2;
 		output = PyramidMirrorTest.pyramid(n);   
 		expected = " 1\n"
 				+ "121\n"
 				+ "1\n";
+		test  = expected.split("\n");
 		assertNotEquals(expected, output);  // Negative Case
 	 }
 }
