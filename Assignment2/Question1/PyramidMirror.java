@@ -25,7 +25,7 @@ public class PyramidMirror {
 	 * input - size of pyramid integer n
 	 * output - pattern as String object
 	 */
-	public String pyramid(int n){
+	public String[] pyramid(int n){
 		StringBuilder pyramid = new StringBuilder(); // Stores the whole pyramid
 		try {
 			if (n < 1) {
@@ -39,9 +39,10 @@ public class PyramidMirror {
 				pyramid.append(patternBuilder(n, loopCounter));
 			}
 		} catch (Exception invalidArgumentException) {
-			return "Please Enter valid integer pyramid size";
+			System.out.println("Please Enter valid integer pyramid size");
 		}
-		return pyramid.toString();
+		String res[] = pyramid.toString().split("\n");
+		return res;
 	}
 
 	/*
