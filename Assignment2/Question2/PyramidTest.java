@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class PyramidTest {
 	Pyramid PyramidTest = new Pyramid();
-	String output = "";
+	String output[];
    
 	@Test
 	public void testPyramidTrue() {	
@@ -18,11 +18,13 @@ public class PyramidTest {
 		String expected = "123\n"
 				+ " 12\n"
 				+ "  1\n";
-		assertEquals(expected, output);     // True Case
+		String[] test  = expected.split("\n");
+		assertArrayEquals(test, output);    // Positive Case
 		n = 2;
 		output = PyramidTest.pyramid(n);   
 		expected = "12\n"
 				+ "1\n";
+		test  = expected.split("\n");
 		assertNotEquals(expected, output);  // False case
 	 }
 }
