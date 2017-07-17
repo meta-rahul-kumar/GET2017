@@ -9,7 +9,7 @@ import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Test;
 
-public class TestNumbers {
+public class NumbersTest {
 
 	Pyramid PyramidTest = new Pyramid();
 	String output;
