@@ -15,6 +15,6 @@ import org.junit.runners.Suite;
 	   PatternBuilderTest.class
 	})
 
-public class TestSuite {
+public class SuiteTest {
 
 }
