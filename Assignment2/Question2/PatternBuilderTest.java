@@ -19,7 +19,7 @@ public class PatternBuilderTest {
 		output = PyramidMirrorTest.patternBuilder(n, row);   
 		String expected = "   12\n";
 		assertEquals(expected, output);	//Positive test case
-		output = PyramidMirrorTest.numbers(n, row);
+		output = PyramidMirrorTest.patternBuilder(n, row);
 		expected = "12321\n";
 		assertNotEquals(expected, output);  // Negative test case
 	 }
