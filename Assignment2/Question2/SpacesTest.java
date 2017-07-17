@@ -7,7 +7,7 @@ package Question2;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class TestSpaces {
+public class SpacesTest {
 
 	Pyramid PyramidTest = new Pyramid();
 	String output;
