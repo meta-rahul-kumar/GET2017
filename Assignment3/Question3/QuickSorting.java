@@ -15,29 +15,33 @@ class QuickSorting
 	 * output - return the pivot element index
 	 */
 	int partitioning(int[] input, int indexOfLower, int indexOfUpper) {
-		try {
-			if (input.length < 1) {
-				throw (new Exception());
-			}
-		} catch(Exception lengthError) {
-			System.out.println("Length of input array must be greater than 0");
-		}
+		
 		int pivotElement = input[indexOfUpper];
 		int leastIndex = indexOfLower - 1;
 		
-		for(int loopCounter = indexOfLower ; loopCounter < indexOfUpper ; loopCounter++) {
-			if (input[loopCounter] <= pivotElement) {
-				leastIndex++;
-				int tempElement = input[loopCounter];
-				input[loopCounter] = input[leastIndex];
-				input[leastIndex] = tempElement;
-				
+		try {
+			if (input.length < 1) {
+				int x=3;
+				x= x / input.length;
 			}
-		}
-		
-		int pivotChanging = input[leastIndex + 1];
-		input[leastIndex + 1] = input[indexOfUpper]; 
-		input[indexOfUpper] = pivotChanging;
+			
+			for(int loopCounter = indexOfLower ; loopCounter < indexOfUpper ; loopCounter++) {
+				if (input[loopCounter] <= pivotElement) {
+					leastIndex++;
+					int tempElement = input[loopCounter];
+					input[loopCounter] = input[leastIndex];
+					input[leastIndex] = tempElement;
+					
+				}
+			}
+			
+			int pivotChanging = input[leastIndex + 1];
+			input[leastIndex + 1] = input[indexOfUpper]; 
+			input[indexOfUpper] = pivotChanging;
+			
+		} catch(Exception lengthError) {
+			System.out.println("Length of input array must be greater than 0");
+		} 
 		
 		return leastIndex + 1;
 	}
@@ -48,18 +52,22 @@ class QuickSorting
 	 * output - return sorted array
 	 */
 	int [] quickSort(int[] input, int indexOfLower, int indexOfUpper) {
+	
 		try {
 			if (input.length < 1) {
-				throw (new Exception());
+				int x=3;
+				x= x / input.length;
 			}
+			
+			if(indexOfLower < indexOfUpper){
+				int indexOfPartitioning = partitioning(input, indexOfLower, indexOfUpper);
+				
+				quickSort(input, indexOfLower, indexOfPartitioning - 1);
+				quickSort(input, indexOfPartitioning  +1, indexOfUpper);
+			}
+			
 		} catch(Exception lengthError) {
 			System.out.println("Length of input array must be greater than 0");
-		}
-		if(indexOfLower < indexOfUpper){
-			int indexOfPartitioning = partitioning(input, indexOfLower, indexOfUpper);
-			
-			quickSort(input, indexOfLower, indexOfPartitioning - 1);
-			quickSort(input, indexOfPartitioning  +1, indexOfUpper);
 		}
 		
 		return input;
