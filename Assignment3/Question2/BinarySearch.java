@@ -15,6 +15,7 @@ public class BinarySearch {
 	 */
 	public int binarySearch(int[] input, int search,int indexOfLower,int indexOfUpper) {
 		int mid = indexOfLower + (indexOfUpper - indexOfLower) / 2;
+		
 		if(indexOfUpper >= indexOfLower) {
 			if(input[mid] == search) {
 				return mid;
@@ -25,8 +26,8 @@ public class BinarySearch {
 			if(input[mid] < search) {
 				return binarySearch(input, search, mid + 1, indexOfUpper);  // if input[mid] is greater than searching element
 			}
-
 		}
+		
 		return -1;
 	}
 }
