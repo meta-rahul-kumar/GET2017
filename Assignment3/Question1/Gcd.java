@@ -15,6 +15,7 @@ public class Gcd {
 	 */
 	 int gcd(int x, int y) {
 		 if (Math.abs(x) < Math.abs(y)) {
+			 /* if first number is less than second , then swap the numbers */
 			 x = Math.abs(x) + Math.abs(y);
 			 y = Math.abs(x) - Math.abs(y);
 			 x = Math.abs(x) - Math.abs(y);
@@ -22,6 +23,6 @@ public class Gcd {
 		 if (Math.abs(x) % Math.abs(y) == 0) {
 			 return Math.abs(y);
 		 }
-		 return gcd(Math.abs(y), Math.abs(x / y));
+		 return gcd(Math.abs(y), Math.abs(x % y));
 	 }
 }
