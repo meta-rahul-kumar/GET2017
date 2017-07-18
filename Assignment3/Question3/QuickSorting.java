@@ -21,8 +21,7 @@ class QuickSorting
 		
 		try {
 			if (input.length < 1) {
-				int x=3;
-				x= x / input.length;
+				throw new Exception("Length of input array must be greater than 0"); 
 			}
 			
 			for(int loopCounter = indexOfLower ; loopCounter < indexOfUpper ; loopCounter++) {
@@ -40,7 +39,7 @@ class QuickSorting
 			input[indexOfUpper] = pivotChanging;
 			
 		} catch(Exception lengthError) {
-			System.out.println("Length of input array must be greater than 0");
+			System.out.println("Caught: " + lengthError.getMessage());
 		} 
 		
 		return leastIndex + 1;
@@ -55,8 +54,7 @@ class QuickSorting
 	
 		try {
 			if (input.length < 1) {
-				int x=3;
-				x= x / input.length;
+				throw new Exception("Length of input array must be greater than 0"); 
 			}
 			
 			if(indexOfLower < indexOfUpper){
@@ -67,7 +65,7 @@ class QuickSorting
 			}
 			
 		} catch(Exception lengthError) {
-			System.out.println("Length of input array must be greater than 0");
+			System.out.println("Caught: " + lengthError.getMessage());
 		}
 		
 		return input;
