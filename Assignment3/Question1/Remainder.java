@@ -18,9 +18,10 @@ public class Remainder {
 	 */
 	public int rem(int x, int y) {
 		try {
-			if (y == 0) {
-				throw(new Exception()); // throws exception if y is less than 1
-			} else if (x > 0 && y > 0) {
+			if(y == 0) {
+				x=x/y; // to throws an exception when y is equal to 0
+			}
+			if (x > 0 && y > 0) {
 				/* Case when x is greater than 0 and y is also greater than 0*/
 				if (x >= y) {
 					x = x - y;
@@ -48,12 +49,5 @@ public class Remainder {
 			return -1;
 		}
 		return x;
-	}
-	
-	public static void main(String args[]) {
-		Remainder r = new Remainder();
-		int x = -11;
-		int y = 5;
-		System.out.println(r.rem(x, y));
 	}
 }
