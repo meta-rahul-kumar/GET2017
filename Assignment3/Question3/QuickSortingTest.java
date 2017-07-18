@@ -23,22 +23,22 @@ public class QuickSortingTest {
 		int[] output = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
 		assertArrayEquals(outputExpected, output); // True Case
 		
-		int[] outputExpectedSecond= {1, 2, 6, 6, 7, 8, 1}; 
+		outputExpected = new int[]{1, 2, 6, 6, 7, 8, 1}; 
 		int[] outputSecond = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
-		assertNotEquals(outputExpectedSecond, outputSecond); // False Case
+		assertNotEquals(outputExpected, outputSecond); // False Case
 		
-		int[] inputThird = {};
-		int[] outputExpectedThird= {1}; 
+		input =  new int[]{};
+		outputExpected=  new int[]{1}; 
 		indexOfLower = 0;
 		indexOfUpper = input.length - 1;
-		int[] outputThird = quickSorter.quickSort(inputThird, indexOfLower, indexOfUpper);
-		assertNotEquals(outputExpectedThird, outputThird); // Exception Case
+		int[] outputThird = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
+		assertNotEquals(outputExpected, outputThird); // Exception Case
 		
-		int[] inputSecond = {2, 5, 8, 9, 10, 77, 55, 11};;
-		int[] outputExpectedForth= {2, 5, 8, 9, 10, 77, 55, 11}; 
+		input =  new int[]{2, 5, 8, 9, 10, 77, 55, 11};;
+		outputExpected=  new int[]{2, 5, 8, 9, 10, 77, 55, 11}; 
 		indexOfLower = 0;
 		indexOfUpper = input.length - 1;
-		int[] outputForth = quickSorter.quickSort(inputSecond, indexOfLower, indexOfUpper);
-		assertNotEquals(outputExpectedForth, outputForth); // Exception Case
+		int[] outputForth = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
+		assertNotEquals(outputExpected, outputForth); // Exception Case
 	}
 }
