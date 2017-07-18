@@ -22,10 +22,12 @@ public class BinarySearchTest {
 		int output = binarySearcher.binarySearch(input, search, indexOfLower, indexOfUpper);
 		int expected = 1;
 		assertEquals(expected, output); // True Case 
+		
 		search = 11;
 		output = binarySearcher.binarySearch(input, search, indexOfLower, indexOfUpper);
 		expected = -1;
 		assertEquals(expected, output); // True Case
+		
 		int[] inputSecond = {1, 3, 4, 5, 7, 9};
 		indexOfLower = 0;
 		indexOfUpper = 5;
@@ -33,6 +35,7 @@ public class BinarySearchTest {
 		output = binarySearcher.binarySearch(inputSecond, search, indexOfLower, indexOfUpper);
 		expected = -1;
 		assertNotEquals(expected, output); // False Case 
+		
 		search = 11;
 		output = binarySearcher.binarySearch(inputSecond, search, indexOfLower, indexOfUpper);
 		expected = 5;
