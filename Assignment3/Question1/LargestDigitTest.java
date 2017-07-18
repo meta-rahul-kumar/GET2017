@@ -18,11 +18,23 @@ public class LargestDigitTest {
 		LargestDigit digitFinder = new LargestDigit();
 		int output = digitFinder.largestDigit(12345);
 		int expected = 5;
-		assertEquals(expected, output); // True Case 
+		assertEquals(expected, output); // True Case  
 		
 		output = digitFinder.largestDigit(-300023);
 		expected = 6;
 		assertNotEquals(expected, output); // False case
+		
+		output = digitFinder.largestDigit(1257369);
+		expected = 9;
+		assertEquals(expected, output); // True case
+		
+		output = digitFinder.largestDigit(444);
+		expected = 4;
+		assertEquals(expected, output); // True case
+		
+		output = digitFinder.largestDigit(2);
+		expected = 0;
+		assertNotEquals(expected, output); // True case
 		
 		output = digitFinder.largestDigit(4093545);
 		expected = 9;
