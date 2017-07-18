@@ -18,24 +18,31 @@ public class RemainderTest {
 		int output = remainderFinder.rem(-5, 2);
 		int expected = -1;
 		assertEquals(expected, output); // True Case 
+		
 		output = remainderFinder.rem(-5, 2);
 		expected = 1;
 		assertNotEquals(expected, output); // False case
+		
 		output = remainderFinder.rem(5, 2);
 		expected = 1;
 		assertEquals(expected, output); // True Case 
+		
 		output = remainderFinder.rem(5, 2);
 		expected = -1;
 		assertNotEquals(expected, output); // False case
+		
 		output = remainderFinder.rem(-5, -2);
 		expected = -1; 
 		assertEquals(expected, output); // True Case 
+		
 		output = remainderFinder.rem(-5, -2);
 		expected = 1;
 		assertNotEquals(expected, output); // False case
+		
 		output = remainderFinder.rem(5, -2);
 		expected = 1;
 		assertEquals(expected, output); // True Case 
+		
 		output = remainderFinder.rem(5, -2);
 		expected = -1;
 		assertNotEquals(expected, output); // False case
