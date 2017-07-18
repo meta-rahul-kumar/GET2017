@@ -19,6 +19,22 @@ public class RemainderTest {
 		int expected = -1;
 		assertEquals(expected, output); // True Case 
 		
+		output = remainderFinder.rem(2, 1);
+		expected = 0;
+		assertEquals(expected, output); // True case in Assignment
+		
+		output = remainderFinder.rem(2, 0);
+		expected = 1;
+		assertNotEquals(expected, output); // False case in Assignment
+		
+		output = remainderFinder.rem(100, 3);
+		expected = 1;
+		assertEquals(expected, output); // True case case in Assignment
+		
+		output = remainderFinder.rem(-5, 2);
+		expected = 1;
+		assertNotEquals(expected, output); // False case
+		
 		output = remainderFinder.rem(-5, 2);
 		expected = 1;
 		assertNotEquals(expected, output); // False case
@@ -46,5 +62,6 @@ public class RemainderTest {
 		output = remainderFinder.rem(5, -2);
 		expected = -1;
 		assertNotEquals(expected, output); // False case
+		
 	}
 }
