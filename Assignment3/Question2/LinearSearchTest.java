@@ -41,5 +41,21 @@ public class LinearSearchTest {
 		expected = 5;
 		assertNotEquals(expected, output); // False Case
 		
+		int[] inputThird = {2, 5, 8, 9, 10, 55, 77};
+		indexOfLower = 0;
+		indexOfUpper = 6;
+		search = 88;
+		output = linearSearcher.linearSearch(inputThird, search, indexOfLower, indexOfUpper);
+		expected = -1;
+		assertEquals(expected, output); // True Case
+		
+		int[] inputForth = {2, 5, 8, 9, 10, 55, 77};
+		indexOfLower = 0;
+		indexOfUpper = 6;
+		search = 77;
+		output = linearSearcher.linearSearch(inputForth, search, indexOfLower, indexOfUpper);
+		expected = 6;
+		assertEquals(expected, output); // True Case
+		
 	}
 }
