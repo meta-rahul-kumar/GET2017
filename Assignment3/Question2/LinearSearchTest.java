@@ -28,32 +28,32 @@ public class LinearSearchTest {
 		expected = -1;
 		assertEquals(expected, output); // True Case
 		
-		int[] inputSecond = {1, 3, 4, 5, 7, 9};
+		input = new int[]{1, 3, 4, 5, 7, 9};
 		indexOfLower = 0;
 		indexOfUpper = 5;
 		search = 3;
-		output = linearSearcher.linearSearch(inputSecond, search, indexOfLower, indexOfUpper);
+		output = linearSearcher.linearSearch(input, search, indexOfLower, indexOfUpper);
 		expected = -1;
 		assertNotEquals(expected, output); // False Case 
 		
 		search = 11;
-		output = linearSearcher.linearSearch(inputSecond, search, indexOfLower, indexOfUpper);
+		output = linearSearcher.linearSearch(input, search, indexOfLower, indexOfUpper);
 		expected = 5;
 		assertNotEquals(expected, output); // False Case
 		
-		int[] inputThird = {2, 5, 8, 9, 10, 55, 77};
+		input = new int[]{2, 5, 8, 9, 10, 55, 77};
 		indexOfLower = 0;
 		indexOfUpper = 6;
 		search = 88;
-		output = linearSearcher.linearSearch(inputThird, search, indexOfLower, indexOfUpper);
+		output = linearSearcher.linearSearch(input, search, indexOfLower, indexOfUpper);
 		expected = -1;
 		assertEquals(expected, output); // True Case
 		
-		int[] inputForth = {2, 5, 8, 9, 10, 55, 77};
+		input = new int[]{2, 5, 8, 9, 10, 55, 77};
 		indexOfLower = 0;
 		indexOfUpper = 6;
 		search = 77;
-		output = linearSearcher.linearSearch(inputForth, search, indexOfLower, indexOfUpper);
+		output = linearSearcher.linearSearch(input, search, indexOfLower, indexOfUpper);
 		expected = 6;
 		assertEquals(expected, output); // True Case
 		
