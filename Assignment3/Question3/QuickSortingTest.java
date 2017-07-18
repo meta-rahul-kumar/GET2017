@@ -22,9 +22,11 @@ public class QuickSortingTest {
 		int[] outputExpected = {1, 2, 6, 6, 7, 8, 9};
 		int[] output = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
 		assertArrayEquals(outputExpected, output); // True Case
+		
 		int[] outputExpectedSecond= {1, 2, 6, 6, 7, 8, 1}; 
 		int[] outputSecond = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
 		assertNotEquals(outputExpectedSecond, outputSecond); // False Case
+		
 		int[] outputExpectedThird= {}; 
 		indexOfLower = 0;
 		indexOfUpper = input.length - 1;
