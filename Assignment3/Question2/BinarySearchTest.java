@@ -28,28 +28,28 @@ public class BinarySearchTest {
 		expected = -1;
 		assertEquals(expected, output); // True Case
 		
-		int[] inputSecond = {1, 3, 4, 5, 7, 9};
+		input = new int[]{1, 3, 4, 5, 7, 9};
 		indexOfLower = 0;
 		indexOfUpper = 5;
 		search = 3;
-		output = binarySearcher.binarySearch(inputSecond, search, indexOfLower, indexOfUpper);
+		output = binarySearcher.binarySearch(input, search, indexOfLower, indexOfUpper);
 		expected = -1;
 		assertNotEquals(expected, output); // False Case 
 		
 		search = 11;
-		output = binarySearcher.binarySearch(inputSecond, search, indexOfLower, indexOfUpper);
+		output = binarySearcher.binarySearch(input, search, indexOfLower, indexOfUpper);
 		expected = 5;
 		assertNotEquals(expected, output); // False Case
 		
-		int[] inputThird = {2, 5, 8, 9, 10, 77, 55};
+		input = new int[]{2, 5, 8, 9, 10, 77, 55};
 		search = 88;
-		output = binarySearcher.binarySearch(inputThird, search, indexOfLower, indexOfUpper);
+		output = binarySearcher.binarySearch(input, search, indexOfLower, indexOfUpper);
 		expected = -1;
 		assertEquals(expected, output); // True Case
 		
-		int[] inputForth = {2, 5, 8, 9, 10, 77, 55, 11};
+		input = new int[]{2, 5, 8, 9, 10, 77, 55, 11};
 		search = 77;
-		output = binarySearcher.binarySearch(inputForth, search, indexOfLower, indexOfUpper);
+		output = binarySearcher.binarySearch(input, search, indexOfLower, indexOfUpper);
 		expected = 2;
 		assertNotEquals(expected, output); // False Case
 		
