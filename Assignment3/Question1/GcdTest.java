@@ -19,9 +19,11 @@ public class GcdTest {
 		int output = gcdFinder.gcd(-30, 15);
 		int expected = 15;
 		assertEquals(expected, output); // True Case 
+		
 		output = gcdFinder.gcd(6, 7);
 		expected = 6;
 		assertNotEquals(expected, output); // False case
+		
 		output = gcdFinder.gcd(-30, -60);
 		expected = 30;
 		assertEquals(expected, output); // True case
