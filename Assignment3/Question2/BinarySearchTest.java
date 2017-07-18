@@ -41,5 +41,17 @@ public class BinarySearchTest {
 		expected = 5;
 		assertNotEquals(expected, output); // False Case
 		
+		int[] inputThird = {2, 5, 8, 9, 10, 77, 55};
+		search = 88;
+		output = binarySearcher.binarySearch(inputThird, search, indexOfLower, indexOfUpper);
+		expected = -1;
+		assertEquals(expected, output); // True Case
+		
+		int[] inputForth = {2, 5, 8, 9, 10, 77, 55, 11};
+		search = 77;
+		output = binarySearcher.binarySearch(inputForth, search, indexOfLower, indexOfUpper);
+		expected = 2;
+		assertNotEquals(expected, output); // False Case
+		
 	}
 }
