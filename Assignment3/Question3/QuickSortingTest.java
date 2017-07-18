@@ -27,10 +27,18 @@ public class QuickSortingTest {
 		int[] outputSecond = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
 		assertNotEquals(outputExpectedSecond, outputSecond); // False Case
 		
-		int[] outputExpectedThird= {}; 
+		int[] inputThird = {};
+		int[] outputExpectedThird= {1}; 
 		indexOfLower = 0;
 		indexOfUpper = input.length - 1;
-		int[] outputThird = quickSorter.quickSort(input, indexOfLower, indexOfUpper);
+		int[] outputThird = quickSorter.quickSort(inputThird, indexOfLower, indexOfUpper);
 		assertNotEquals(outputExpectedThird, outputThird); // Exception Case
+		
+		int[] inputSecond = {2, 5, 8, 9, 10, 77, 55, 11};;
+		int[] outputExpectedForth= {2, 5, 8, 9, 10, 77, 55, 11}; 
+		indexOfLower = 0;
+		indexOfUpper = input.length - 1;
+		int[] outputForth = quickSorter.quickSort(inputSecond, indexOfLower, indexOfUpper);
+		assertNotEquals(outputExpectedForth, outputForth); // Exception Case
 	}
 }
