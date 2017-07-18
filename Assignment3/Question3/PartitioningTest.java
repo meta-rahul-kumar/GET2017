@@ -22,8 +22,8 @@ public class PartitioningTest {
 		int output = quickSorter.partitioning(input, indexOfLower, indexOfUpper);
 		assertEquals(outputExpected, output); // True Case
 		
-		int outputExpectedSecond = 4; 
+		outputExpected = 4; 
 		int outputSecond = quickSorter.partitioning(input, indexOfLower, indexOfUpper);
-		assertNotEquals(outputExpectedSecond, outputSecond); // False Case
+		assertNotEquals(outputExpected, outputSecond); // False Case
 	}
 }
