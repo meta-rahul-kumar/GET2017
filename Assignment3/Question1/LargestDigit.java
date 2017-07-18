@@ -11,17 +11,12 @@ public class LargestDigit {
 		 if (Math.abs(x) == 0) {
 			 return 0;
 		 }
-		 int max = Math.abs(x) % 10;
+		 int max = Math.abs(x) % 10;  //  take last digit as maximum digit
 		 int checking = largestDigit(Math.abs(x) / 10);
 		 if (max < checking) {
 			 max = checking;
 		 }
 		 return max;
 		 
-	 }
-	 
-	 public static void main(String args[]) {
-		 LargestDigit lg = new LargestDigit();
-		 System.out.println(lg.largestDigit(-102));
 	 }
 }
