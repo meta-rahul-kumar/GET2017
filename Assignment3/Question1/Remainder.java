@@ -19,7 +19,7 @@ public class Remainder {
 	public int rem(int x, int y) {
 		try {
 			if(y == 0) {
-				x=x/y; // to throws an exception when y is equal to 0
+				throw new Exception("Number must be Greater than 0"); // to throws an exception when y is equal to 0
 			}
 			if (x > 0 && y > 0) {
 				/* Case when x is greater than 0 and y is also greater than 0*/
@@ -46,7 +46,7 @@ public class Remainder {
 				} 
 			}
 		} catch (Exception invalidArgument) {
-			return -1;
+			 System.out.println("Caught: " + invalidArgument.getMessage());
 		}
 		return x;
 	}
