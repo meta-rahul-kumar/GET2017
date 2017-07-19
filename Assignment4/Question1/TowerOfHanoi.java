@@ -18,7 +18,7 @@ package Question1;
 import java.util.*;
 
 public class TowerOfHanoi {
-	int noOfDisk; // Stores number of Disks
+	int diskCounts; // Stores number of Disks
 	
 	/**
 	 * Method - towerOfHanoi 
@@ -36,12 +36,12 @@ public class TowerOfHanoi {
 		List<String> listWords = new ArrayList<String>(); // arraylist initialiation
 		
 		if(numOfDisk == 1) {
-		listWords.add("Move Disk "+(noOfDisk+1-numOfDisk)+" from "+source+" to "+destination);
+		listWords.add("Move Disk "+(diskCounts+1-numOfDisk)+" from "+source+" to "+destination);
 		return listWords;
 		}
 		
 		listWords.addAll(towerOfHanoi(source, temp, destination, numOfDisk - 1)); // First sub problem
-		listWords.add("Move Disk "+(noOfDisk+1-numOfDisk)+" from "+source+" to "+destination);
+		listWords.add("Move Disk "+(diskCounts+1-numOfDisk)+" from "+source+" to "+destination);
 		listWords.addAll(towerOfHanoi(temp, destination, source, numOfDisk - 1)); // Second sub problem
 		
 		return listWords;
@@ -62,7 +62,7 @@ public class TowerOfHanoi {
 	 */
 	List<String> utilTowerOfHanoi(String source, String destination, String temp, int numOfDisk)
 	{
-		noOfDisk=numOfDisk;
+		diskCounts=numOfDisk;
 		return towerOfHanoi(source, destination, temp, numOfDisk);
 	}
 	
@@ -75,8 +75,7 @@ public class TowerOfHanoi {
 		String temp = "C";
 		int numOfDisk = 3;
 		listWords = obj.utilTowerOfHanoi(source, destination, temp, numOfDisk);
-		
-		for (int i = 0; i < listWords.size(); i++) {
+				for (int i = 0; i < listWords.size(); i++) {
 			System.out.println(listWords.get(i));
 		}
 		
