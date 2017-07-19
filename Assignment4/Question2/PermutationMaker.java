@@ -15,6 +15,9 @@ public class PermutationMaker {
 	List<String> possiblePermutations = new ArrayList<String>();
 
 	/**
+	 * Method - swap
+	 * 
+	 * Method take a input String , starting index of input array and second index
 	 * @param inputString
 	 * @param firstIndex
 	 * @param secondIndex
@@ -31,6 +34,9 @@ public class PermutationMaker {
 
 
 	/**
+	 * Method - generatePermutations
+	 * 
+	 * Method Generates all possible permutation of input String
 	 * @param inputString
 	 * @param lowIndex
 	 * @param highIndex
