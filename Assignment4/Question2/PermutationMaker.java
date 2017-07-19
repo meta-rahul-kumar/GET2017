@@ -57,12 +57,14 @@ public class PermutationMaker {
 				inputString = swap(inputString, iterateIndex, lowIndex);
 			}
 		}
+		
 		return possiblePermutations;
 	}
 	
 	List<String> generatePermutations(String inputString) {
 		int lowIndex = 0;
 		int highIndex = inputString.length() - 1;
+		
 		return generatePermutations(inputString, lowIndex, highIndex);
 	}
 	public static void main(String args[]) {
@@ -70,6 +72,7 @@ public class PermutationMaker {
 		PermutationMaker obj = new PermutationMaker();
 		String input = "AAB";
 		permutations = obj.generatePermutations(input);
+		
 		for (int i = 0; i < permutations.size(); i++) {
 			System.out.println(permutations.get(i));
 		}
