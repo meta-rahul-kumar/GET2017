@@ -18,31 +18,48 @@ package Question1;
 import java.util.*;
 
 public class TowerOfHanoi {
-	int noOfDisk;
+	int noOfDisk; // Stores number of Disks
+	
+	/**
+	 * Method - towerOfHanoi 
+	 * 
+	 * method takes source, Destination, temp as string and number of disks in integer
+	 * method returns the moves to move all the disks from source to destination
+	 * @param source
+	 * @param destination
+	 * @param temp
+	 * @param numOfDisk
+	 * @return
+	 */
 	List<String> towerOfHanoi(String source, String destination, String temp, int numOfDisk)
 	{
-		List<String> listWords = new ArrayList<String>();
-		
-//		if(numOfDisk == 1) {
-//			listWords.add("Move Disk 1 from "+source+" to "+destination);
-//			return listWords;
-//		}
-//		
-//		listWords.addAll(towerOfHanoi(source, temp, destination, numOfDisk - 1));
-//		listWords.add("Move Disk "+numOfDisk+" from "+source+" to "+destination);
-//		listWords.addAll(towerOfHanoi(temp, destination, source, numOfDisk - 1));
+		List<String> listWords = new ArrayList<String>(); // arraylist initialiation
 		
 		if(numOfDisk == 1) {
 		listWords.add("Move Disk "+(noOfDisk+1-numOfDisk)+" from "+source+" to "+destination);
 		return listWords;
 		}
 		
-		listWords.addAll(towerOfHanoi(source, temp, destination, numOfDisk - 1));
+		listWords.addAll(towerOfHanoi(source, temp, destination, numOfDisk - 1)); // First sub problem
 		listWords.add("Move Disk "+(noOfDisk+1-numOfDisk)+" from "+source+" to "+destination);
-		listWords.addAll(towerOfHanoi(temp, destination, source, numOfDisk - 1));
+		listWords.addAll(towerOfHanoi(temp, destination, source, numOfDisk - 1)); // Second sub problem
 		
 		return listWords;
 	}
+	
+	/**
+	 * Method - towerOfHanoi 
+	 * 
+	 * method takes source, Destination, temp as string and number of disks in integer
+	 * method returns the moves to move all the disks from source to destination
+	 * 
+	 * Method is a utility Method
+	 * @param source
+	 * @param destination
+	 * @param temp
+	 * @param numOfDisk
+	 * @return
+	 */
 	List<String> utilTowerOfHanoi(String source, String destination, String temp, int numOfDisk)
 	{
 		noOfDisk=numOfDisk;
