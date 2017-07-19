@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+/*
+ * Class checks towerOfHanoi Method of Class TowerOfHanoi
+ */
 public class TowerOfHanoiTest {
 
 	@Test
