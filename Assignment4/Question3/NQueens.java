@@ -26,22 +26,25 @@ public class NQueens {
 	 */
 	boolean boxSafe(int[][] board, int row, int col, int dimesionMatrix) {
 		 
-        /* Check this row on left side */
-        for (int i = 0; i < col; i++)
-            if (board[row][i] == 1)
-                return false;
+		/* Check this row on left side */
+		for (int i = 0; i < col; i++) {
+		    if (board[row][i] == 1)
+			return false;
+		}
+
+		/* Check upper diagonal on left side */
+		for (int i = row, j = col; i >= 0 && j >= 0; i--, j--) {
+		    if (board[i][j] == 1)
+			return false;
+		}
+
+		/* Check lower diagonal on left side */
+		for (int i=row, j=col; j>=0 && i<dimesionMatrix; i++, j--) {
+		    if (board[i][j] == 1)
+			return false;
+		}
  
-        /* Check upper diagonal on left side */
-        for (int i = row, j = col; i >= 0 && j >= 0; i--, j--)
-            if (board[i][j] == 1)
-                return false;
- 
-        /* Check lower diagonal on left side */
-        for (int i=row, j=col; j>=0 && i<dimesionMatrix; i++, j--)
-            if (board[i][j] == 1)
-                return false;
- 
-        return true;
+       		return true;
 	}
 	
 	/**
@@ -54,9 +57,11 @@ public class NQueens {
 	 * @return
 	 */
 	boolean  nQueen(int[][] board, int startRow, int dimensionOfMatrix) {
+		
 		if (startRow >= dimensionOfMatrix) {
 			return true;
 		}
+		
 		for (int boardLoop = 0; boardLoop < dimensionOfMatrix; boardLoop++ ) {
 			if(boxSafe(board, boardLoop , startRow, dimensionOfMatrix) == true) {
 				 board[boardLoop][startRow] = 1;
@@ -78,16 +83,16 @@ public class NQueens {
 	public static void main(String args[]) {
 		NQueens obj = new NQueens();
 		int dimenstion = 4;
-		int [][] board = new int [][] {
-            { 0,  0,  0,  0},
-             { 0,  0,  0,  0},
-             { 0,  0,  0,  0},
-             { 0,  0,  0,  0} };
+		int [][] board = new int [][] {{ 0,  0,  0,  0},
+					       { 0,  0,  0,  0},
+					       { 0,  0,  0,  0},
+					       { 0,  0,  0,  0} };
         obj.nQueen(board , 0, dimenstion);
         for(int i=0;i<dimenstion;i++) {
         	for (int j = 0; j < dimenstion; j++) {
         		System.out.print(board[i][j]);
         	}
+		
         	System.out.println("");
         }
        
