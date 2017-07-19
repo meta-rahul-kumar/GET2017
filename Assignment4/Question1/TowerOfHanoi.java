@@ -75,7 +75,8 @@ public class TowerOfHanoi {
 		String temp = "C";
 		int numOfDisk = 3;
 		listWords = obj.utilTowerOfHanoi(source, destination, temp, numOfDisk);
-				for (int i = 0; i < listWords.size(); i++) {
+		
+		for (int i = 0; i < listWords.size(); i++) {
 			System.out.println(listWords.get(i));
 		}
 		
