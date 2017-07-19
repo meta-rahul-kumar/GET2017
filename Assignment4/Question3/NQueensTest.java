@@ -15,14 +15,13 @@ public class NQueensTest {
 	public void NQueensTesting() {
 		NQueens obj = new NQueens();
 		int dimenstion = 4;
-		int [][] board = new int [][] {
-            { 0,  0,  0,  0},
-             { 0,  0,  0,  0},
-             { 0,  0,  0,  0},
-             { 0,  0,  0,  0} };
+		int [][] board = new int [][] {{ 0,  0,  0,  0},
+						               { 0,  0,  0,  0},
+						               { 0,  0,  0,  0},
+						               { 0,  0,  0,  0} };
         boolean result = obj.nQueen(board , 0, 4);
         boolean expected = true;
-        for(int i=0;i<dimenstion;i++) {
+        for(int i = 0; i < dimenstion; i++) {
 	    	for (int j = 0; j < dimenstion; j++) {
 	    		System.out.print(board[i][j]);
 	    	}
@@ -32,18 +31,17 @@ public class NQueensTest {
         assertEquals(expected, result); // True Case
         
         dimenstion = 8;
-        board = new int [][] {
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0},
-            { 0,  0,  0,  0, 0, 0, 0, 0}};
+        board = new int [][] {{ 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0},
+				              { 0,  0,  0,  0, 0, 0, 0, 0}};
         result = obj.nQueen(board , 0, dimenstion);
         expected = true;
-        for(int i=0;i<dimenstion;i++) {
+        for(int i = 0; i < dimenstion; i++) {
 	    	for (int j = 0; j < dimenstion; j++) {
 	    		System.out.print(board[i][j]);
 	    	}
@@ -53,13 +51,12 @@ public class NQueensTest {
         assertEquals(expected, result); // True Case
         
         dimenstion = 3;
-        board = new int [][] {
-            { 0,  0,  0},
-            { 0,  0,  0},
-            { 0,  0,  0}};
+        board = new int [][] {{ 0,  0,  0},
+        					  { 0,  0,  0},
+        					  { 0,  0,  0}};
         result = obj.nQueen(board , 0, 3);
         expected = true;
-        for(int i=0;i<dimenstion;i++) {
+        for(int i = 0; i < dimenstion; i++) {
 	    	for (int j = 0; j < dimenstion; j++) {
 	    		System.out.print(board[i][j]);
 	    	}
@@ -69,12 +66,11 @@ public class NQueensTest {
         assertNotEquals(expected, result); // False Case
         
         dimenstion = 2;
-        board = new int [][] {
-            { 0,  0},
-            { 0,  0}};
+        board = new int [][] {{ 0,  0},
+            				  { 0,  0}};
         result = obj.nQueen(board , 0, 2);
         expected = true;
-        for(int i=0;i<dimenstion;i++) {
+        for(int i = 0; i < dimenstion; i++) {
 	    	for (int j = 0; j < dimenstion; j++) {
 	    		System.out.print(board[i][j]);
 	    	}
