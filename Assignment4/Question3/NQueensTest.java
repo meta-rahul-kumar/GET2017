@@ -3,6 +3,12 @@ package Question3;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Class checks the nQueen function of class NQueen 
+ * 
+ * @version 1.0 18 July 2017
+ * @author User17
+ */
 public class NQueensTest {
 
 	@Test
