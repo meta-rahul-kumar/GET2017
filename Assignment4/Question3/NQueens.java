@@ -10,6 +10,20 @@ package Question3;
  */
 public class NQueens {
 	
+	/**
+	 * Method - boxSafe
+	 * 
+	 * method checks that a position of queen in given board is safe or not
+	 * 
+	 * method returns boolean value true if position is safe and return false 
+	 * if position is unsafe
+	 *  
+	 * @param board
+	 * @param row
+	 * @param col
+	 * @param dimesionMatrix
+	 * @return
+	 */
 	boolean boxSafe(int[][] board, int row, int col, int dimesionMatrix) {
 		 
         /* Check this row on left side */
@@ -30,6 +44,15 @@ public class NQueens {
         return true;
 	}
 	
+	/**
+	 * Method - nQueen
+	 * 
+	 * Method check for the arrangement of n queens
+	 * @param board
+	 * @param startRow
+	 * @param dimensionOfMatrix
+	 * @return
+	 */
 	boolean  nQueen(int[][] board, int startRow, int dimensionOfMatrix) {
 		if (startRow >= dimensionOfMatrix) {
 			return true;
