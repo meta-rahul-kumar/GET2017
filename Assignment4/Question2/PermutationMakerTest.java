@@ -5,6 +5,9 @@ import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Class Checks the generatePermutations method of class PermutationMaker
+ */
 public class PermutationMakerTest {
 	
 	@Test
