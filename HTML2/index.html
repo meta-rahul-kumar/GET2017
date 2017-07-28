@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>User Profile</title>
+	<link rel="icon" type="text/css" href="" />
+	<meta name="title" content="User Profile" />
+	<meta name="description" content="show user profile of xyz site" /> 
+	<meta property="og:author" content="Rahul Kumar" />
+	<style type="text/css">
+		body{
+			background: rgba(0,0,0,0.2);
+			margin: 3% 2% 3% 2%;
+		}
+		#mainContainer{
+			background: white;
+			-webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+			padding: 0.1%;
+		}
+		#header{
+			background: skyblue;
+			margin: 2%;
+			border: 1px solid blue;
+			color: blue;
+			padding: 1% 2% 1% 2%;
+		}
+		#mainContant{
+			display: flex;
+			padding: 1% 2% 1% 2%;
+		}
+		#leftSideContent{
+			width:20%;
+		}
+		#rightSideContent{
+			width:80%;
+		}
+		.imageShadow{
+			-webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+			border: 2px solid white;
+			width: 90%;
+		}
+		.infoBox{
+			margin-bottom: 2%;
+			line-height: 150%;
+		}
+		.links{
+			text-decoration: none;
+		}
+		.clickableTags{
+			border: 1px solid blue;
+			border-radius: 5%;
+			background: skyblue; 
+			margin: 1px;
+			padding: 2px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div id="mainContainer">
+		<div id="header">
+			<h1>My Profile</h1>
+		</div>
+		<div id="mainContant">
+			<div id="leftSideContent">
+					<img src="images/user_pic.jpg" class="imageShadow" />
+			</div>
+			<div id="rightSideContent">
+				<div class="infoBox">
+					<b>Contact Information</b><br/>
+					Email : <a href="mailto: rahul.kumar@metacube.com" class="links">rahul.kumar@metacube.com</a><br/>
+					Mobile : <a href="tel: 918955678101" class="links">8955678101</a><br/>
+					Work Phone : XXXXXXXXXX<br/>
+					Internal Phone : XXXXXXXXXX<br/>
+					Skype : netsurferrahul<br/>
+				</div>
+				<div class="infoBox">
+					<b>General Information</b><br/>
+					Birthday : Dec 11, 1997<br/>
+					Middle Name : None<br/>
+					Departments : Computer Science & Engineering<br/>
+					Status : <address style="display:inline-block;">Hello</address><br/>
+				</div>
+				<div class="infoBox">
+					<b>Additional Information</b><br/>
+					Other Websites : <span class="clickableTags"><a href="http://www.theworkingboy.com" class="links">http://www.theworkingboy.com</a></span><br/>
+					Skills : <span class="clickableTags" style="color:blue;">Java</span>
+							 <span class="clickableTags" style="color:blue">C++</span>
+							 <span class="clickableTags" style="color:blue">C Language</span>
+							 <span class="clickableTags" style="color:blue">HTML</span>
+							 <span class="clickableTags" style="color:blue">CSS</span>
+							 <span class="clickableTags" style="color:blue">PHP</span>
+							 <span class="clickableTags" style="color:blue">JavaScript</span><br/>
+					Intrests : <span class="clickableTags" style="color:blue;">Punjabi Songs</span>
+							 <span class="clickableTags" style="color:blue">Counter Strike</span>
+							 <span class="clickableTags" style="color:blue">Web Development</span>
+							 <span class="clickableTags" style="color:blue">Reading</span><br/>
+					Groups : <span class="clickableTags" style="color:blue">KTSU</span>
+							 <span class="clickableTags" style="color:blue">Web Freaks</span>
+							 <span class="clickableTags" style="color:blue">Study Smart</span><br/>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
