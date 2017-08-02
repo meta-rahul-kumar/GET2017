@@ -125,11 +125,13 @@ public class Users {
 	/**
 	 * Method adds a user
 	 */
-	public void addUser() {
+	public boolean addUser() {
 		String userName;
 		String userGender;
 		String userPhone;
 		int max = 0;
+		boolean exists = false;
+		boolean status = false;
 		
 		while(true) {
 				System.out.println("Enter User Name : ");
@@ -184,12 +186,25 @@ public class Users {
 		
 		max = max + 1;
 		
-		User user = new User();
-		user.setUser(max+"", userName, userGender, userPhone);
-		totalUsers.put(max+"", user);
+		for(String key : totalUsers.keySet()) {
+			if(totalUsers.get(key).getUserName().equals(userName) && totalUsers.get(key).getUserPhone().equals(userPhone)) {
+				exists = true;
+			}
+		}
 		
-		Home.sessionId = max;
-		System.out.println("User Profile Created!!");
-		Util.setSessionId(userName);
+		if(exists) {
+			System.out.println("User with Same Name and Phone Number already Exixts");
+		}else {
+			User user = new User();
+			user.setUser(max+"", userName, userGender, userPhone);
+			totalUsers.put(max+"", user);
+			
+			Home.sessionId = max;
+			System.out.println("User Profile Created!!");
+			Util.setSessionId(userName);
+			status = true;
+		}
+		
+		return status;
 	}
 }
