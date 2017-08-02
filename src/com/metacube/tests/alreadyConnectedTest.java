@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import com.metacube.controllers.Connections;
 import com.metacube.main.Home;
 
-public class alreadyConnectedTest {
+public class AlreadyConnectedTest {
 
 	@Test
 	public void alreadyConnectedTesting() {

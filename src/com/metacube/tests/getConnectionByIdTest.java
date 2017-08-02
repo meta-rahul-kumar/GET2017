@@ -6,7 +6,7 @@ import com.metacube.models.Connection;
 import static org.junit.Assert.*;
 
 
-public class getConnectionByIdTest {
+public class GetConnectionByIdTest {
 
 	@Test
 	public void getConnectionByIdTesting() {

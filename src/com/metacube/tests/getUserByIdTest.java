@@ -8,7 +8,7 @@ import com.metacube.controllers.Users;
 import com.metacube.main.Home;
 import com.metacube.models.User;
 
-public class getUserByIdTest {
+public class GetUserByIdTest {
 
 	@Test
 	public void getUserByIdTesting() {

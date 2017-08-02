@@ -5,7 +5,7 @@ import org.junit.Test;
 import com.metacube.controllers.Organisations;
 import com.metacube.main.Home;
 
-public class isOrganisationExistsTest {
+public class IsOrganisationExistsTest {
 	
 	@Test
 	public void isOrganisationExistsTesting() {

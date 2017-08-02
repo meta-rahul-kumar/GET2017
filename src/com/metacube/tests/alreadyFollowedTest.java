@@ -6,7 +6,7 @@ import org.junit.Test;
 import com.metacube.controllers.OrganisationFollowers;
 import com.metacube.main.Home;
 
-public class alreadyFollowedTest {
+public class AlreadyFollowedTest {
 	
 	@Test
 	public void alreadyFollowedTesting() {
