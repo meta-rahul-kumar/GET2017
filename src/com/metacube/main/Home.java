@@ -55,9 +55,12 @@ public class Home {
         mi.setDisplayName("3. Remove Friend");
         friendsSubMenu.add(mi);
         
+        mi = new ActionableMenuItem(new showMainMenu());
+        mi.setDisplayName("4. Back");
+        friendsSubMenu.add(mi);
         
         mi = new ActionableMenuItem(new Logout());
-        mi.setDisplayName("4. Logout");
+        mi.setDisplayName("5. Logout");
         friendsSubMenu.add(mi);
         
 		mi = new Menu();
@@ -90,8 +93,12 @@ public class Home {
         mi.setDisplayName("6. View Friend Followed Organisations");
         organisationSubMenu.add(mi);
         
+        mi = new ActionableMenuItem(new showMainMenu());
+        mi.setDisplayName("7. Back");
+        organisationSubMenu.add(mi);
+        
         mi = new ActionableMenuItem(new Logout());
-        mi.setDisplayName("7. Logout");
+        mi.setDisplayName("8. Logout");
         organisationSubMenu.add(mi);
         
         mi = new Menu();
@@ -116,8 +123,12 @@ public class Home {
         mi.setDisplayName("4. View Friend Posts");
         postSubMenu.add(mi);
         
+        mi = new ActionableMenuItem(new showMainMenu());
+        mi.setDisplayName("5. Back");
+        postSubMenu.add(mi);
+        
         mi = new ActionableMenuItem(new Logout());
-        mi.setDisplayName("5. Logout");
+        mi.setDisplayName("6. Logout");
         postSubMenu.add(mi);
         
         mi = new ActionableMenuItem(new SearchUser());
