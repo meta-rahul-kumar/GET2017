@@ -7,6 +7,7 @@ body{
 
 .header{
 	padding-top: 1%;
+	border-bottom: 1px solid #C0C0C0;
 }
 .header_text{
 	font-size: 25px;
@@ -51,7 +52,7 @@ input,select,textarea{
 input:invalid,select:invalid,textarea:invalid{
 	border-radius: 0px 5px 5px 0px;
 	border-top: 1px solid red;
-	border-right: 1px solid red;
+	border-right0: 1px solid red;
 	border-bottom: 1px solid red;
 	padding-left: 2%;
 	padding-right: 2%;
