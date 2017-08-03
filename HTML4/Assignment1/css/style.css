@@ -1,0 +1,87 @@
+body{
+	background: #ebebeb;
+	font-family: 'Open Sans', serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header{
+	padding-top: 1%;
+}
+.header_text{
+	font-size: 25px;
+	font-weight: bold;
+}
+.form{
+	width: 45%;
+	margin: auto;
+}
+.label{
+	font-weight: bold;
+	text-align: right;
+	flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: 40%;
+   margin-right: 5%;
+}
+.form_input{
+	display: flex;
+	margin: 2%;
+}
+.images{
+	background: rgb(237,237,237);
+	width:16px;
+	height:16px;
+	padding: 1%;
+	border: 1px solid grey;
+	border-radius: 5px 0px 0px 5px;
+}
+input,select,textarea{
+	border-radius: 0px 5px 5px 0px;
+	border: 1px solid grey;
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 40%;
+}
+.clear{
+	clear: both;
+}
+input:invalid,select:invalid,textarea:invalid{
+	border-radius: 0px 5px 5px 0px;
+	border: 1px solid red;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.button{
+	background: rgb(240,166,78);
+	border: 1px solid rgb(240,166,78);
+	padding: 1% 2% 1% 2%;
+	border-radius: 5px;
+	color: white;
+	transition: box-shadow 0.5s;
+}
+.button:hover{
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.button_place{
+	position: relative;
+	left: 45%;
+	width:100%;
+}
+.radio-options{
+	display: block;
+
+}
+
+#textarea > img {
+	height: 43px;
+}
+input:placeholder-shown {
+	border: 1px solid grey;
+}
+textarea:placeholder-shown{
+	border: 1px solid grey;
+}
+.button-images{
+	vertical-align: middle;
+}

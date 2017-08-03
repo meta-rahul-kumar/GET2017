@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Contact Page - HTML4 Assignment</title>
+	<link rel="icon" type="text/css" href="images/phone.png">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="header_text">Contact us today!</div>
+		<hr/>
+	</div>
+	<div class="form">
+		<form method="POST" action="#">
+			<div class="form_input">
+				<div class="label">First Name </div>
+				<img src="images/man-user.png" class="images" />
+				<input type="text" name="fname" id="fname" placeholder="First Name" minlength="2" required />
+			</div>
+			<div class="form_input">
+				<div class="label">Last Name </div>
+				<img src="images/man-user.png" class="images" />
+				<input type="text" name="lname" id="lname" placeholder="Last Name" minlength="2" required />
+			</div>
+			<div class="form_input">
+				<div class="label">Email </div>
+				<img src="images/email.png" class="images" />
+				<input type="email" name="email" id="email" placeholder="E-mail Address" required />
+			</div>
+			<div class="form_input">
+				<div class="label">Phone </div>
+				<img src="images/phone.png" class="images" />
+				<input type="text" name="phone" id="phone" pattern="[0-9]{10}" placeholder="8955678101" required />
+			</div>
+			<div class="form_input">
+				<div class="label">Address </div>
+				<img src="images/home.png" class="images" />
+				<input type="text" name="address" id="address" placeholder="Address" required />
+			</div>
+			<div class="form_input">
+				<div class="label">City </div>
+				<img src="images/home.png" class="images" />
+				<input type="text" name="city" id="city" placeholder="City" required />
+			</div>
+			<div class="form_input">
+				<div class="label">State </div>
+				<img src="images/state.png" class="images" required />
+				<select name="state" id="state" >
+					<option>Please select your state</option>
+					<option value="Udaipur">Udaipur</option>
+					<option value="Jaipur">Jaipur</option>
+					<option value="Alwar">Alwar</option>
+				</select>
+			</div>
+			<div class="form_input">
+				<div class="label">Zip Code </div>
+				<img src="images/home.png" class="images" />
+				<input type="text" name="zip" id="zip" pattern="[0-9]{6}" placeholder="Zip Code" required />
+			</div>
+			<div class="form_input">
+				<div class="label">Website or domain name</div>
+				<img src="images/internet.png" class="images" />
+				<input type="url" name="website" id="website" placeholder="Website or domain name"  required />
+			</div>
+			<div class="form_input">
+				<div class="label">Do you have hosting ?</div>
+				<div class="radio-options">
+					<input type="radio" name="hosting" value="yes" checked /> Yes
+					<input type="radio" name="hosting" value="no" /> No
+				</div>
+			</div>
+			<div class="form_input">
+				<div class="label">Project Description</div>
+				<img src="images/edit.png" class="images"/>
+				<textarea name="description" id="description" placeholder="Project Description"  required ></textarea>
+			</div>
+			<div class="form_input">
+				<div class="button_place"><button type="submit" name="submit" class="button">Send <img src="images/send.png" class="button-images" /> </button></div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
