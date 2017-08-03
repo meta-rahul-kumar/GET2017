@@ -1,13 +1,13 @@
 <html>
 <head>
 	<title>User Profile</title>
-	<link rel="icon" type="text/css" href="" />
+	<link rel="icon" type="text/css" href="images/favicon.png">
 	<meta name="title" content="User Profile" />
 	<meta name="description" content="show user profile of xyz site" /> 
 	<meta property="og:author" content="Rahul Kumar" />
 	<style type="text/css">
 		body{
-			background: rgba(0,0,0,0.2);
+			background: #e3ebed;
 			margin: 3% 2% 3% 2%;
 		}
 		#mainContainer{
@@ -16,10 +16,10 @@
 			padding: 0.1%;
 		}
 		#header{
-			background: skyblue;
+			background: #eef6f8;
 			margin: 2%;
-			border: 1px solid blue;
-			color: blue;
+			border: 1px solid #a7c4df;
+			color: #6093c6;
 			padding: 1% 2% 1% 2%;
 		}
 		#mainContant{
@@ -43,14 +43,27 @@
 		}
 		.links{
 			text-decoration: none;
+			color: #6093c6;
 		}
 		.clickableTags{
-			border: 1px solid blue;
-			border-radius: 5%;
-			background: skyblue; 
+			border: 1px solid #6093c6;
+			border-radius: 5px;
+			background: #eef6f8; 
 			margin: 1px;
 			padding: 2px;
 			display: inline-block;
+			transition: box-shadow 1s;
+			color: #6093c6;
+		}
+		.clickableTags:hover{
+			box-shadow: 1px 1px 1px #a7c4df;
+			cursor: pointer;
+		}
+		a{
+			color: #6093c6;
+		}
+		.text{
+			line-height: 200%;
 		}
 	</style>
 </head>
@@ -66,36 +79,36 @@
 			<div id="rightSideContent">
 				<div class="infoBox">
 					<b>Contact Information</b><br/>
-					Email : <a href="mailto: rahul.kumar@metacube.com" class="links">rahul.kumar@metacube.com</a><br/>
-					Mobile : <a href="tel: 918955678101" class="links">8955678101</a><br/>
-					Work Phone : XXXXXXXXXX<br/>
-					Internal Phone : XXXXXXXXXX<br/>
-					Skype : netsurferrahul<br/>
+					<div class="text">Email : <a href="mailto: rahul.kumar@metacube.com" class="links">rahul.kumar@metacube.com</a></div>
+					<div class="text">Mobile : <a href="tel: 918955678101" class="links">8955678101</a></div>
+					<div class="text">Work Phone : XXXXXXXXXX</div>
+					<div class="text">Internal Phone : XXXXXXXXXX</div>
+					<div class="text">Skype : netsurferrahul</div>
 				</div>
 				<div class="infoBox">
-					<b>General Information</b><br/>
-					Birthday : Dec 11, 1997<br/>
-					Middle Name : None<br/>
-					Departments : Computer Science & Engineering<br/>
-					Status : <address style="display:inline-block;">Hello</address><br/>
+					<b>General Information</b>
+					<div class="text">Birthday : Dec 11, 1997</div>
+					<div class="text">Middle Name : None</div>
+					<div class="text">Departments : Computer Science & Engineering</div>
+					<div class="text">Status : <address style="display:inline-block;">Hello</address></div>
 				</div>
 				<div class="infoBox">
 					<b>Additional Information</b><br/>
-					Other Websites : <span class="clickableTags"><a href="http://www.theworkingboy.com" class="links">http://www.theworkingboy.com</a></span><br/>
-					Skills : <span class="clickableTags" style="color:blue;">Java</span>
-							 <span class="clickableTags" style="color:blue">C++</span>
-							 <span class="clickableTags" style="color:blue">C Language</span>
-							 <span class="clickableTags" style="color:blue">HTML</span>
-							 <span class="clickableTags" style="color:blue">CSS</span>
-							 <span class="clickableTags" style="color:blue">PHP</span>
-							 <span class="clickableTags" style="color:blue">JavaScript</span><br/>
-					Intrests : <span class="clickableTags" style="color:blue;">Punjabi Songs</span>
-							 <span class="clickableTags" style="color:blue">Counter Strike</span>
-							 <span class="clickableTags" style="color:blue">Web Development</span>
-							 <span class="clickableTags" style="color:blue">Reading</span><br/>
-					Groups : <span class="clickableTags" style="color:blue">KTSU</span>
-							 <span class="clickableTags" style="color:blue">Web Freaks</span>
-							 <span class="clickableTags" style="color:blue">Study Smart</span><br/>
+					<div class="text">Other Websites : <span class="clickableTags"><a href="http://www.theworkingboy.com" class="links">http://www.theworkingboy.com</a></span></div>
+					<div class="text">Skills : <span class="clickableTags" >Java</span>
+							 <span class="clickableTags" >C++</span>
+							 <span class="clickableTags" >C Language</span>
+							 <span class="clickableTags" >HTML</span>
+							 <span class="clickableTags" >CSS</span>
+							 <span class="clickableTags" >PHP</span>
+							 <span class="clickableTags" >JavaScript</span></div>
+					<div class="text">Intrests : <span class="clickableTags" >Punjabi Songs</span>
+							 <span class="clickableTags" >Counter Strike</span>
+							 <span class="clickableTags" >Web Development</span>
+							 <span class="clickableTags" >Reading</span></div>
+					<div class="text">Groups : <span class="clickableTags" >KTSU</span>
+							 <span class="clickableTags" >Web Freaks</span>
+							 <span class="clickableTags" >Study Smart</span></div>
 				</div>
 			</div>
 		</div>
