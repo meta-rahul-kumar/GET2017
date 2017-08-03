@@ -52,7 +52,7 @@ input,select,textarea{
 input:invalid,select:invalid,textarea:invalid{
 	border-radius: 0px 5px 5px 0px;
 	border-top: 1px solid red;
-	border-right0: 1px solid red;
+	border-right: 1px solid red;
 	border-bottom: 1px solid red;
 	padding-left: 2%;
 	padding-right: 2%;
@@ -89,4 +89,18 @@ textarea:placeholder-shown{
 }
 .button-images{
 	vertical-align: middle;
+}
+.combine{
+	display: flex;
+	width: 100%;
+}
+.img-long{
+	width: 7%;
+	border-top: 1px solid grey;
+	border-left: 1px solid grey;
+	border-bottom: 1px solid grey;
+	border-radius: 5px 0px 0px 5px;
+}
+.description{
+	flex:1;
 }
