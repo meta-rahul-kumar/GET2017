@@ -1,0 +1,142 @@
+
+		body{
+			margin: 2% 2% 2% 2%;
+			background: url('../images/background.jpg');	
+			font-family: 'Open Sans', serif;
+		}
+		.mainContainer{
+			background: white;
+			-webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.4);
+			border-radius: 10px;
+		}
+		#mainHeader{
+			border-radius: 10px 10px 0px 0px;
+			background: #afd1ed;
+			padding: 2%;
+		}
+
+		nav{
+			  background: #92abb0;
+			  padding: 2px;
+		}
+
+		.navLinks{
+			text-decoration: none;
+			color: black;
+			display: inline-block;
+			padding: 8px;
+			transition: 2s background;
+		}
+
+		.active{
+			text-decoration: none;
+			color: black;
+			display: inline-block;
+			padding: 8px;
+			border: 1px solid black;
+			background: #72afdf;
+		}
+
+		.navLinks:hover{
+			text-decoration: none;
+			color: black;
+			display: inline-block;
+			padding: 8px;
+			background: #72afdf;
+		}
+
+		.mainContent{
+
+			display: flex;
+			padding: 2% 2% 2% 2%;
+		}
+
+		.leftbar{
+			width: 30%;
+		}
+
+		.rightbar{
+			width: 30%;
+		}
+
+		.midContent{
+			flex: 1;
+			-webkit-flex : 1;
+			-moz-flex: 1;
+			-o-flex: 1;
+		}
+
+		.box{
+			margin-bottom: 4%;
+			width:90%;
+			border: 2px solid rgba(145,170,175,0.4);
+			border-radius: 10px;
+			background: #fafcfb;
+		}
+
+		.boxHeader,.boxHeader2{
+			margin: 2%;
+			background: #d9e9f4;
+			padding: 3%;
+			border-radius: 5px;
+			color: black;
+			font-weight: bold;
+		}
+		
+		.boxHeader-type-two{
+			margin: 2%;
+			background: #d9e9f4;
+			padding: 3%;
+			border-radius: 5px;
+			color: black;
+			font-weight: bold;
+			background: #e2e7ea;
+		}
+
+		.menuList{
+			list-style-type: none;
+		}
+		.menuItem{
+			margin: 2%;
+			padding: 3%;
+			color: black;
+		}
+		.activeItem{
+			background: #d9e9f4;
+			color: #73afe2;
+		}
+
+		.text{
+			padding: 2%;
+		}
+		.head-text{
+			padding: 2% 2% 0% 2%;
+		}
+		.searchbox{
+			width: 100%;
+			border: 1px solid #90a9ad;
+			height: 30px;
+		}
+		.button{
+			background : #90a9ad;
+			border: 0px solid black;
+			padding: 2%;
+			border-radius: 5px;
+		}
+		ul{
+			list-style-type: none;
+			margin-left: -10%;
+		}
+		a{
+			display: inline-block;
+			color: #90a9ad;
+		}
+		footer{
+			background: rgb(241,238,233);
+			border-radius: 0px 0px 10px 10px;
+			text-align: center;
+			padding: 2%;
+		}
+		.line-text{
+			padding-left: 2%;
+		}
