@@ -95,6 +95,7 @@ textarea:placeholder-shown{
 	width: 100%;
 }
 .img-long{
+	min-width: 22px;
 	width: 7%;
 	border-top: 1px solid grey;
 	border-left: 1px solid grey;
