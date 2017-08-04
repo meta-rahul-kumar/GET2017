@@ -33,7 +33,7 @@ body{
 	background: rgb(237,237,237);
 	width:16px;
 	height:16px;
-	padding: 1%;
+	padding: 2% 3% 2% 3%;
 	border-top: 1px solid grey;
 	border-left: 1px solid grey;
 	border-bottom: 1px solid grey;
@@ -44,7 +44,10 @@ input,select,textarea{
 	border: 1px solid grey;
 	padding-left: 2%;
 	padding-right: 2%;
-	width: 40%;
+	width: 70%;
+}
+input[type=radio]{
+	width: auto;
 }
 .clear{
 	clear: both;
@@ -75,7 +78,6 @@ input:invalid,select:invalid,textarea:invalid{
 }
 .radio-options{
 	display: block;
-
 }
 
 #textarea > img {
@@ -95,13 +97,22 @@ textarea:placeholder-shown{
 	width: 100%;
 }
 .img-long{
-	min-width: 22px;
-	width: 7%;
 	border-top: 1px solid grey;
 	border-left: 1px solid grey;
 	border-bottom: 1px solid grey;
 	border-radius: 5px 0px 0px 5px;
+	padding: 2% 3% 2% 3%;
+}
+.imgs{
+	padding-top: 45%;
+	margin:auto;
 }
 .description{
 	flex:1;
+}
+.text{
+	display: inline;
+}
+.radio{
+	display: inline;
 }
