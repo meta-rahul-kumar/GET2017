@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>HTML5 Storage Demonstration</title>
+	<link rel="icon" type="text/css" href="images/fevicon.png">
+	<script src="js/storage.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="check();">
+	<div id="Instruction-layer">
+		<div class="instruction-head">
+			Instructions
+		</div>
+		<div class="instruction-body">
+			<div class="instruction">1. First Enter the Login Email</div>
+			<div class="instruction">2. Now Hit the "Save the login info" button</div>
+			<div class="instruction">3. Now you will display two button - (1) Login using Old Info (2) Remove Old Login Info</div>
+			<div class="instruction">4. Now Hit the "Login using Old Info" button to login using saved Details</div>
+			<div class="instruction">5. Now Hit the "Remove Old Login Info" button to remove login details</div>
+			<button type="button" class="instruction-button" id="instruction" onclick="gotInstruction();">I Got It !!</button>
+		</div>
+	</div>
+	<div id="container">
+		<div class="container-body">
+			<p id="msg">Hello Guest !!</p>
+			<div id="login-box">
+				<div class="left-box">
+					<input type="email" placeholder="Enter Your Login Email" id="textbox"/>
+					<button type="button" id="save" onclick="saveStore();" >Save the new Login Info</button>
+					<div id="err-msg"></div>
+				</div>
+				<div class="right-box">
+					<button type="button" id="get" onclick="getStore();" >Login using Old Info</button>
+					<button type="button" id="remove" onclick="removeLogin();" >Remove Old Login Info</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

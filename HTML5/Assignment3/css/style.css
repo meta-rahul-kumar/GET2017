@@ -1,0 +1,106 @@
+body{
+	background: #e37222;
+	font-family: 'Open Sans', serif;
+}
+#maincontainer{
+	position: fixed;
+	width: 20%;
+	height: 50%;
+	bottom: 0;
+	border: 1px solid rgba(8,137,158,0.7);
+	border-radius: 5px 5px 0px 0px;
+	color: rgba(8,137,158,0.7);
+	font-weight: bold;
+}
+#container{
+	position: fixed;
+	background: rgba(8,137,158,0.7);
+	width: 20%;
+	margin: auto;
+	border-radius: 5px 5px 0px 0px;
+	margin-top: 10%;
+	bottom: 0;
+}
+#container-two{
+	position: fixed;
+	height: 50%;
+	border: 1px solid rgba(8,137,158,0.7);
+	width: 20%;
+	margin: auto;
+	border-radius: 5px 5px 0px 0px;
+	margin-top: 10%;
+	bottom: 0;
+	right: 2%;
+	color: rgba(8,137,158,0.7);
+	font-weight: bold;
+}
+#container-head{
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	background: rgba(8,137,158,0.7);
+	padding: 2%;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid black;
+}
+.left-chat{
+	position: relative;
+	background: rgba(8,137,158,0.7);
+	float: left;
+	width: 57%;
+	padding: 2%;
+	border-radius: 5px;
+	margin: 1%;
+	color: white;
+	display: inline;
+}
+.right-chat{
+	position: relative;
+	background: rgba(8,137,158,0.7);
+	float: right;
+	width: 57%;
+	padding: 2%;
+	border-radius: 5px;
+	margin: 1%;
+	color: white;
+	display: inline;
+}
+.left-chat > .time, .right-chat > .time {
+	font-style: italic;
+	font-size: 9px;
+}
+.user-img{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+}
+.left-chat-user > .msg-img{
+	width: 20px;
+	height: 20px;
+	float: right;
+	vertical-align: middle;
+}
+.right-chat-user > .msg-img{
+	width: 20px;
+	height: 20px;
+	float: left;
+	vertical-align: middle;
+}
+.left-chat-user{
+	display: inline;
+	float: left;
+}
+.right-chat-user{
+	display: inline;
+	float: right;
+}
+.clear{
+	clear: both;
+}
+.msgbox{
+	width:90%;
+	height: 30px;
+	border: 0px;
+	padding: 1% 5% 1% 5%;
+}
