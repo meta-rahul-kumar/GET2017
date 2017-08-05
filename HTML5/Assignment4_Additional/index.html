@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Cricket Game</title>
+	<link rel="icon" type="text/css" href="images/fevicon.png">
+	<script src="js/storage.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="check();">
+	<div class="bat"></div>
+	<div class="ball"></div>
+	<div id="container">
+		<div class="container-body">
+			<p id="msg">Hello Guest !!</p>
+			<div id="login-box">
+				<div class="left-box">
+					<input type="text" placeholder="Enter Your Name" id="textbox"/>
+					<button type="button" id="save" onclick="saveStore();" >Save and Play</button>
+					<div id="err-msg"></div>
+					<div id="cricket-counter" onclick="getHit();">
+						<div id="cricket-counter-head">Hit Click to play a shot</div>
+						<div id="cricket-counter-body"></div>
+					</div>
+					<div id="notification">
+
+					</div>
+				</div>
+				<div class="right-box">
+					<div id="cricket-scorecard">
+						<div id="cricket-scorecard-head">Score Card</div>
+						<div id="cricket-scorecard-body"></div>
+					</div>
+					<div id="cricket-highscore">
+						<div id="cricket-highscore-head">Hight Score</div>
+						<div id="high-user">High name</div>
+						<div id="cricket-highscore-body"></div>
+					</div>
+					<div id="cricket-ball-head">Ball To Ball</div>
+					<div id="ball-to-ball">
+					</div>
+					<button type="button" id="remove" onclick="removeLogin();" >Start New Game</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
