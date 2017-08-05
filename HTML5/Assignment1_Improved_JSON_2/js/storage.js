@@ -10,7 +10,7 @@ function selectLogin(id) {
 
 	text.value = id.id;
 
-	errmsg.innerHTML = "Please Enter Login Password";
+	errmsg.innerHTML = "<img src='images/warning.png' class='old-usr-img' /> Please Enter Login Password";
 	errmsg.style.display = "block";
 	document.getElementById("old-logins").style.display = "none";
 	backToMain();
@@ -107,7 +107,7 @@ function saveStore() {
 			     	break;
 			     } else if (eid == text.value && epass != pass.value) {
 			     	document.getElementById("err-msg").style.display="block";
-					document.getElementById("err-msg").innerHTML = "Please check your password !!";
+					document.getElementById("err-msg").innerHTML = "<img src='images/warning.png' class='old-usr-img' />  Please check your password !!";
 					flag = 1;
 			     }
 
@@ -121,10 +121,13 @@ function saveStore() {
 			if (flag != 1) {
 				if (atpos<1 || dotpos<atpos+2 || dotpos+2>=text.value.length) {
 		    	document.getElementById("err-msg").style.display="block";
-				document.getElementById("err-msg").innerHTML = "Please enter a valid email !!";
-				} else if(text.value === "") {
+				document.getElementById("err-msg").innerHTML = "<img src='images/warning.png' class='old-usr-img' />  Please enter a valid email !!";
+				} else if (text.value === "") {
 					document.getElementById("err-msg").style.display="block";
-					document.getElementById("err-msg").innerHTML = "Login field can't be empty !!";
+					document.getElementById("err-msg").innerHTML = "<img src='images/warning.png' class='old-usr-img' />  Login field can't be empty !!";
+				} else if (pass.value === "") {`
+					document.getElementById("err-msg").style.display="block";
+					document.getElementById("err-msg").innerHTML = "<img src='images/warning.png' class='old-usr-img' />  Password field can't be empty !!";
 				} else {
 					if (JSON.parse(localStorage.getItem("logins")) != null) {
 						var login = JSON.parse(localStorage.getItem("logins"));
