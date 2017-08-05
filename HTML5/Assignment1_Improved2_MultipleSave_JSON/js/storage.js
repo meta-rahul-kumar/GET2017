@@ -6,30 +6,29 @@ function selectLogin(id){
 	var text = document.getElementById("textbox");
 	var pass = document.getElementById("password");
 	var errmsg = document.getElementById("err-msg");
-	text.value = id.innerHTML;
+	text.value = id.id;
 	errmsg.innerHTML = "Please Enter Login Password";
 	errmsg.style.display = "block";
 	document.getElementById("old-logins").style.display = "none";
 }
 
 function deleteLogin(id){
-	alert(id.id);
 	var i = 0;
 	var data = JSON.parse(localStorage.getItem("logins")).logins;
-	var vata = localStorage.getItem("logins");
+	var hold_data = JSON.parse(localStorage.getItem("logins")).logins;
 	for(i in data)
 	{
-	     if(data.email == id.id){
+	     if(data[i].email == id.id){
 	     	break;
 	     }
 	}
-	alert(i);
 
 	data.splice(i, 1);
+	var newObj = {"logins"  : data};
 	var errmsg = document.getElementById("err-msg");
-	errmsg.innerHTML = vata;
-	localStorage.removeItem("logins");
-	localStorage.setItem("logins",JSON.stringify(vata));
+	localStorage.setItem("logins",JSON.stringify(newObj));
+	alert("Remove login with email "+ id.id);
+	location.reload();
 }
 
 function getStore(){
@@ -46,7 +45,7 @@ function getStore(){
 		for(var i in data)
 		{
 		     var eid = data[i].email;
-		     document.getElementById("old-logins").innerHTML += '<div class="grey" id="'+ eid +'" onclick="selectLogin(this);" >' + eid +'</div>'; 
+		     document.getElementById("old-logins").innerHTML += '<div class="grey" id="'+ eid +'" onclick="selectLogin(this);" ><img class="old-usr-img" src="images/user.png" /> ' + eid +'</div>'; 
 		}
 	}else{
 		alert("There is no Login");
@@ -71,7 +70,7 @@ function saveStore(){
 			     var epass = data[i].pass;
 			     if(eid == text.value && epass == pass.value){
 			     	var msg = document.getElementById("msg");
-					msg.innerHTML = "Hello "+ localStorage.getItem("login") + " !!";
+					msg.innerHTML = "Hello "+ eid + " !!";
 			     	flag = 1;
 			     	break;
 			     }
@@ -132,6 +131,6 @@ function removeLogin(){
 	for(var i in data)
 	{
 	     var eid = data[i].email;
-	     document.getElementById("cancel-old-logins").innerHTML += '<div class="grey" >' + eid +' <div class="close-box" id="'+ eid +'" onclick="deleteLogin(this);">X</div></div>'; 
+	     document.getElementById("cancel-old-logins").innerHTML += '<div class="grey" ><img class="old-usr-img" src="images/user.png"> ' + eid +' <div class="close-box" id="'+ eid +'" onclick="deleteLogin(this);">X</div></div>'; 
 	}
 }
