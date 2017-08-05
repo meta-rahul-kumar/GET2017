@@ -22,11 +22,13 @@ body{
 	color: white;
 	padding: 1%;
 	font-weight: bold;
+	cursor: pointer;
 }
 .close-box{
 	background: red;
 	display: inline;
 	float: right;
+	padding: 0% 1% 0% 1%;
 }
 #old-logins-head, #cancel-old-logins-head{
 	color: white;
@@ -99,6 +101,9 @@ button[id=save]{
 	color: white;
 	font-weight: bold;
 	transition: box-shadow 0.4s;
+}
+.old-usr-img{
+	vertical-align: middle;
 }
 button[id=remove]{
 	margin: auto;
