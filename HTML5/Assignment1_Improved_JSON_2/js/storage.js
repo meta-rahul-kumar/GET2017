@@ -125,7 +125,7 @@ function saveStore() {
 				} else if (text.value === "") {
 					document.getElementById("err-msg").style.display="block";
 					document.getElementById("err-msg").innerHTML = "<img src='images/warning.png' class='old-usr-img' />  Login field can't be empty !!";
-				} else if (pass.value === "") {`
+				} else if (pass.value === "") {
 					document.getElementById("err-msg").style.display="block";
 					document.getElementById("err-msg").innerHTML = "<img src='images/warning.png' class='old-usr-img' />  Password field can't be empty !!";
 				} else {
