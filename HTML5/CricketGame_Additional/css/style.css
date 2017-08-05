@@ -1,0 +1,263 @@
+/*********************************** Animations Start*************************/
+
+@keyframes bat {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-50deg);}
+}
+
+@keyframes ball {
+    0% {transform: translate(0px,0px);}
+    25% {transform: translate(750px,-600px);}
+    100% {transform: translate(1500px,0px);}
+}
+
+/*********************************** Animations Ends*************************/
+
+/*********************************** Body CSS Start *************************/
+
+body {
+	background-image: url('../images/back.jpg');
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/*********************************** Body CSS Ends *************************/
+
+/*********************************** Input Type CSS Start*************************/
+
+button[id=save], button[id=get], button[id=remove], input {
+	display: block;
+	padding: 2%;
+	margin: 2%;
+}
+
+input {
+	width: 80%;
+	border-radius: 5px;
+	border: 1px solid black;
+	background: rgba(255,255,255,0.5);
+	color: black;
+	transition: box-shadow 0.4s;
+}
+
+button[id=save] {
+	background: rgba(0,128,128,0.6);
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	font-weight: bold;
+	transition: box-shadow 0.4s;
+}
+
+button[id=remove] {
+	margin: auto;
+	background: rgba(255,0,0,0.4);
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	font-weight: bold;
+	width: 70%;
+	transition: box-shadow 0.4s;
+}
+
+button[id=get] {
+	margin: auto;
+	background: rgba(0,128,0,0.4);
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	font-weight: bold;
+	width: 70%;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	transition: box-shadow 0.4s;
+}
+
+button[id=save]:hover, button[id=remove]:hover, button[id=get]:hover, input[type=email]:focus {
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+/*********************************** Input Type CSS Ends *************************/
+
+/*********************************** Scrollbar CSS Starts *************************/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+/*********************************** Scrollbar CSS Ends *************************/
+
+/*********************************** General CSS Start *************************/
+
+.bat {
+	background-image: url('../images/bat.png');
+	height: 256px;
+	width: 256px;
+	background-position: top left;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 60px;
+	animation-name: bat;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+.ball {
+	background-image: url('../images/ball.png');
+	height: 64px;
+	width: 64px;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 60px;
+	animation-name: ball;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    z-index: -1;
+}
+
+#container {
+	padding-top: 15%;
+}
+
+.container-body {
+	z-index: 1;
+	width: 40%;
+	background: rgba(255,255,255,0.8);
+	border-radius: 5px 5px 5px 5px;
+	padding: 1%;
+	margin: auto;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+}
+
+#msg {
+	background: rgba(0,0,0,0.5);
+	padding: 1%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+#cricket-counter {
+	cursor: pointer;
+}
+
+#cricket-counter-head {
+	background: rgba(0,0,0,0.5);
+	padding: 1%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#cricket-counter-body {
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
+	padding: 5%;
+	background: rgba(0,0,0,0.2);
+}
+
+#cricket-scorecard-head, #cricket-highscore-head, #cricket-ball-head {
+	background: rgba(0,0,0,0.5);
+	padding: 1%;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#cricket-scorecard-body, #cricket-highscore-body {
+	border-bottom: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-size: 50px;
+	padding: 5%;
+	background: rgba(0,0,0,0.2);
+}
+
+#high-user {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	font-weight: bold;
+	background: rgba(0,0,0,0.9);
+}
+
+#login-box {
+	display: flex;
+}
+
+.left-box {
+	flex: 1;
+}
+
+.right-box {
+	flex: 1;
+}
+
+#err-msg {
+	color: white;
+	background: red;
+	font-weight: bold;
+	padding: 2%;
+}
+
+#ball-to-ball {
+	width: 400px;
+	white-space: nowrap;
+	overflow-x: auto;
+	color: white;
+	font-weight: bold;
+	background: rgba(0,0,0,0.3);
+	padding: 2%;
+
+}
+
+#notification {
+	position: fixed;
+	background: rgba(255,0,0,0.4);
+	top: 1%;
+	left: 1%;
+	width: 20%;
+	padding: 2%;
+	border-radius: 5px 5px 5px 5px;
+	color: white;
+	font-weight: bold;
+}
+
+/*********************************** General CSS Ends *************************/

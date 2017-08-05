@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Drag and Drop</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/drag.js"></script>
+</head>
+<body>
+<div id="maincontainer" ondrop="drop(event)" ondragover="allowDrop(event)">
+	Drop Chatbox Here
+	<div id="container" draggable="true" ondragstart="drag(event)" id="drag1">
+		<div id="container-head">Chat Box</div>
+		<div class="left-chat-user">
+			<img src="images/ph.jpg" class="user-img" />
+			<img src="images/left.png" class="msg-img" />
+		</div>
+		<div class="talk-bubble tri-right left-top">
+		<div class="left-chat">
+			Hello Rahul
+			<div class="time">7:04 PM</div>
+		</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="right-chat-user">
+			<img src="images/photo.png" class="user-img" />
+			<img src="images/right.png" class="msg-img" />
+		</div>
+		<div class="right-chat">
+			Hello Nisha
+			<div class="time">7:05 PM</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="left-chat-user">
+			<img src="images/ph.jpg" class="user-img" />
+			<img src="images/left.png" class="msg-img" />
+		</div>
+		<div class="left-chat">
+			How are you ?
+			<div class="time">7:07 PM</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="right-chat-user">
+			<img src="images/photo.png" class="user-img" />
+			<img src="images/right.png" class="msg-img" />
+		</div>
+		<div class="right-chat">
+			I am fine. what about you ?
+			<div class="time">7:08 PM</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="left-chat-user">
+			<img src="images/ph.jpg" class="user-img" />
+			<img src="images/left.png" class="msg-img" />
+		</div>
+		<div class="left-chat">
+			I am also fine. when will you come to home ?
+			<div class="time">8:00 PM</div>
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div class="right-chat-user">
+			<img src="images/photo.png" class="user-img" />
+			<img src="images/right.png" class="msg-img" />
+		</div>
+		<div class="right-chat">
+			will come soon. bye
+			<div class="time">8:20 PM</div>
+		</div>
+		<div class="textbox">
+			<input type="text" name="msgbox" id="msgbox" class="msgbox" />
+		</div>
+	</div>
+</div>
+	<div id="container-two" ondrop="drop(event)" ondragover="allowDrop(event)">
+		Drop Chatbox Here
+	</div>
+</body>
+</html>
