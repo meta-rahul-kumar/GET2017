@@ -32,7 +32,7 @@ function deleteLogin(id) {
 	var newObj = {"logins"  : data}; // creates new object using data JSON array
 	var errmsg = document.getElementById("err-msg");
 	localStorage.setItem("logins",JSON.stringify(newObj)); 
-	alert("Remove login with email "+ id.id);
+	alert("Removed login with email "+ id.id);
 	location.reload();
 }
 
