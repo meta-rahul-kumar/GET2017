@@ -38,17 +38,19 @@
 		
 		<!-- Contact Form Starts-->
 		<form method="POST" action="#">
-			<table align="center">
+			<table align="center" width="50%">
 				<tr>
 					<td width="20%">Name</td>
 					<td width="40%"><input type="text" name="username" id="username" placeholder="Name" onkeyup="validateOnKeyPress(id,event);"  autofocus required /></td>
 					<td  width="40%" id="name-warning" class="warning"></td>
 				</tr>	
+				<div class="clear"></div>
 				<tr>
 					<td width="20%">Email</td>
 					<td width="40%"><input type="email" name="useremail" id="useremail" placeholder="Email" onkeyup="validateOnKeyPress(id,event);" required /></td>
 					<td width="40%" id="email-warning" class="warning"></td>
 				</tr>
+				<div class="clear"></div>
 				<tr>
 					<td width="20%">City</td>
 					<td width="40%">
@@ -62,6 +64,7 @@
 					</td>
 					<td width="40%" id="city-warning" class="warning"></td>
 				</tr>
+				<div class="clear"></div>
 				<tr>
 					<td></td>
 					<td><input type="text" id="citymsg" placeholder="" disabled /></td>
@@ -71,11 +74,13 @@
 					<td width="40%"><input type="text" name="userorg" id="userorg" placeholder="Organisation Name" onkeyup="validateOnKeyPress(id,event);" required /></td>
 					<td width="40%" id="org-warning" class="warning"></td>
 				</tr>
+				<div class="clear"></div>
 				<tr>
 					<td width="10%">Contact Number</td>
 					<td width="40%"><input type="text" name="userphone" id="userphone" placeholder="Contact Number" onkeyup="validateOnKeyPress(id,event);" maxlength="10" minlength="10" required /></td>
 					<td width="40%" id="contact-warning" class="warning"></td>
 				</tr>
+				<div class="clear"></div>
 				<tr>
 					<td width="20%">Message</td>
 					<td width="40%">
@@ -83,6 +88,7 @@
 					</td>
 					<td width="40%" id="message-warning" class="warning"></td>
 				</tr>
+				<div class="clear"></div>
 				<tr>
 					<td colspan="2"><input type="submit" name="submit" value="Submit"></td>
 				</tr>
