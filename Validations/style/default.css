@@ -1,7 +1,9 @@
 .warning {
-	display: none;
-	color: red;
+	visibility: hidden;
+	color: white;
+	font-weight: bold;
 	width: 100%;
+	z-index: 1;
 }
 
 input[type=text],input[type=email] {
@@ -13,5 +15,20 @@ select {
 }
 
 #citymsg{
-	display: none;
+	visibility: hidden;
+}
+.box{
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+	z-index: 1;
+	float: left;
+	padding: 1%;
+	background: rgba(255,0,0,0.5);
+	margin-left: 1%;
+	background-image: url('images/tooltip.png');
+}
+td{
+	padding: 1%;
+}
+.clear{
+	clear: both;
 }
