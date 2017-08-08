@@ -51,6 +51,13 @@ function checkUsername(id){
 			changeBorder(id, "1px solid red");
 			changeStyle("name-warning", "inline-block");
 			setInnerHTML("name-warning", "Name length must be less than 20 chars.");
+		}else if(getValue(id).match(/\d+/g) != null || getValue(id).match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) != null){
+			changeBorder(id, "1px solid red");
+			changeStyle("name-warning", "inline-block");
+			setInnerHTML("name-warning", "Name only have chars.");
+		}else{
+			changeStyle("name-warning", "none");
+			changeBorder(id, "1px solid #a9a9a9");
 		}
 	}
 }
