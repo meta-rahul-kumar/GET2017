@@ -1,5 +1,13 @@
-.warning{
+.warning {
 	display: none;
 	color: red;
+	width: 100%;
+}
+
+input[type=text],input[type=email] {
+	width: 100%;
+}
+
+select {
 	width: 100%;
 }
