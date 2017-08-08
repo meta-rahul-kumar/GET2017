@@ -4,6 +4,7 @@
 	font-weight: bold;
 	width: 100%;
 	z-index: 1;
+	padding: 1%;
 }
 
 input[type=text],input[type=email] {
@@ -21,10 +22,11 @@ select {
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.4);
 	z-index: 1;
 	float: left;
-	padding: 1%;
 	background: rgba(255,0,0,0.5);
 	margin-left: 1%;
 	background-image: url('images/tooltip.png');
+	padding-left: 1%;
+	padding-right: 1%;
 }
 td{
 	padding: 1%;
