@@ -88,6 +88,7 @@ function checkEmail(id){
 function checkUserCity(id) {
 	if (id === "usercity" && getValue(id) != "") {
 		changeStyle("city-warning", "none");
+		changeStyle("citymsg","block");
 		setValue('citymsg', "You have selected city : " + getValue(id));
 	} else if (id === "usercity" && getValue(id) == "") {
 		changeStyle("city-warning", "inline-block");
