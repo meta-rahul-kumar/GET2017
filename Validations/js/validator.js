@@ -37,7 +37,7 @@ function setValue(id,value){
 	Method changes the display type of a specific div.
 */
 function changeStyle(id,styleType){
-	document.getElementById(id).style.display = styleType;
+	document.getElementById(id).style.visibility = styleType;
 }
 
 /*
@@ -49,14 +49,14 @@ function checkUsername(id){
 		var nameLength = getLength(getValue(id));
 		if(nameLength > 20){
 			changeBorder(id, "1px solid red");
-			changeStyle("name-warning", "inline-block");
-			setInnerHTML("name-warning", "Name length must be less than 20 chars.");
+			changeStyle("name-warning", "visible");
+			setInnerHTML("name-warning", "<div class='box'>Name length must be less than 20 chars.</div>");
 		}else if(getValue(id).match(/\d+/g) != null || getValue(id).match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) != null){
 			changeBorder(id, "1px solid red");
-			changeStyle("name-warning", "inline-block");
-			setInnerHTML("name-warning", "Name only have chars.");
+			changeStyle("name-warning", "visible");
+			setInnerHTML("name-warning", "<div class='box'>Name only have chars.</div>");
 		}else{
-			changeStyle("name-warning", "none");
+			changeStyle("name-warning", "hidden");
 			changeBorder(id, "1px solid #a9a9a9");
 		}
 	}
@@ -71,11 +71,11 @@ function checkEmail(id){
 		var dotPos = getValue(id).lastIndexOf(".");
 
 		if (atPos < 1 || dotPos < atPos + 2 || dotPos + 2 >= getLength(getValue(id))) {
-			changeStyle("email-warning", "inline-block");
-			setInnerHTML("email-warning", "Please enter a valid email.");
+			changeStyle("email-warning", "visible");
+			setInnerHTML("email-warning", "<div class='box'>Please enter a valid email.</div>");
 			changeBorder(id, "1px solid red");
 		} else {
-			changeStyle("email-warning", "none");
+			changeStyle("email-warning", "hidden");
 			changeBorder(id, "1px solid #a9a9a9");
 		}
 	}
@@ -87,13 +87,14 @@ function checkEmail(id){
 */
 function checkUserCity(id) {
 	if (id === "usercity" && getValue(id) != "") {
-		changeStyle("city-warning", "none");
-		changeStyle("citymsg","block");
+		changeStyle("city-warning", "hidden");
+		changeStyle("citymsg","visible");
 		setValue('citymsg', "You have selected city : " + getValue(id));
 	} else if (id === "usercity" && getValue(id) == "") {
-		changeStyle("city-warning", "inline-block");
-		setInnerHTML("city-warning", "Please choose a city");
+		changeStyle("city-warning", "visible");
+		setInnerHTML("city-warning", "<div class='box'>Please choose a city</div>");
 		setValue('citymsg',"");
+		changeStyle("citymsg","hidden");
 	}
 }
 
@@ -102,11 +103,13 @@ function checkUserCity(id) {
 	Format : user organisation must only have chars.
 */
 function checkUserOrganisation(id) {
-	if (id === "userorg" && (getValue(id).match(/\d+/g) != null || getValue(id).match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) != null)) {
-		changeStyle("org-warning", "inline-block");
-		setInnerHTML("org-warning", "Organisation must contain only chars.");
-	} else {
-		changeStyle("org-warning", "none");
+	if (id === "userorg") {
+		if ((getValue(id).match(/\d+/g) != null || getValue(id).match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) != null)) {
+			changeStyle("org-warning", "visible");
+			setInnerHTML("org-warning", "<div class='box'>Organisation must contain only chars.</div>");
+		} else {
+			changeStyle("org-warning", "hidden");
+		}
 	}
 }
 
@@ -119,11 +122,11 @@ function checkUserPhone(id) {
 		var pattern = /^[789]\d{9}$/
 			if (pattern.test(getValue(id))) {
 				changeBorder(id, "1px solid #a9a9a9");
-				changeStyle("contact-warning", "none");
+				changeStyle("contact-warning", "hidden");
 			} else {
 				changeBorder(id, "1px solid red");
-				changeStyle("contact-warning", "inline-block");
-				setInnerHTML("contact-warning", "Please Enter a valid Number.");
+				changeStyle("contact-warning", "visible");
+				setInnerHTML("contact-warning", "<div class='box'>Please Enter a valid Number.</div>");
 			}
 	}
 }
@@ -136,10 +139,10 @@ function checkUserMessage(id) {
 	if (id === "usermessage") {
 		messageLength = getLength(getValue(id));
 		if (messageLength > 250) {
-			changeStyle("message-warning", "inline-block");
-			setInnerHTML("message-warning", "Message length should be less than 250 chars.");
+			changeStyle("message-warning", "visible");
+			setInnerHTML("message-warning", "<div class='box'>Message length should be less than 250 chars.</div>");
 		} else {
-			changeStyle("message-warning", "none");
+			changeStyle("message-warning", "hidden");
 		}
 	}
 }
