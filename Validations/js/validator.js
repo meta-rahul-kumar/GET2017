@@ -57,7 +57,7 @@ function checkUsername(id){
 			setInnerHTML("name-warning", "<div class='box'>Name only have chars.</div>");
 		}else{
 			changeStyle("name-warning", "hidden");
-			changeBorder(id, "1px solid #a9a9a9");
+			changeBorder(id, "thin solid #a9a9a9");
 		}
 	}
 }
@@ -76,7 +76,7 @@ function checkEmail(id){
 			changeBorder(id, "1px solid red");
 		} else {
 			changeStyle("email-warning", "hidden");
-			changeBorder(id, "1px solid #a9a9a9");
+			changeBorder(id, "thin solid #a9a9a9");
 		}
 	}
 }
@@ -89,10 +89,12 @@ function checkUserCity(id) {
 	if (id === "usercity" && getValue(id) != "") {
 		changeStyle("city-warning", "hidden");
 		changeStyle("citymsg","visible");
+		changeBorder(id, "thin solid #a9a9a9");
 		setValue('citymsg', "You have selected city : " + getValue(id));
 	} else if (id === "usercity" && getValue(id) == "") {
 		changeStyle("city-warning", "visible");
 		setInnerHTML("city-warning", "<div class='box'>Please choose a city</div>");
+		changeBorder(id, "1px solid red");
 		setValue('citymsg',"");
 		changeStyle("citymsg","hidden");
 	}
@@ -107,8 +109,10 @@ function checkUserOrganisation(id) {
 		if ((getValue(id).match(/\d+/g) != null || getValue(id).match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/) != null)) {
 			changeStyle("org-warning", "visible");
 			setInnerHTML("org-warning", "<div class='box'>Organisation must contain only chars.</div>");
+			changeBorder(id, "1px solid red");
 		} else {
 			changeStyle("org-warning", "hidden");
+			changeBorder(id, "thin solid #a9a9a9");
 		}
 	}
 }
@@ -121,7 +125,7 @@ function checkUserPhone(id) {
 	if (id === "userphone" && getValue(id).length) {
 		var pattern = /^[789]\d{9}$/
 			if (pattern.test(getValue(id))) {
-				changeBorder(id, "1px solid #a9a9a9");
+				changeBorder(id, "thin solid #a9a9a9");
 				changeStyle("contact-warning", "hidden");
 			} else {
 				changeBorder(id, "1px solid red");
@@ -141,8 +145,10 @@ function checkUserMessage(id) {
 		if (messageLength > 250) {
 			changeStyle("message-warning", "visible");
 			setInnerHTML("message-warning", "<div class='box'>Message length should be less than 250 chars.</div>");
+			changeBorder(id, "1px solid red");
 		} else {
 			changeStyle("message-warning", "hidden");
+			changeBorder(id, "thin solid #a9a9a9");
 		}
 	}
 }
