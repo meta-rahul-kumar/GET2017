@@ -10,29 +10,29 @@ function DoublyLinkedList() {
 		Method - add function to add a node to front of linkedlist 
 	*/
 	this.add = function(value) {
-		var node = new Node(value);
-		var currentNode = this.head;
 
-		// for first node .. when linkedlist is empty
+		var newNode = new Node(value);
+
+		// If list is empty, point head node to new node.
 		if (this.head == null) {
-			this.head = node;
-			this.tail = node;
+			this.head = newNode;
 			this.length++;
 
-			return node;
+		}
+		else{
+		// Otherwise, traverse to the end of list
+		var iterator = this.head;
+		while (iterator.next) {
+			iterator = iterator.next;
 		}
 
-		// Iterate to last node .. when linkedlist have some nodes
-		while (currentNode != this.tail) {
-			currentNode = currentNode.next;
-		}
-
-		currentNode.next = node;
-		node.back = currentNode;
-		this.tail = node;
+		// Point the last node to new node.
+		iterator.next = newNode;
+		newNode.back = iterator;
 		this.length++;
+		}
 
-		return node;
+		return newNode;
 	};
 
 	/*
