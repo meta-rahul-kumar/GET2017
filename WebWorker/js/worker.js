@@ -1,5 +1,5 @@
 /*
-	function to update Time
+	function to update Time after 2 minutes
 */
 function timedCount() {
 	var currentTime = new Date();
@@ -17,7 +17,7 @@ function timedCount() {
 	var secondIST = ISTTime.getSeconds();
 
     postMessage("<b>" + hoursIST + ":" + minutesIST + ":" + secondIST + " " + "</b>");
-    setTimeout("timedCount()", 3000);
+    setTimeout("timedCount()", 3600000); // timeout for 2 minutes
 }
 
 timedCount();
