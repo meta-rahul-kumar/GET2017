@@ -1,0 +1,669 @@
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.7490.0(10 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1123.5
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.1498.0
+
+SubTotal : 7490.0
+Product Level Discounts : 1123.5
+Order Level Discounts : 1498.0
+Total Discounts : 2621.5
+Total : 4868.5
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.2247.0(3 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.337.04999999999995
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.449.4
+
+SubTotal : 2247.0
+Product Level Discounts : 337.04999999999995
+Order Level Discounts : 449.4
+Total Discounts : 786.4499999999999
+Total : 1460.5500000000002
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.1916.0(4 x Rs.479.00)
+
+Product : 4010 - Numero Uno T-Shirt
+Cost : Rs.6450.0(5 x Rs.1290.00)
+
+Product : 4011 - Reebok Shirt (Blue)
+Cost : Rs.11543.0(7 x Rs.1649.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.400.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1750.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2450.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.4281.4
+
+SubTotal : Rs.21407.0
+Product Level Discounts : Rs.4824.7
+Order Level Discounts : Rs.4281.4
+Total Discounts : Rs.9106.099999999999
+Total : Rs.12300.900000000001
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.1916.0(4 x Rs.479.00)
+
+Product : 4010 - Numero Uno T-Shirt
+Cost : Rs.6450.0(5 x Rs.1290.00)
+
+Product : 4011 - Reebok Shirt (Blue)
+Cost : Rs.11543.0(7 x Rs.1649.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.400.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1750.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2450.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.4281.4
+
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.1916.0(4 x Rs.479.00)
+
+Product : 4010 - Numero Uno T-Shirt
+Cost : Rs.6450.0(5 x Rs.1290.00)
+
+Product : 4011 - Reebok Shirt (Blue)
+Cost : Rs.11543.0(7 x Rs.1649.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.400.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1750.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2450.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.4281.4
+
+SubTotal : Rs.21407.0
+Product Level Discounts : Rs.4824.7
+Order Level Discounts : Rs.4281.4
+Total Discounts : Rs.9106.1
+Total : Rs.12300.9
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+APPLIED PROMOTIONS/DISCOUNTS :
+
+
+SubTotal : Rs.0.0
+Product Level Discounts : Rs.0.0
+Order Level Discounts : Rs.0.0
+Total Discounts : Rs.0.0
+Total : Rs.0.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.0.0(0 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.0.0
+
+
+
+SubTotal : Rs.0.0
+Product Level Discounts : Rs.0.0
+Order Level Discounts : Rs.0.0
+Total Discounts : Rs.0.0
+Total : Rs.0.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.749.0(1 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.112.35
+
+
+
+SubTotal : Rs.749.0
+Product Level Discounts : Rs.112.35
+Order Level Discounts : Rs.0.0
+Total Discounts : Rs.112.35
+Total : Rs.636.65
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.1916.0(4 x Rs.479.00)
+
+Product : 4010 - Numero Uno T-Shirt
+Cost : Rs.6450.0(5 x Rs.1290.00)
+
+Product : 4011 - Reebok Shirt (Blue)
+Cost : Rs.11543.0(7 x Rs.1649.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.400.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1750.0
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2450.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.4281.4
+
+SubTotal : Rs.21407.0
+Product Level Discounts : Rs.4824.7
+Order Level Discounts : Rs.4281.4
+Total Discounts : Rs.9106.1
+Total : Rs.12300.9
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.3745.0(5 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.561.75
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.749.0
+
+SubTotal : Rs.3745.0
+Product Level Discounts : Rs.561.75
+Order Level Discounts : Rs.749.0
+Total Discounts : Rs.1310.75
+Total : Rs.2434.25
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.2395.0(5 x Rs.479.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.500.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.479.0
+
+SubTotal : Rs.2395.0
+Product Level Discounts : Rs.500.0
+Order Level Discounts : Rs.479.0
+Total Discounts : Rs.979.0
+Total : Rs.1416.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.7664.0(16 x Rs.479.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.1600.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.1532.8
+
+SubTotal : Rs.7664.0
+Product Level Discounts : Rs.1600.0
+Order Level Discounts : Rs.1532.8
+Total Discounts : Rs.3132.8
+Total : Rs.4531.2
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010], Reebok Sneakers[Code:1001]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.299.6
+
+SubTotal : Rs.1498.0
+Product Level Discounts : Rs.224.7
+Order Level Discounts : Rs.299.6
+Total Discounts : Rs.524.3
+Total : Rs.973.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.14980.0(20 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2247.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.2996.0
+
+SubTotal : Rs.14980.0
+Product Level Discounts : Rs.2247.0
+Order Level Discounts : Rs.2996.0
+Total Discounts : Rs.5243.0
+Total : Rs.9737.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.14980.0(20 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2247.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.2996.0
+
+SubTotal : Rs.14980.0
+Product Level Discounts : Rs.2247.0
+Order Level Discounts : Rs.2996.0
+Total Discounts : Rs.5243.0
+Total : Rs.9737.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.22470.0(30 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.3370.5
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.4494.0
+
+SubTotal : Rs.22470.0
+Product Level Discounts : Rs.3370.5
+Order Level Discounts : Rs.4494.0
+Total Discounts : Rs.7864.5
+Total : Rs.14605.5
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.14980.0(20 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.2247.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.2996.0
+
+SubTotal : Rs.14980.0
+Product Level Discounts : Rs.2247.0
+Order Level Discounts : Rs.2996.0
+Total Discounts : Rs.5243.0
+Total : Rs.9737.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+APPLIED PROMOTIONS/DISCOUNTS :
+
+
+SubTotal : Rs.0.0
+Product Level Discounts : Rs.0.0
+Order Level Discounts : Rs.0.0
+Total Discounts : Rs.0.0
+Total : Rs.0.0
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.7.5934369E7(101381 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1.139015535E7
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.1.51868738E7
+
+SubTotal : Rs.7.5934369E7
+Product Level Discounts : Rs.1.139015535E7
+Order Level Discounts : Rs.1.51868738E7
+Total Discounts : Rs.2.657702915E7
+Total : Rs.4.935733985E7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.3745.0(5 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.2395.0(5 x Rs.479.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.561.75
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.500.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.1228.0
+
+SubTotal : Rs.6140.0
+Product Level Discounts : Rs.1061.75
+Order Level Discounts : Rs.1228.0
+Total Discounts : Rs.2289.75
+Total : Rs.3850.25
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.749.0(1 x Rs.749.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.112.35
+
+
+
+SubTotal : Rs.749.0
+Product Level Discounts : Rs.112.35
+Order Level Discounts : Rs.0.0
+Total Discounts : Rs.112.35
+Total : Rs.636.65
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.2395.0(5 x Rs.479.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.500.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.778.6
+
+SubTotal : Rs.3893.0
+Product Level Discounts : Rs.724.7
+Order Level Discounts : Rs.778.6
+Total Discounts : Rs.1503.3
+Total : Rs.2389.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 4010 - Numero Uno T-Shirt
+Cost : Rs.6450.0(5 x Rs.1290.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.350.00 off on Reebok Shirt (Blue)[Code:4011], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.1750.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.1589.6
+
+SubTotal : Rs.7948.0
+Product Level Discounts : Rs.1974.7
+Order Level Discounts : Rs.1589.6
+Total Discounts : Rs.3564.3
+Total : Rs.4383.7
+###############################################################
+YOUR ORDER :
+###############################################################
+PURCHASED PRODUCTS :
+Product : 1001 - Reebok Sneakers
+Cost : Rs.1498.0(2 x Rs.749.00)
+
+Product : 1002 - Reebok T-Shirt (Black)
+Cost : Rs.958.0(2 x Rs.479.00)
+
+APPLIED PROMOTIONS/DISCOUNTS :
+15% off on Reebok T-Shirt (Black)[Code:1002], Numero Uno T-Shirt[Code:4010]
+Discount : Rs.224.7
+
+Rs.100.00 off on Reebok Sneakers[Code:1001], Reebok T-Shirt (Black)[Code:1002]
+Discount : Rs.200.0
+
+
+20% off on order Above Rs.1400.00
+Discount : Rs.491.2
+
+SubTotal : Rs.2456.0
+Product Level Discounts : Rs.424.7
+Order Level Discounts : Rs.491.2
+Total Discounts : Rs.915.9
+Total : Rs.1540.1
