@@ -17,7 +17,7 @@ function timedCount() {
 	var secondIST = ISTTime.getSeconds();
 
     postMessage("<b>" + hoursIST + ":" + minutesIST + ":" + secondIST + " " + "</b>");
-    setTimeout("timedCount()", 3600000); // timeout for 2 minutes
+    setTimeout("timedCount()", 120000); // timeout for 2 minutes
 }
 
 timedCount();
