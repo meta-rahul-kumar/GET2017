@@ -86,7 +86,7 @@ public class FileProductDAO implements ProductDAO{
 		return false;
 	}
 
-	public void addData(String filepath) {
+	public void addProductsFromFile(String filepath) {
 		// TODO Auto-generated method stub
 		ReadFromFile read = new ReadFromFile();
 		for(String lineNumber : read.ReadCsvFile(filepath)) {

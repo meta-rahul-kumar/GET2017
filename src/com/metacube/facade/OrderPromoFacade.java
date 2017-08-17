@@ -11,14 +11,14 @@ import com.metacube.models.OrderPromo;
  */
 public class OrderPromoFacade {
 	final static String FILEPATH = "src/OrderPromo.csv";
-	FileOrderPromoDAO getOrderPromo = FileOrderPromoDAO.getInstance();
+	FileOrderPromoDAO fileOrderPromoDAO = FileOrderPromoDAO.getInstance();
 		
 		OrderPromoFacade() {
-			getOrderPromo.addData(FILEPATH);
+			fileOrderPromoDAO.getOrderPromoFromFile(FILEPATH);
 		}
 		
-		void showOrderPromos() {
-			HashMap<Integer,OrderPromo> totalOrderPromos = getOrderPromo.getAllOrderPromos();
+		void showAllOrderPromos() {
+			HashMap<Integer,OrderPromo> totalOrderPromos = fileOrderPromoDAO.getAllOrderPromos();
 			System.out.println("Type \t Discount \t\t\t\t Applicable For");
 			
 			for (int key : totalOrderPromos.keySet()) {
@@ -28,7 +28,7 @@ public class OrderPromoFacade {
 		
 		
 		String ApplicablePromos(double totalOrderAmount) {
-			HashMap<Integer,OrderPromo> totalOrderPromos = getOrderPromo.getAllOrderPromos();
+			HashMap<Integer,OrderPromo> totalOrderPromos = fileOrderPromoDAO.getAllOrderPromos();
 			String appliedPromotions = "";
 			double discount = 0;
 			for (int iterator : totalOrderPromos.keySet()) {

@@ -12,31 +12,30 @@ import com.metacube.utils.Utils;
  */
 
 public class CartFacade {
-	final static String ERROR_MESSAGE_INVALID_INPUT = "It Must be an Integer and greater than 0. Please Try Again";
+	final static String ERROR_MESSAGE_INVALID_INPUT = "Please enter a valid product";
 	public static void main(String[] args) {
 		// reads all products from csv file
-		ProductFacade listProduct = new ProductFacade();
+		ProductFacade productFacade = new ProductFacade();
 		
 		//Show products
-		listProduct.showProducts();
+		productFacade.showAllProducts();
 		
 		// reads all product_level promo codes
-		ProductPromoFacade listProductPromo = new ProductPromoFacade();
+		ProductPromoFacade productPromoFacade = new ProductPromoFacade();
 		
 		System.out.println("------------------------------------------------------------------------------------");
 		// show product promos
-		listProductPromo.showProductPromos();
+		productPromoFacade.showAllProductPromos();
 		
 		// reads all ORDER_level promo codes
-		OrderPromoFacade listOrderPromo = new OrderPromoFacade();
+		OrderPromoFacade orderPromoFacade = new OrderPromoFacade();
 
 		System.out.println("------------------------------------------------------------------------------------");
 		// show product promos
-		listOrderPromo.showOrderPromos();
+		orderPromoFacade.showAllOrderPromos();
 		
 		int totalBuyingProduct = 0;
-		Utils validateByProductId = new Utils();
-		UserCartFacade userCart = new UserCartFacade();
+		UserCartFacade userCartFacade = new UserCartFacade();
 		Scanner scanner = new Scanner(System.in);
 		while (totalBuyingProduct <= 0) {
 			System.out.println("How Many Product do You want to buy ?");
@@ -66,7 +65,7 @@ public class CartFacade {
 				try {
 					productCode[iterator] = scanner.nextInt();
 					
-					if(!validateByProductId.validateProduct(listProduct.getProducts(), productCode[iterator])) {
+					if(!Utils.validateProduct(productFacade.getAllProducts(), productCode[iterator])) {
 						System.out.println("Invalid Product ID");
 						productCode[iterator] = 0;
 						continue;
@@ -98,11 +97,11 @@ public class CartFacade {
 					continue;
 				}
 			}
-			userCart.addProduct(productCode[iterator], productQuantity[iterator]);
-			userCart.showCart();
+			userCartFacade.addProduct(productCode[iterator], productQuantity[iterator]);
+			userCartFacade.showCart();
 		}
 		
 		scanner.close();
-		userCart.generateBill(); // to generate the bill
+		userCartFacade.generateBill(); // to generate the bill
 	}
 }

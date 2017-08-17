@@ -11,7 +11,7 @@ import com.metacube.utils.Utils;
  *
  */
 public class UserCartFacade {
-	InMemoryUserCartDAO getUserCart = InMemoryUserCartDAO.getInstance();
+	InMemoryUserCartDAO inMemoryUserCartDAO = InMemoryUserCartDAO.getInstance();
 	/**
 	 * empty UserCart Constructor
 	 */
@@ -26,12 +26,11 @@ public class UserCartFacade {
 	 * @return
 	 */
 	boolean addProduct(int productCode, int productQuantity) {
-		ProductFacade showProducts = new ProductFacade();
-		Utils validate = new Utils();
+		ProductFacade productFacade = new ProductFacade();
 		boolean isAddProductSuccess = false;
 		
-		if(validate.validateProduct(showProducts.getProducts() , productCode)) {
-			getUserCart.add(productCode, productQuantity);
+		if(Utils.validateProduct(productFacade.getAllProducts() , productCode)) {
+			inMemoryUserCartDAO.add(productCode, productQuantity);
 			isAddProductSuccess = true;
 		}
 		
@@ -42,7 +41,7 @@ public class UserCartFacade {
 	 * shows all the product in which exists in user cart
 	 */
 	void showCart() {
-		HashMap<Integer, Integer> allCartProducts = getUserCart.getAllCartProducts();
+		HashMap<Integer, Integer> allCartProducts = inMemoryUserCartDAO.getAllCartProducts();
 		ProductFacade showProducts = new ProductFacade();
 		System.out.println("Cart : ");
 		System.out.println("Code \t Name \t\t\t Price \t Quantity");
@@ -57,24 +56,13 @@ public class UserCartFacade {
 	 * generate the bill when user checkouts
 	 */
 	void generateBill() {
-		HashMap<Integer, Integer> allCartProducts = getUserCart.getAllCartProducts();
+		HashMap<Integer, Integer> allCartProducts = inMemoryUserCartDAO.getAllCartProducts();
 		ProductFacade showProducts = new ProductFacade();
-		ProductPromoFacade applicablePromos = new ProductPromoFacade();
 		OrderPromoFacade applicableOrderPromos = new OrderPromoFacade();
 		ReceiptGenerator generateReceipt = new ReceiptGenerator();
 		double totalOrderAmount = 0;
-		String toFile = "###############################################################";
-		System.out.println(toFile);
-		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "YOUR ORDER :";
-		System.out.println(toFile);
-		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "###############################################################";
-		System.out.println(toFile);
-		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "PURCHASED PRODUCTS :";
-		System.out.println(toFile);
-		generateReceipt.generateRecipt(toFile+"\n");
+		
+		String toFile = recieptFormate();
 		
 		for (int iterator : allCartProducts.keySet()) {
 			int quantity = allCartProducts.get(iterator);
@@ -92,15 +80,8 @@ public class UserCartFacade {
 		toFile = "APPLIED PROMOTIONS/DISCOUNTS :";
 		System.out.println(toFile);
 		generateReceipt.generateRecipt(toFile+"\n");
-		
-		Utils utils = new Utils();
-		
-		for (int iterator : allCartProducts.keySet()) {
-			int quantity = allCartProducts.get(iterator);
-			int requiredProductId = utils.changeToInteger(showProducts.getProductById(iterator+"").getCode());
-			double requiredProductPrice = utils.changeToDouble(showProducts.getProductById(iterator+"").getPrice());
-			productDiscountShow += applicablePromos.getApplicableProductPromo(requiredProductId, requiredProductPrice, quantity) + "\n\n";
-		}
+
+		productDiscountShow += iteratePromotion(allCartProducts);
 		
 		toFile = productDiscountShow;
 		System.out.println(toFile);
@@ -128,20 +109,53 @@ public class UserCartFacade {
 		}
 		
 		totalDiscount = productLevelDiscount + orderLevelDiscount;
-		toFile = "SubTotal : Rs." + utils.roundNumber(totalOrderAmount);
+		toFile = "SubTotal : Rs." + Utils.roundNumber(totalOrderAmount);
 		System.out.println(toFile);
 		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "Product Level Discounts : Rs." + utils.roundNumber(productLevelDiscount) ;
+		toFile = "Product Level Discounts : Rs." + Utils.roundNumber(productLevelDiscount) ;
 		System.out.println(toFile);
 		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "Order Level Discounts : Rs." + utils.roundNumber(orderLevelDiscount);
+		toFile = "Order Level Discounts : Rs." + Utils.roundNumber(orderLevelDiscount);
 		System.out.println(toFile);
 		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "Total Discounts : Rs." + utils.roundNumber(totalDiscount);
+		toFile = "Total Discounts : Rs." + Utils.roundNumber(totalDiscount);
 		System.out.println(toFile);
 		generateReceipt.generateRecipt(toFile+"\n");
-		toFile = "Total : Rs." + utils.roundNumber((totalOrderAmount - totalDiscount));
+		toFile = "Total : Rs." + Utils.roundNumber((totalOrderAmount - totalDiscount));
 		System.out.println(toFile);
 		generateReceipt.generateRecipt(toFile+"\n");
+	}
+
+	private String recieptFormate() {
+		ReceiptGenerator generateReceipt = new ReceiptGenerator();
+		String toFile = "###############################################################";
+		System.out.println(toFile);
+		generateReceipt.generateRecipt(toFile+"\n");
+		toFile = "YOUR ORDER :";
+		System.out.println(toFile);
+		generateReceipt.generateRecipt(toFile+"\n");
+		toFile = "###############################################################";
+		System.out.println(toFile);
+		generateReceipt.generateRecipt(toFile+"\n");
+		toFile = "PURCHASED PRODUCTS :";
+		System.out.println(toFile);
+		generateReceipt.generateRecipt(toFile+"\n");
+		
+		return toFile;
+	}
+
+	private String iteratePromotion(HashMap<Integer, Integer> allCartProducts) {
+		String productDiscountShow ="";
+		ProductFacade showProducts = new ProductFacade();
+		ProductPromoFacade applicablePromos = new ProductPromoFacade();
+		
+		for (int iterator : allCartProducts.keySet()) {
+			int quantity = allCartProducts.get(iterator);
+			int requiredProductId = Utils.changeToInteger(showProducts.getProductById(iterator+"").getCode());
+			double requiredProductPrice = Utils.changeToDouble(showProducts.getProductById(iterator+"").getPrice());
+			productDiscountShow += applicablePromos.getApplicableProductPromo(requiredProductId, requiredProductPrice, quantity) + "\n\n";
+		}
+		
+		return productDiscountShow;
 	}
 }

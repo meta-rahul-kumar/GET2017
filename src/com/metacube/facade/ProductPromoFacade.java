@@ -10,23 +10,23 @@ import com.metacube.models.ProductPromo;
  *
  */
 public class ProductPromoFacade {
-	FileProductPromoDAO getProductPromos = FileProductPromoDAO.getInstance();
+	FileProductPromoDAO fileProductPromoDAO = FileProductPromoDAO.getInstance();
 	final static String FILEPATH = "src/ProductPromo.csv";
 	
 	/**
 	 * ProductPromos Constructor which reads the ProductPromo.csv file and stores it in totalProductPromos HashMap
 	 */
 	ProductPromoFacade() {
-		getProductPromos.addData(FILEPATH);
+		fileProductPromoDAO.addData(FILEPATH);
 	}
 	
 	/**
 	 * Show all Product Level Promotions
 	 */
-	void showProductPromos() {
+	void showAllProductPromos() {
 		HashMap<Integer, ProductPromo> allProductPromos = new HashMap<>();
 		
-		allProductPromos = getProductPromos.getAllProductPromos();
+		allProductPromos = fileProductPromoDAO.getAllProductPromos();
 		System.out.println("Type \t Discount \t\t\t\t Applicable For");
 		
 		for (int key : allProductPromos.keySet()) {
@@ -46,7 +46,7 @@ public class ProductPromoFacade {
 	String getApplicableProductPromo(int productId, double price, int quantity) {
 		HashMap<Integer, ProductPromo> allProductPromos = new HashMap<>();
 		HashMap<String, HashMap<String, String>> availPromoTypes = new HashMap<>();
-		allProductPromos = getProductPromos.getAllProductPromos();
+		allProductPromos = fileProductPromoDAO.getAllProductPromos();
 		String result = "";
 		
 		for (int promoKey : allProductPromos.keySet() ) {
@@ -117,7 +117,7 @@ public class ProductPromoFacade {
 	 */
 	String ApplicableProductPromos(String Amount, int quantity) {
 		HashMap<Integer, ProductPromo> allProductPromos = new HashMap<>();
-		allProductPromos = getProductPromos.getAllProductPromos();
+		allProductPromos = fileProductPromoDAO.getAllProductPromos();
 		String appliedOn = "";
 		
 		
@@ -149,7 +149,7 @@ public class ProductPromoFacade {
 	 */
 	String productsAppliedForPercent(String Percent, int quantity , String price) {
 		HashMap<Integer, ProductPromo> allProductPromos = new HashMap<>();
-		allProductPromos = getProductPromos.getAllProductPromos();
+		allProductPromos = fileProductPromoDAO.getAllProductPromos();
 		String appliedOn = "";
 		
 		for (int iterator = 0; iterator < allProductPromos.size(); iterator++) {

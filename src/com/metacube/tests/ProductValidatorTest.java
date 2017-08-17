@@ -11,7 +11,6 @@ import com.metacube.utils.Utils;
 public class ProductValidatorTest {
 	Product product = new Product();
 	HashMap<String,Product> productIterator;
-	Utils productValidator = new Utils();
 	
 	@Test(expected = NullPointerException.class)
 	public void validateProduct() {
@@ -19,6 +18,6 @@ public class ProductValidatorTest {
 		productIterator.put("1001", product);
 		int productCode = 1001;
 		boolean expected = true;
-		assertNotEquals(expected, productValidator.validateProduct(productIterator, productCode));
+		assertNotEquals(expected, Utils.validateProduct(productIterator, productCode));
 	}
 }

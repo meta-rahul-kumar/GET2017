@@ -11,15 +11,15 @@ import com.metacube.models.Product;
  */
 public class ProductFacade {
 	final static String FILEPATH = "src/Products.csv";
-	FileProductDAO getProducts = FileProductDAO.getInstance();
+	FileProductDAO fileProductDAO = FileProductDAO.getInstance();
 	
 	/**
 	 * returns all products which is available in store
 	 * @return
 	 */
-	HashMap<String, Product> getProducts(){
+	HashMap<String, Product> getAllProducts(){
 		// getter method
-		return getProducts.getAllProducts();
+		return fileProductDAO.getAllProducts();
 	}
 	
 	/**
@@ -29,29 +29,28 @@ public class ProductFacade {
 	 */
 	Product getProductById(String productId) {
 		HashMap<String, Product> allProducts = new HashMap<>();
+		allProducts = fileProductDAO.getAllProducts();
 		
-		allProducts = getProducts.getAllProducts();
-		Product tempProductAttribute = new Product();
-		String tempProductId = allProducts.get(productId).getCode();
-		String tempProductName = allProducts.get(productId).getName();
-		String tempProductPrice = allProducts.get(productId).getPrice();
-		tempProductAttribute.setProduct(tempProductId, tempProductName, tempProductPrice);
-		return tempProductAttribute;
+		if (allProducts.containsKey(productId+"")) {
+			return allProducts.get(productId);
+		}else {
+			return null;
+		}
 	}
 	
 	/**
 	 * Product Constructor which reads the Products.csv file and stores it in totalProducts HashMap
 	 */
 	ProductFacade() {
-		getProducts.addData(FILEPATH);
+		fileProductDAO.addProductsFromFile(FILEPATH);
 	}
 	
 	/**
 	 * Show all the available products
 	 */
-	void showProducts() {
+	void showAllProducts() {
 		HashMap<String, Product> allProducts = new HashMap<>();
-		allProducts = getProducts.getAllProducts();
+		allProducts = fileProductDAO.getAllProducts();
 		
 		System.out.println("Code \t Name \t\t\t\t Price");
 		for (String key : allProducts.keySet()) {
