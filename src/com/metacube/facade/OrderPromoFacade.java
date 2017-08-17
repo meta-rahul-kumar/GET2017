@@ -14,7 +14,7 @@ public class OrderPromoFacade {
 	FileOrderPromoDAO fileOrderPromoDAO = FileOrderPromoDAO.getInstance();
 		
 		OrderPromoFacade() {
-			fileOrderPromoDAO.getOrderPromoFromFile(FILEPATH);
+			fileOrderPromoDAO.getAllOrderPromoFromFilePath(FILEPATH);
 		}
 		
 		void showAllOrderPromos() {

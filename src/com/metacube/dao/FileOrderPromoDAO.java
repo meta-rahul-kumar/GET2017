@@ -86,7 +86,7 @@ public class FileOrderPromoDAO implements OrderPromoDAO{
 		return false;
 	}
 
-	public void getOrderPromoFromFile(String filepath) {
+	public void getAllOrderPromoFromFilePath(String filepath) {
 		// TODO Auto-generated method stub
 		ReadFromFile read = new ReadFromFile();
 		int lineNo = 0;

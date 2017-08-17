@@ -17,7 +17,7 @@ public class ProductPromoFacade {
 	 * ProductPromos Constructor which reads the ProductPromo.csv file and stores it in totalProductPromos HashMap
 	 */
 	ProductPromoFacade() {
-		fileProductPromoDAO.addData(FILEPATH);
+		fileProductPromoDAO.readAllProductPromoFromFilePath(FILEPATH);
 	}
 	
 	/**
@@ -95,14 +95,14 @@ public class ProductPromoFacade {
 		
 		
 		 
-		ProductFacade productDetails = new ProductFacade();
+		ProductFacade productFacade = new ProductFacade();
 		
 		if (discountFromFixedAmount > discountFromFixedPercent ) {
 			result += "Rs." + availPromoTypes.get(productId+"").get("AMOUNT") + " off on " + ApplicableProductPromos(availPromoTypes.get(productId+"").get("AMOUNT"), quantity); 
 			//System.out.println("Amount" + discount);
 		} else {
 			discountFromFixedAmount = discountFromFixedPercent;
-			result += availPromoTypes.get(productId+"").get("PERCENT") + "% off on " + productsAppliedForPercent(availPromoTypes.get(productId+"").get("PERCENT"), quantity, productDetails.getProductById(productId+"").getPrice()); 
+			result += availPromoTypes.get(productId+"").get("PERCENT") + "% off on " + productsAppliedForPercent(availPromoTypes.get(productId+"").get("PERCENT"), quantity, productFacade.getProductById(productId+"").getPrice()); 
 			//System.out.println(discount2);
 		}
 		
@@ -122,13 +122,13 @@ public class ProductPromoFacade {
 		
 		
 		for (int i = 0; i < allProductPromos.size(); i++) {
-			ProductFacade getById = new ProductFacade();
+			ProductFacade productFacade = new ProductFacade();
 			
 			if (allProductPromos.get(i).getType().equals("ProductFixedAmountPromotion") && allProductPromos.get(i).getDiscount().equals(Amount)) {
 				String[] promoProductIds = allProductPromos.get(i).getApplicableProducts().split(";");
 				
 				for (String oneByOne : promoProductIds) {
-					appliedOn += getById.getProductById(oneByOne).getName() + "[";
+					appliedOn += productFacade.getProductById(oneByOne).getName() + "[";
 					appliedOn += "Code:" + oneByOne + "], ";
 				}
 				
@@ -153,12 +153,12 @@ public class ProductPromoFacade {
 		String appliedOn = "";
 		
 		for (int iterator = 0; iterator < allProductPromos.size(); iterator++) {
-			ProductFacade getById = new ProductFacade();
+			ProductFacade productFacade = new ProductFacade();
 			if (allProductPromos.get(iterator).getType().equals("ProductFixedPercentPromotion") && allProductPromos.get(iterator).getDiscount().equals(Percent)) {
 				String[] promoProductIds = allProductPromos.get(iterator).getApplicableProducts().split(";");
 				
 				for (String oneByOneIterator : promoProductIds) {
-					appliedOn += getById.getProductById(oneByOneIterator).getName() + "[";
+					appliedOn += productFacade.getProductById(oneByOneIterator).getName() + "[";
 					appliedOn += "Code:" + oneByOneIterator + "], ";
 				}
 				appliedOn = appliedOn.substring(0, appliedOn.length() - 2);

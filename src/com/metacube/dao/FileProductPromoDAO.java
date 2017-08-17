@@ -86,7 +86,7 @@ public class FileProductPromoDAO implements ProductPromoDAO{
 		return false;
 	}
 
-	public void addData(String filepath) {
+	public void readAllProductPromoFromFilePath(String filepath) {
 		ReadFromFile read = new ReadFromFile();
 		int lineNo = 0;
 		

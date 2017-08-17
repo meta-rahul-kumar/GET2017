@@ -19,7 +19,7 @@ public class ProductFacade {
 	 */
 	HashMap<String, Product> getAllProducts(){
 		// getter method
-		return fileProductDAO.getAllProducts();
+		return fileProductDAO.getAllProductsFromFilePath();
 	}
 	
 	/**
@@ -29,7 +29,7 @@ public class ProductFacade {
 	 */
 	Product getProductById(String productId) {
 		HashMap<String, Product> allProducts = new HashMap<>();
-		allProducts = fileProductDAO.getAllProducts();
+		allProducts = fileProductDAO.getAllProductsFromFilePath();
 		
 		if (allProducts.containsKey(productId+"")) {
 			return allProducts.get(productId);
@@ -42,7 +42,7 @@ public class ProductFacade {
 	 * Product Constructor which reads the Products.csv file and stores it in totalProducts HashMap
 	 */
 	ProductFacade() {
-		fileProductDAO.addProductsFromFile(FILEPATH);
+		fileProductDAO.readAllProductsFromFilePath(FILEPATH);
 	}
 	
 	/**
@@ -50,7 +50,7 @@ public class ProductFacade {
 	 */
 	void showAllProducts() {
 		HashMap<String, Product> allProducts = new HashMap<>();
-		allProducts = fileProductDAO.getAllProducts();
+		allProducts = fileProductDAO.getAllProductsFromFilePath();
 		
 		System.out.println("Code \t Name \t\t\t\t Price");
 		for (String key : allProducts.keySet()) {

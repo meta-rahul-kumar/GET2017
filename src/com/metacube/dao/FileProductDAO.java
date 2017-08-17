@@ -41,7 +41,7 @@ public class FileProductDAO implements ProductDAO{
 	 * method returns the all product
 	 * @return
 	 */
-	public HashMap<String, Product> getAllProducts(){
+	public HashMap<String, Product> getAllProductsFromFilePath(){
 		
 		return totalProducts;
 	}
@@ -86,7 +86,7 @@ public class FileProductDAO implements ProductDAO{
 		return false;
 	}
 
-	public void addProductsFromFile(String filepath) {
+	public void readAllProductsFromFilePath(String filepath) {
 		// TODO Auto-generated method stub
 		ReadFromFile read = new ReadFromFile();
 		for(String lineNumber : read.ReadCsvFile(filepath)) {
