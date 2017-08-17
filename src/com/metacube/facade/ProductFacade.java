@@ -1,10 +1,7 @@
 package com.metacube.facade;
 import java.util.HashMap;
-import java.util.StringTokenizer;
-
 import com.metacube.dao.FileProductDAO;
 import com.metacube.models.Product;
-import com.metacube.utils.ReadFromFile;
 
 /**
  * 
@@ -46,15 +43,7 @@ public class ProductFacade {
 	 * Product Constructor which reads the Products.csv file and stores it in totalProducts HashMap
 	 */
 	ProductFacade() {
-		ReadFromFile read = new ReadFromFile();
-		for(String lineNumber : read.ReadCsvFile(FILEPATH)) {
-			StringTokenizer tokenizer = new StringTokenizer(lineNumber, "\t");
-			while(tokenizer.hasMoreTokens()) {
-				Product product = new Product();
-				product.setProduct(tokenizer.nextToken(), tokenizer.nextToken(), tokenizer.nextToken());
-				getProducts.add(product.getCode(), product);
-			}
-		}
+		getProducts.addData(FILEPATH);
 	}
 	
 	/**

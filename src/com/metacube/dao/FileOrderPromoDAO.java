@@ -1,6 +1,9 @@
 package com.metacube.dao;
 import java.util.HashMap;
+import java.util.StringTokenizer;
+
 import com.metacube.models.OrderPromo;
+import com.metacube.utils.ReadFromFile;
 
 /**
  * FileOrderPromoDAO perform action on OrderPromo in File System
@@ -48,15 +51,6 @@ public class FileOrderPromoDAO implements OrderPromoDAO{
 	 * @return
 	 */
 	@Override
-	public void add(Integer promoCode, OrderPromo OrderPromo) {
-		totalOrderPromos.put(promoCode, OrderPromo);
-	}
-	
-	/**
-	 * adds to Database or file
-	 * @return
-	 */
-	@Override
 	public boolean add() {
 		// TODO Auto-generated method stub
 		return false;
@@ -90,6 +84,20 @@ public class FileOrderPromoDAO implements OrderPromoDAO{
 	public boolean delete() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public void addData(String filepath) {
+		// TODO Auto-generated method stub
+		ReadFromFile read = new ReadFromFile();
+		int lineNo = 0;
+		for(String altu : read.ReadCsvFile(filepath)) {
+			StringTokenizer tokenizer = new StringTokenizer(altu, "\t");
+			while(tokenizer.hasMoreTokens()) {
+				OrderPromo orderPromo = new OrderPromo();
+				orderPromo.setOrderPromo(tokenizer.nextToken(), tokenizer.nextToken(), tokenizer.nextToken());
+				totalOrderPromos.put(lineNo++, orderPromo);
+			}
+		}
 	}
 	
 }

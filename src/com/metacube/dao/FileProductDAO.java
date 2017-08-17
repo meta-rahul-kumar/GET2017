@@ -1,6 +1,9 @@
 package com.metacube.dao;
 import java.util.HashMap;
+import java.util.StringTokenizer;
+
 import com.metacube.models.Product;
+import com.metacube.utils.ReadFromFile;
 
 /**
  * FileProductDAO perform action on Product in File System
@@ -42,16 +45,7 @@ public class FileProductDAO implements ProductDAO{
 		
 		return totalProducts;
 	}
-
-	/**
-	 * adds to file
-	 * @return
-	 */
-	@Override
-	public void add(String productCode, Product product) {
-		totalProducts.put(productCode, product);
-	}
-
+	
 	/**
 	 * update to file
 	 * @return
@@ -90,5 +84,18 @@ public class FileProductDAO implements ProductDAO{
 	public boolean add() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public void addData(String filepath) {
+		// TODO Auto-generated method stub
+		ReadFromFile read = new ReadFromFile();
+		for(String lineNumber : read.ReadCsvFile(filepath)) {
+			StringTokenizer tokenizer = new StringTokenizer(lineNumber, "\t");
+			while(tokenizer.hasMoreTokens()) {
+				Product product = new Product();
+				product.setProduct(tokenizer.nextToken(), tokenizer.nextToken(), tokenizer.nextToken());
+				totalProducts.put(product.getCode(), product);
+			}
+		}
 	}
 }

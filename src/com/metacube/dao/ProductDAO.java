@@ -1,5 +1,4 @@
 package com.metacube.dao;
-import com.metacube.models.Product;
 
 /**
  * ProductDAO is an interface which extends the BaseDAO
@@ -7,7 +6,5 @@ import com.metacube.models.Product;
  *
  */
 public interface ProductDAO extends BaseDAO{
-
-	void add(String productCode, Product product);
 	
 }

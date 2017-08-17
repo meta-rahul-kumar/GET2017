@@ -1,9 +1,7 @@
 package com.metacube.facade;
 import java.util.HashMap;
-import java.util.StringTokenizer;
 import com.metacube.dao.FileProductPromoDAO;
 import com.metacube.models.ProductPromo;
-import com.metacube.utils.ReadFromFile;
 
 /**
  * 
@@ -19,20 +17,7 @@ public class ProductPromoFacade {
 	 * ProductPromos Constructor which reads the ProductPromo.csv file and stores it in totalProductPromos HashMap
 	 */
 	ProductPromoFacade() {
-		
-		ReadFromFile read = new ReadFromFile();
-		int lineNo = 0;
-		
-		for(String altu : read.ReadCsvFile(FILEPATH)) {
-			StringTokenizer tokenizer = new StringTokenizer(altu, "\t"); // splits using \t seperator
-			
-			while(tokenizer.hasMoreTokens()) {
-				ProductPromo productPromo = new ProductPromo();
-				productPromo.setProductPromo(tokenizer.nextToken(), tokenizer.nextToken(), tokenizer.nextToken());
-				getProductPromos.add(lineNo++, productPromo);
-			}
-			
-		}
+		getProductPromos.addData(FILEPATH);
 	}
 	
 	/**

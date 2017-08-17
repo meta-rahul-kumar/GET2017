@@ -1,6 +1,9 @@
 package com.metacube.dao;
 import java.util.HashMap;
+import java.util.StringTokenizer;
+
 import com.metacube.models.ProductPromo;
+import com.metacube.utils.ReadFromFile;
 
 /**
  * FileProductPromoDAO perform action on ProductPromo in File System
@@ -83,13 +86,20 @@ public class FileProductPromoDAO implements ProductPromoDAO{
 		return false;
 	}
 
-	/**
-	 * adds to file
-	 * @return
-	 */
-	public void add(int promoID, ProductPromo productPromo) {
-		// TODO Auto-generated method stub
-		totalProductPromos.put(promoID, productPromo);
+	public void addData(String filepath) {
+		ReadFromFile read = new ReadFromFile();
+		int lineNo = 0;
+		
+		for(String altu : read.ReadCsvFile(filepath)) {
+			StringTokenizer tokenizer = new StringTokenizer(altu, "\t"); // splits using \t seperator
+			
+			while(tokenizer.hasMoreTokens()) {
+				ProductPromo productPromo = new ProductPromo();
+				productPromo.setProductPromo(tokenizer.nextToken(), tokenizer.nextToken(), tokenizer.nextToken());
+				totalProductPromos.put(lineNo++, productPromo);
+			}
+			
+		}
 	}
 
 }

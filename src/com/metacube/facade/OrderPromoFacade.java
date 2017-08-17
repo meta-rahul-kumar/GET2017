@@ -1,10 +1,7 @@
 package com.metacube.facade;
 import java.util.HashMap;
-import java.util.StringTokenizer;
-
 import com.metacube.dao.FileOrderPromoDAO;
 import com.metacube.models.OrderPromo;
-import com.metacube.utils.ReadFromFile;
 
 /**
  * 
@@ -17,16 +14,7 @@ public class OrderPromoFacade {
 	FileOrderPromoDAO getOrderPromo = FileOrderPromoDAO.getInstance();
 		
 		OrderPromoFacade() {
-			ReadFromFile read = new ReadFromFile();
-			int lineNo = 0;
-			for(String altu : read.ReadCsvFile(FILEPATH)) {
-				StringTokenizer tokenizer = new StringTokenizer(altu, "\t");
-				while(tokenizer.hasMoreTokens()) {
-					OrderPromo orderPromo = new OrderPromo();
-					orderPromo.setOrderPromo(tokenizer.nextToken(), tokenizer.nextToken(), tokenizer.nextToken());
-					getOrderPromo.add(lineNo++, orderPromo);
-				}
-			}
+			getOrderPromo.addData(FILEPATH);
 		}
 		
 		void showOrderPromos() {

@@ -1,5 +1,4 @@
 package com.metacube.dao;
-import com.metacube.models.OrderPromo;
 
 /**
  * MySqlOrderPromoDAO perform action on OrderPromo in Database
@@ -46,16 +45,6 @@ public class MySqlOrderPromoDAO implements OrderPromoDAO{
 	public boolean delete() {
 		// TODO Auto-generated method stub
 		return false;
-	}
-
-	/**
-	 * adds to Database
-	 * @return
-	 */
-	@Override
-	public void add(Integer promoCode, OrderPromo OrderPromo) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

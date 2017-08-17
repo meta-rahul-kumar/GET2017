@@ -1,5 +1,4 @@
 package com.metacube.dao;
-import com.metacube.models.OrderPromo;
 
 /**
  * OrderPromoDAO is an interface which extends the BaseDAO
@@ -7,7 +6,5 @@ import com.metacube.models.OrderPromo;
  *
  */
 public interface OrderPromoDAO extends BaseDAO{
-
-	void add(Integer promoCode, OrderPromo OrderPromo);
 
 }

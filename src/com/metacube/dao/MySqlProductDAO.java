@@ -1,5 +1,4 @@
 package com.metacube.dao;
-import com.metacube.models.Product;
 
 /**
  * MySqlProductDAO perform action on Product in Database
@@ -48,12 +47,4 @@ public class MySqlProductDAO implements ProductDAO{
 		return false;
 	}
 
-	/**
-	 * adds to Database
-	 * @return
-	 */
-	@Override
-	public void add(String productCode, Product product) {
-		// TODO Auto-generated method stub
-	}
 }
