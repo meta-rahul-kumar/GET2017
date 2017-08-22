@@ -1,15 +1,14 @@
-import java.util.Scanner;
 
 public class ClearList implements Action {
 
 	@Override
-	public void performAction() {
-		ArrayList.getInstance().clear();
+	public void performAction(ArrayList<Integer> list) {
+		list.clear();
 		System.out.println("List Cleared !!");
-		Object[] lists = ArrayList.getInstance().show();
+		Object[] lists = list.show();
 		
 		System.out.print("List : ");
-		for (int i = 0 ; i < ArrayList.getInstance().size; i++) {
+		for (int i = 0 ; i < list.size(); i++) {
 			System.out.print(lists[i] + " ");
 		}
 		System.out.println();

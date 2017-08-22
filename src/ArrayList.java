@@ -6,29 +6,33 @@ import java.util.ListIterator;
 
 public class ArrayList<T extends Comparable<T>> implements List<T>{
 	Object list[];
-	static int size = 0;
-	static int length;
-	private static ArrayList arraylist;
+	int size = 0;
+	int length;
+//	private static ArrayList arraylist;
+//	
+//	public static ArrayList getInstance() {
+//
+//		if (arraylist == null) {
+//			synchronized (ArrayList.class) {
+//				if (arraylist == null) {
+//					arraylist = new ArrayList(10);
+//				}
+//
+//			}
+//		}
+//
+//		return arraylist;
+//	}
 	
-	public static ArrayList getInstance() {
-
-		if (arraylist == null) {
-			synchronized (ArrayList.class) {
-				if (arraylist == null) {
-					arraylist = new ArrayList(10);
-				}
-
-			}
-		}
-
-		return arraylist;
+	public int getSize() {
+		return size;
 	}
 	
-	private ArrayList() {
-		
+	public ArrayList() {
+		this(10);
 	}
 	
-	private ArrayList(int n) {
+	public ArrayList(int n) {
 		list = new Object[n];
 		length = n;
 	}
@@ -218,8 +222,7 @@ public class ArrayList<T extends Comparable<T>> implements List<T>{
 
 	@Override
 	public Object[] toArray() {
-		// TODO Auto-generated method stub
-		return null;
+		return Arrays.copyOf(list, size);
 	}
 
 	@SuppressWarnings("hiding")
@@ -239,10 +242,10 @@ public class ArrayList<T extends Comparable<T>> implements List<T>{
 		}
 	}
 	
-	public void mergeLists(Object[] secondList) {
-		int secondListLength = secondList.length;
+	public void mergeLists(ArrayList<T> secondList) {
+		int secondListLength = secondList.getSize();
 		expandList(secondListLength);
-		System.arraycopy(secondList, 0, list, size, secondListLength);
+		System.arraycopy(secondList.toArray(), 0, list, size, secondListLength);
 		size = size + secondListLength;
 		
 		

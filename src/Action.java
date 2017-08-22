@@ -7,6 +7,7 @@ public interface Action {
 	
 	/**
 	 * method performAction
+	 * @param list TODO
 	 */
-	void performAction();
+	void performAction(ArrayList<Integer> list);
 }

@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MainClass {
+	ArrayList<Integer> list = new ArrayList<>();
 	public  static Menu createMenu(){
 		Menu mainMenu=new Menu();
 		List<MenuItem> subMenu=mainMenu.getSubMenu();
@@ -43,6 +44,10 @@ public class MainClass {
 		mi.setDisplayName("9. Sort the List");
 		subMenu.add(mi);
 		
+		mi=new ActionableMenuItem(new MergeList());
+		mi.setDisplayName("9. Merge the List");
+		subMenu.add(mi);
+		
 		return mainMenu;
 		
 	}
@@ -57,13 +62,14 @@ public class MainClass {
 	}
 	
 	public static int getInput(int size){
+		@SuppressWarnings("resource")
 		Scanner scan= new Scanner(System.in);
 		int choice = 0;
 		choice=scan.nextInt();
 		return choice-1;
 	}
 	
-	public static void displayAndPerformAction(Menu menu){
+	public void displayAndPerformAction(Menu menu){
 		
 		display(menu);
 		
@@ -78,7 +84,7 @@ public class MainClass {
 			displayAndPerformAction(menu);
 			
 		} else if(menuItem instanceof ActionableMenuItem){
-			((ActionableMenuItem)menuItem).triggerAction();
+			((ActionableMenuItem)menuItem).triggerAction(list);
 			
 		}
 		else{
@@ -88,9 +94,9 @@ public class MainClass {
 
 	public static void main(String[] args) {
 		Menu menu=createMenu();
-		
+		MainClass mainClass = new MainClass();
 		while(true){
-		displayAndPerformAction(menu);
+		mainClass.displayAndPerformAction(menu);
 		}
 	}
 }

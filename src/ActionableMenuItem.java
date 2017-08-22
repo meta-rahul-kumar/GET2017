@@ -12,8 +12,8 @@ public class ActionableMenuItem extends MenuItem{
 	 * takes two double operand and perform an action
 	 * returns double 
 	 */
-	public void triggerAction(){
-		 this.action.performAction();
+	public void triggerAction(ArrayList<Integer> list){
+		 this.action.performAction(list);
 	}
 
 	/**
