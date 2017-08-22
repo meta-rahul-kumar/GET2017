@@ -93,14 +93,6 @@ public class Tests {
 	}
 
 	@Test
-	public void GivenLinkedListIsEmpty_WhenSize_Then0() {
-		doublyLinkedList.clear();
-		int actual = doublyLinkedList.size();
-		int expected = 0;
-		assertEquals(expected, actual);
-	}
-
-	@Test
 	public void GivenElementIsValid_WhenContains_ThenTrue() {
 		boolean actual = doublyLinkedList.contains(10);
 		boolean expected = true;
@@ -140,43 +132,11 @@ public class Tests {
 		assertEquals(expected, actual);
 	}
 
-	@Test(expected = NoSuchElementException.class)
-	public void GivenLinkedListIsEmpty_WhenGetFirst_ThenNoSuchElementException() {
-		doublyLinkedList.clear();
-		doublyLinkedList.getFirst();
-	}
 
 	@Test
 	public void GivenLinkedListIsNotEmpty_WhenGetLast_ThenElement() {
 		Object actual = doublyLinkedList.getLast();
 		Object expected = 20;
-		assertEquals(expected, actual);
-	}
-
-	@Test(expected = NoSuchElementException.class)
-	public void GivenLinkedListIsEmpty_WhenGetLast_ThenNoSuchElementException() {
-		doublyLinkedList.clear();
-		doublyLinkedList.getLast();
-	}
-
-	@Test
-	public void GivenElementIsValid_WhenIndexOF_ThenIndex() {
-		int actual = doublyLinkedList.indexOf(10);
-		int expected = 1;
-		assertEquals(expected, actual);
-	}
-
-	@Test
-	public void GivenElementIsInvalid_WhenIndexOF_ThenIndex() {
-		int actual = doublyLinkedList.indexOf(null);
-		int expected = -1;
-		assertEquals(expected, actual);
-	}
-
-	@Test
-	public void GivenElementIsNull_WhenIndexOF_ThenIndex() {
-		int actual = doublyLinkedList.indexOf(null);
-		int expected = -1;
 		assertEquals(expected, actual);
 	}
 
@@ -209,23 +169,6 @@ public class Tests {
 		doublyLinkedList.remove(null);
 	}
 
-	@Test
-	public void GivenIndexIsValid_WhenSet_ThenElement() {
-		Object actual = doublyLinkedList.set(1, 100);
-		Object expected = 100;
-		assertEquals(expected, actual);
-	}
-
-	@Test(expected = IndexOutOfBoundsException.class)
-	public void GivenIndexIsInValid_WhenSet_ThenIndexOutOfBoundsException() {
-		doublyLinkedList.set(10, 100);
-	}
-
-	@Test(expected = NullPointerException.class)
-	public void GivenLinkedListIsEmpty_WhenReverse_ThenNullPointerException() {
-		doublyLinkedList.clear();
-		doublyLinkedList.reverse();
-	}
 
 	@Test
 	public void GivenLinkedListIsNotEmpty_WhenReverse_ThenReverseLinkedList() {
@@ -269,10 +212,5 @@ public class Tests {
 		}
 		int[] expected = {20,10,4,2};
 		assertArrayEquals(expected, actual);
-	}
-	@Test(expected=NullPointerException.class)
-	public void GivenLinkedListIsEmpty_WhenSort_ThenNullPointerException() {
-		doublyLinkedList.clear();
-		doublyLinkedList.sort(SortOrder.DESCENDING);
 	}
 }

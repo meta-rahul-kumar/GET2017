@@ -30,10 +30,6 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	 */
 	public boolean addLast(E element);
 
-	/**
-	 * Clear the linked list.
-	 */
-	public void clear();
 
 	/**
 	 * Contains
@@ -60,11 +56,6 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	public E getLast() throws NoSuchElementException;
 
 	/**
-	 * Get Index of Element
-	 */
-	public int indexOf(E element);
-
-	/**
 	 * Removes the element by its position
 	 */
 	public E removeByPosition(int position) throws NoSuchElementException;
@@ -83,11 +74,6 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	 * Removes the last element
 	 */
 	public E removeLast() throws NoSuchElementException;
-
-	/**
-	 * Sets the element at given index
-	 */
-	public E set(int index, E element) throws IndexOutOfBoundsException;
 
 	/**
 	 *

@@ -19,26 +19,7 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	public boolean add(E element);
 
 	/**
-	 * Adds the element at the first.
-	 */
-	public boolean addFirst(E element);
-
-	/**
-	 * Adds the element at the last.
-	 */
-	public boolean addLast(E element);
-
-	/**
-	 * Clear the linked list.
-	 */
-	public void clear();
-
-	/**
 	 * Contains
-	 *
-	 * @param element
-	 *            the element
-	 * @return true, if successful else false
 	 */
 	public boolean contains(E element);
 
@@ -46,21 +27,6 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	 * Gets the element by its index
 	 */
 	public E get(int index) throws IndexOutOfBoundsException;
-
-	/**
-	 * Gets the element present at first position.
-	 */
-	public E getFirst() throws NoSuchElementException;
-
-	/**
-	 * Gets the element from last position.
-	 */
-	public E getLast() throws NoSuchElementException;
-
-	/**
-	 * Get Index of Element
-	 */
-	public int indexOf(E element);
 
 	/**
 	 * Removes the element by its position
@@ -71,21 +37,6 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	 * Removes the element
 	 */
 	public boolean remove(E element) throws NoSuchElementException;
-
-	/**
-	 * Removes the first element.
-	 */
-	public E removeFirst() throws NoSuchElementException;
-
-	/**
-	 * Removes the last element
-	 */
-	public E removeLast() throws NoSuchElementException;
-
-	/**
-	 * Sets the element at given index
-	 */
-	public E set(int index, E element) throws IndexOutOfBoundsException;
 
 	/**
 	 *
@@ -107,5 +58,17 @@ public interface MyLinkedList<E extends Comparable<E>> extends Iterable<E> {
 	 * Sort the linked list according to sorting order.
 	 */
 	public void sort(SortOrder sortOrder);
+
+	boolean addFirst(E element);
+
+	boolean addLast(E element);
+
+	E getFirst() throws NoSuchElementException;
+
+	E getLast() throws NoSuchElementException;
+
+	E removeFirst() throws NoSuchElementException;
+
+	E removeLast() throws NoSuchElementException;
 
 }

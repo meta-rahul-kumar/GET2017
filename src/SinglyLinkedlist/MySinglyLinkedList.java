@@ -111,16 +111,7 @@ public class MySinglyLinkedList<E extends Comparable<E>> implements MyLinkedList
 
 		return add(element);
 	}
-
-	/**
-	 * Clear the linked list.
-	 */
-	@Override
-	public void clear() {
-		this.head = null;
-		this.size = 0;
-	}
-
+	
 	/**
 	 * Contains
 	 * @return true, if successful else false
@@ -193,29 +184,6 @@ public class MySinglyLinkedList<E extends Comparable<E>> implements MyLinkedList
 		}
 
 		return (E) currentNode.getElement();
-	}
-
-	/**
-	 * Get Index of Element
-	 * @return the index of element
-	 */
-	@Override
-	public int indexOf(E element) {
-		if (contains(element)) {
-			int index = 1;
-			Node currentNode = this.head;
-			while (currentNode != null) {
-				if (currentNode.getElement().equals(element)) {
-					break;
-				}
-				index++;
-				currentNode = currentNode.getNextNode();
-			}
-
-			return index;
-		}
-
-		return -1;
 	}
 
 	/**
@@ -295,30 +263,6 @@ public class MySinglyLinkedList<E extends Comparable<E>> implements MyLinkedList
 		currentNode.getNextNode().setNextNode(null);
 
 		return (E) element;
-	}
-
-	/**
-	 * Sets the element at given index
-	 * @return the element
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public E set(int index, E element) throws IndexOutOfBoundsException {
-		if (index > size() || index < 0) {
-			throw new IndexOutOfBoundsException();
-		}
-		Node currentNode = this.head;
-		int position = 1;
-		while (currentNode != null) {
-			if (index == position) {
-				break;
-			}
-			currentNode = currentNode.getNextNode();
-			position++;
-		}
-		currentNode.setElement(element);
-
-		return (E) currentNode.getElement();
 	}
 
 	/**

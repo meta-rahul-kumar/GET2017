@@ -92,15 +92,7 @@ public class Tests {
 		int expected = 2;
 		assertEquals(expected, actual);
 	}
-
-	@Test
-	public void GivenLinkedListIsEmpty_WhenSize_Then0() {
-		singlyLinkedList.clear();
-		int actual = singlyLinkedList.size();
-		int expected = 0;
-		assertEquals(expected, actual);
-	}
-
+	
 	@Test
 	public void GivenElementIsValid_WhenContains_ThenTrue() {
 		boolean actual = singlyLinkedList.contains(10);
@@ -141,43 +133,10 @@ public class Tests {
 		assertEquals(expected, actual);
 	}
 
-	@Test(expected = NoSuchElementException.class)
-	public void GivenLinkedListIsEmpty_WhenGetFirst_ThenNoSuchElementException() {
-		singlyLinkedList.clear();
-		singlyLinkedList.getFirst();
-	}
-
 	@Test
 	public void GivenLinkedListIsNotEmpty_WhenGetLast_ThenElement() {
 		Object actual = singlyLinkedList.getLast();
 		Object expected = 20;
-		assertEquals(expected, actual);
-	}
-
-	@Test(expected = NoSuchElementException.class)
-	public void GivenLinkedListIsEmpty_WhenGetLast_ThenNoSuchElementException() {
-		singlyLinkedList.clear();
-		singlyLinkedList.getLast();
-	}
-
-	@Test
-	public void GivenElementIsValid_WhenIndexOF_ThenIndex() {
-		int actual = singlyLinkedList.indexOf(10);
-		int expected = 1;
-		assertEquals(expected, actual);
-	}
-
-	@Test
-	public void GivenElementIsInvalid_WhenIndexOF_ThenIndex() {
-		int actual = singlyLinkedList.indexOf(null);
-		int expected = -1;
-		assertEquals(expected, actual);
-	}
-
-	@Test
-	public void GivenElementIsNull_WhenIndexOF_ThenIndex() {
-		int actual = singlyLinkedList.indexOf(null);
-		int expected = -1;
 		assertEquals(expected, actual);
 	}
 
@@ -208,24 +167,6 @@ public class Tests {
 	@Test(expected = NoSuchElementException.class)
 	public void GivenElementIsNull_WhenRemove_ThenNoSuchElementException() {
 		singlyLinkedList.remove(null);
-	}
-
-	@Test
-	public void GivenIndexIsValid_WhenSet_ThenElement() {
-		Object actual = singlyLinkedList.set(1, 100);
-		Object expected = 100;
-		assertEquals(expected, actual);
-	}
-
-	@Test(expected = IndexOutOfBoundsException.class)
-	public void GivenIndexIsInValid_WhenSet_ThenIndexOutOfBoundsException() {
-		singlyLinkedList.set(10, 100);
-	}
-
-	@Test(expected = NullPointerException.class)
-	public void GivenLinkedListIsEmpty_WhenReverse_ThenNullPointerException() {
-		singlyLinkedList.clear();
-		singlyLinkedList.reverse();
 	}
 
 	@Test
@@ -270,10 +211,5 @@ public class Tests {
 		}
 		int[] expected = {20,10,4,2};
 		assertArrayEquals(expected, actual);
-	}
-	@Test(expected=NullPointerException.class)
-	public void GivenLinkedListIsEmpty_WhenSort_ThenNullPointerException() {
-		singlyLinkedList.clear();
-		singlyLinkedList.sort(SortOrder.DESCENDING);
 	}
 }
