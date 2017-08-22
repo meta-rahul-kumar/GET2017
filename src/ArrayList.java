@@ -8,11 +8,27 @@ public class ArrayList<T extends Comparable<T>> implements List<T>{
 	Object list[];
 	static int size = 0;
 	static int length;
-	ArrayList() {
+	private static ArrayList arraylist;
+	
+	public static ArrayList getInstance() {
+
+		if (arraylist == null) {
+			synchronized (ArrayList.class) {
+				if (arraylist == null) {
+					arraylist = new ArrayList(10);
+				}
+
+			}
+		}
+
+		return arraylist;
+	}
+	
+	private ArrayList() {
 		
 	}
 	
-	ArrayList(int n) {
+	private ArrayList(int n) {
 		list = new Object[n];
 		length = n;
 	}
@@ -131,21 +147,26 @@ public class ArrayList<T extends Comparable<T>> implements List<T>{
 	@Override
 	public boolean remove(Object element) {
 		int position = -1;
+		boolean status = false;
 		for (int i = 0; i < size ; i++) {
 			if (element == list[i]) {
 				position = i;
+				status = true;
 				break;
 			}
 		}
 		
-		element = list[position];
-		
-		for (int  j = position; j < size; j++) {
-			list[j] = list[j+1];
+		if (status == true) { 
+			element = list[position];
+			
+			for (int  j = position; j < size; j++) {
+				list[j] = list[j+1];
+			}
+			
+			size--;
 		}
 		
-		size--;
-		return true;
+		return status;
 	}
 
 	@SuppressWarnings("unchecked")
@@ -252,144 +273,5 @@ public class ArrayList<T extends Comparable<T>> implements List<T>{
 		list = Arrays.copyOf(list, list.length * 2);
 		System.out.println("Current Length : " + list.length);
 		
-	}
-	
-
-	public static void main(String args[]) {
-		ArrayList<Integer> arrayList = new ArrayList<Integer>(10);
-		arrayList.add(new Integer(1));
-		arrayList.add(new Integer(2));
-		arrayList.add(new Integer(3));
-		arrayList.add(new Integer(4));
-		arrayList.add(new Integer(5));
-		arrayList.add(new Integer(6));
-		arrayList.add(new Integer(7));
-		arrayList.add(new Integer(8));
-		arrayList.add(new Integer(9));
-		arrayList.add(new Integer(1));
-		arrayList.add(new Integer(2));
-	
-		
-		
-		Object list[] = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		arrayList.add(2, 9);
-		
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		arrayList.add(0, 8);
-		
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		int element = 9;
-		int location = 0;
-		Integer retrivedElement = arrayList.get(location);
-		
-		if (retrivedElement == null) {
-			System.out.println("No element found");
-		} else {
-			System.out.println("Element " + retrivedElement + " occures at position "+ location);
-		}
-		
-		int position = arrayList.indexOf(element);
-		
-		if (position == -1) {
-			System.out.println("Element " + element + " is not in arrayList");
-		} else {
-			System.out.println("Element " + element + " occures at position "+ position);
-		}
-		
-		System.out.println();
-		
-		location = 3;
-		Object deletedElement = arrayList.remove(location);
-		
-		if (deletedElement == null) {
-			System.out.println("Please Enter a valid location");
-		} else {
-			System.out.println("deleted Element : " + deletedElement);
-		}
-		
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		//////////////////////////////////////////////
-		
-		element = 7;
-		deletedElement = arrayList.remove(element);
-		
-		if (deletedElement == null) {
-			System.out.println("Please Enter a valid element");
-		} else {
-			System.out.println("deleted Element : " + deletedElement);
-		}
-		
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		//////////////////////////////////////////////////
-//		arrayList.clearList();
-//		
-//		System.out.println("List  :");
-//		list = arrayList.show();
-//		
-//		for (int i = 0 ; i < size; i++) {
-//			System.out.print(list[i] + " ");
-//		}
-//		System.out.println();
-		
-		///////////////////////////////////////////////////
-		
-		arrayList.reverseList();
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		arrayList.sort();
-		
-		System.out.println("Sorted Array : ");
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
-		
-		Object[] secondList = {11,12,13}; 
-		arrayList.mergeLists(secondList);
-		
-		System.out.println("Merged Array : ");
-		list = arrayList.show();
-		
-		for (int i = 0 ; i < size; i++) {
-			System.out.print(list[i] + " ");
-		}
-		System.out.println();
 	}
 }
