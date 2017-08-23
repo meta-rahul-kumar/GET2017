@@ -1,6 +1,11 @@
-package PreOrderTraversal;
+package com.metacube.resource;
 
-class Node {
+/**
+ * Node Class for Tree
+ * @author Rahul Kumar
+ *
+ */
+public class Node {
 	int data;
 	Node left;
 	Node right;
@@ -33,5 +38,9 @@ class Node {
 	
 	public void setRightChild(Node child) {
 		right = child;
+	}
+
+	public void setData(int item) {
+		data = item;
 	}
 }
