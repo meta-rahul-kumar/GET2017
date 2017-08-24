@@ -47,9 +47,9 @@ public class PreOrderTreeTraversal {
 			backTrack.add(currentRoot);
 		} else {
 			if (currentRoot.getLeftChild() == null) {
-				addLeft(currentRoot, item);
+				addLeftChild(currentRoot, item);
 			} else if (currentRoot.getRightChild() == null) {
-				addRight(currentRoot, item);
+				addRightChild(currentRoot, item);
 			} else if (currentRoot.getLeftChild() != null && currentRoot.getRightChild() != null) {
 				backTrack.remove();
 				addNode(backTrack.peek(), item);
@@ -64,11 +64,11 @@ public class PreOrderTreeTraversal {
 	 * @param currentRoot
 	 * @param item
 	 */
-	public void addLeft(Node currentRoot, int item) {
+	public void addLeftChild(Node currentRoot, int item) {
 		System.out.println("Left Child Created !!");
-		Node left = new Node(item);
-		currentRoot.setLeftChild(left);
-		backTrack.add(left);
+		Node leftChild = new Node(item);
+		currentRoot.setLeftChild(leftChild);
+		backTrack.add(leftChild);
 	}
 	
 	/**
@@ -76,11 +76,11 @@ public class PreOrderTreeTraversal {
 	 * @param currentRoot
 	 * @param item
 	 */
-	public void addRight(Node currentRoot, int item) {
+	public void addRightChild(Node currentRoot, int item) {
 		System.out.println("Right Child Created !!");
-		Node right = new Node(item);
-		currentRoot.setRightChild(right);
-		backTrack.add(right);
+		Node rightChild = new Node(item);
+		currentRoot.setRightChild(rightChild);
+		backTrack.add(rightChild);
 	}
 	
 	/**

@@ -16,8 +16,18 @@ public class AddNode implements Action {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Enter Node Value");
-		item = sc.nextInt();
+		do {
+			System.out.println("Enter Node Value");
+			try { 
+				item = sc.nextInt();
+			} catch (Exception e) {
+				System.out.println("Please Enter a Valid Number !!");
+				sc.nextLine();
+				continue;
+			}
+			break;
+		} while (true);
+		
 		tree.addNode(item);
 	}
 

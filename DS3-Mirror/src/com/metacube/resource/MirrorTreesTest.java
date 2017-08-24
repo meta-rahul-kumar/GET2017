@@ -29,7 +29,7 @@ public class MirrorTreesTest {
 		mirrorTrees.addNode(4);
 		mirrorTrees.addNode(3);
 		
-		assertEquals(true, mirrorTrees.checkMirror(mirrorTrees.getRoot(), mirrorTrees2.getRoot()));
+		assertEquals(true, mirrorTrees.checkMirror(mirrorTrees.getRootNode(), mirrorTrees2.getRootNode()));
 	}
 	
 	@Test
@@ -48,6 +48,6 @@ public class MirrorTreesTest {
 		mirrorTrees.addNode(4);
 		mirrorTrees.addNode(3);
 		
-		assertNotEquals(false, mirrorTrees.checkMirror(mirrorTrees.getRoot(), mirrorTrees2.getRoot()));
+		assertNotEquals(false, mirrorTrees.checkMirror(mirrorTrees.getRootNode(), mirrorTrees2.getRootNode()));
 	}
 }

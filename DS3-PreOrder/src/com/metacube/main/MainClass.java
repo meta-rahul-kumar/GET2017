@@ -6,6 +6,7 @@ import com.metacube.menu.ActionableMenuItem;
 import com.metacube.menu.Menu;
 import com.metacube.menu.MenuItem;
 import com.metacube.resource.AddNode;
+import com.metacube.resource.ExitProgram;
 import com.metacube.resource.InOrder;
 import com.metacube.resource.PreOrder;
 import com.metacube.resource.PreOrderTreeTraversal;
@@ -25,8 +26,19 @@ public class MainClass {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int root = 0;
-		System.out.println("Enter Root Node Value");
-		root = sc.nextInt();
+		
+		do {
+			System.out.println("Enter Root Node Value");
+			try { 
+				root = sc.nextInt();
+			} catch (Exception e) {
+				System.out.println("Please Enter a Valid Number !!");
+				sc.nextLine();
+				continue;
+			}
+			break;
+		} while (true);
+		
 		tree = new PreOrderTreeTraversal(root);
 	}
 	
@@ -48,6 +60,10 @@ public class MainClass {
 		
 		mi=new ActionableMenuItem(new PreOrder());
 		mi.setDisplayName("3. Pre Order Traversal");
+		subMenu.add(mi);
+		
+		mi=new ActionableMenuItem(new ExitProgram());
+		mi.setDisplayName("4. Exit");
 		subMenu.add(mi);
 		
 		return mainMenu;
@@ -76,7 +92,19 @@ public class MainClass {
 		@SuppressWarnings("resource")
 		Scanner scan= new Scanner(System.in);
 		int choice = 0;
-		choice=scan.nextInt();
+		
+		do {
+			System.out.println("Enter Your Choice");
+			try { 
+				choice = scan.nextInt();
+			} catch (Exception e) {
+				System.out.println("Please Enter a Valid Number !!");
+				scan.nextLine();
+				continue;
+			}
+			break;
+		} while (true);
+		
 		return choice-1;
 	}
 	

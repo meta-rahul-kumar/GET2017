@@ -14,7 +14,7 @@ public class MirrorTrees {
 	/**
 	 * method returns the root of Tree
 	 */
-	public Node getRoot() {
+	public Node getRootNode() {
 		return root;
 	}
 	/**
@@ -53,9 +53,9 @@ public class MirrorTrees {
 			backTrack.add(currentRoot);
 		} else {
 			if (currentRoot.getLeftChild() == null) {
-				addLeft(currentRoot, item);
+				addLeftChild(currentRoot, item);
 			} else if (currentRoot.getRightChild() == null) {
-				addRight(currentRoot, item);
+				addRightChild(currentRoot, item);
 			} else if (currentRoot.getLeftChild() != null && currentRoot.getRightChild() != null) {
 				backTrack.remove();
 				addNode(backTrack.peek(), item);
@@ -70,10 +70,10 @@ public class MirrorTrees {
 	 * @param currentRoot
 	 * @param item
 	 */
-	public void addLeft(Node currentRoot, int item) {
-		Node left = new Node(item);
-		currentRoot.setLeftChild(left);
-		backTrack.add(left);
+	public void addLeftChild(Node currentRoot, int item) {
+		Node leftChild = new Node(item);
+		currentRoot.setLeftChild(leftChild);
+		backTrack.add(leftChild);
 	}
 	
 	/**
@@ -81,10 +81,10 @@ public class MirrorTrees {
 	 * @param currentRoot
 	 * @param item
 	 */
-	public void addRight(Node currentRoot, int item) {
-		Node right = new Node(item);
-		currentRoot.setRightChild(right);
-		backTrack.add(right);
+	public void addRightChild(Node currentRoot, int item) {
+		Node rightChild = new Node(item);
+		currentRoot.setRightChild(rightChild);
+		backTrack.add(rightChild);
 	}
 	
 	/**
@@ -126,7 +126,7 @@ public class MirrorTrees {
 		mirrorTest2.addNode(4);
 		mirrorTest2.addNode(3);
 		
-		if (mirrorTest.checkMirror(mirrorTest.getRoot(), mirrorTest2.getRoot())) {
+		if (mirrorTest.checkMirror(mirrorTest.getRootNode(), mirrorTest2.getRootNode())) {
 			System.out.println("Trees are Mirrors");
 		} else { 
 			System.out.println("Trees are Not Mirrors");
