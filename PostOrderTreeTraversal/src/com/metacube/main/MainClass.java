@@ -97,8 +97,11 @@ public class MainClass {
 			System.out.println("Enter Your Choice : ");
 			try { 
 				choice=scan.nextInt();
+				if (choice < 0) {
+					throw new Exception();
+				}
 			} catch (Exception e) {
-				System.out.println("Please Enter a Valid Number !!");
+				System.out.println("Please Enter a Valid Choice !!");
 				scan.nextLine();
 				continue;
 			}
