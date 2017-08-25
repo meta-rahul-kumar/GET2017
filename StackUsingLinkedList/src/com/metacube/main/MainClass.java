@@ -1,7 +1,11 @@
 package com.metacube.main;
 import java.util.Scanner;
 import com.metacube.resource.Stack;
-
+/**
+ * Main Class for Infix To Postfix
+ * @author Rahul Kumar
+ *
+ */
 public class MainClass {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {

@@ -2,7 +2,7 @@ package com.metacube.resource;
 
 /**
  * Stack Class have methods push, pop and infix to PostFix Conversion
- * @author User17
+ * @author Rahul Kumar
  *
  * @param <T>
  */
@@ -97,7 +97,12 @@ public class Stack<T> {
 			postFix.pop();
 		}
 	}
-
+	
+	/**
+	 * Checks that stack is empty or not
+	 * @return true if stack is empty
+	 * @return false if stack is not empty
+	 */
 	public boolean isEmpty() {
 		boolean isEmpty = false;
 		
@@ -107,12 +112,21 @@ public class Stack<T> {
 		
 		return isEmpty;
 	}
-
+	
+	/**
+	 * returns the peek node of Stack
+	 * @return
+	 */
 	@SuppressWarnings("rawtypes")
 	private Node peek() {
 		return top;
 	}
 
+	/**
+	 * returns the precedence of operator
+	 * @param operator
+	 * @return integer
+	 */
 	public int getPrecedence(char operator) {
 		int precedenceLevel;
 		switch (operator) {
@@ -138,6 +152,12 @@ public class Stack<T> {
 		return  precedenceLevel;
 	}
 	
+	/**
+	 * checks that a character is operator or not
+	 * @param character
+	 * @return true if character is operator
+	 * @return false if character is not operator
+	 */
 	public boolean isOperator(char character) {
 		boolean isOperator = false;
 		if (character == '+' || character == '-' || character == '/' || character == '*') {

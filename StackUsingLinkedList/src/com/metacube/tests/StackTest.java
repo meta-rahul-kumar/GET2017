@@ -6,7 +6,7 @@ import org.junit.Before;
 
 /**
  * Test Class for the Stack Class
- * @author User17
+ * @author Rahul Kumar
  *
  */
 public class StackTest {
