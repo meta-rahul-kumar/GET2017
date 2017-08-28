@@ -42,4 +42,9 @@ public class Output {
 		CounselingController counselingController = new CounselingController();
 		counselingController.showAllocatedSeats();
 	}
+
+	public int getTotalNoOfStudents() {
+		StudentController studentController = new StudentController();
+		return studentController.getTotalNoOfStudents();
+	}
 }

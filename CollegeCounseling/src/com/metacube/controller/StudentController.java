@@ -35,4 +35,9 @@ public class StudentController {
 		StudentFacade studentFacade = new StudentFacade();
 		return studentFacade.getLastStudentID();
 	}
+
+	public int getTotalNoOfStudents() {
+		StudentFacade studentFacade = new StudentFacade();
+		return studentFacade.getTotalNoOfStudents();
+	}
 }

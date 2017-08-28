@@ -56,4 +56,15 @@ public class StudentFacade {
 		
 		return count;
 	}
+
+	public int getTotalNoOfStudents() {
+		HashMap<Integer,Student> students = StudentDAO.getInstance().getAllStudents();
+		int count = 0;
+		
+		for (@SuppressWarnings("unused") int key : students.keySet()) {
+			count++;
+		}
+		
+		return count;
+	}
 }

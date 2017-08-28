@@ -16,7 +16,7 @@ public class CollegeFacade {
 	public void getAllColleges() {
 		HashMap<Integer,College> colleges = CollegeDAO.getInstance().getAllColleges();
 		for (int key : colleges.keySet()) {
-			System.out.println(colleges.get(key).getCollegeID() + "\t" + colleges.get(key).getCollegeName() + "\t\t" + colleges.get(key).getCollegeSeats());
+			System.out.println(colleges.get(key).getCollegeID() + "\t" + colleges.get(key).getCollegeName() + "\t\t" + colleges.get(key).getNoOfSeatsInCollege());
 		}
 	}
 
@@ -39,7 +39,7 @@ public class CollegeFacade {
 		boolean status = false;
 		
 		HashMap<Integer,College> colleges = CollegeDAO.getInstance().getAllColleges();
-		if (colleges.get(requiredCollegeId).getCollegeSeats() != 0) {
+		if (colleges.get(requiredCollegeId).getNoOfSeatsInCollege() != 0) {
 			status = true;
 		}
 		
@@ -52,7 +52,7 @@ public class CollegeFacade {
 	 */
 	public void decrementSeatsAfterSeatAllocation(int collegeId) {
 		HashMap<Integer,College> colleges = CollegeDAO.getInstance().getAllColleges();
-		colleges.get(collegeId).setCollegeSeats(colleges.get(collegeId).getCollegeSeats() - 1);
+		colleges.get(collegeId).setNoOfSeatsInCollege(colleges.get(collegeId).getNoOfSeatsInCollege() - 1);
 	}
 
 	/**
@@ -63,7 +63,7 @@ public class CollegeFacade {
 		int totalSeats = 0;
 		
 		for (int key : colleges.keySet()) {
-			totalSeats += colleges.get(key).getCollegeSeats();
+			totalSeats += colleges.get(key).getNoOfSeatsInCollege();
 		}
 		
 		return totalSeats;

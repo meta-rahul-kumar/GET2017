@@ -8,7 +8,7 @@ package com.metacube.models;
 public class College extends BaseEntity{
 	int collegeID;
 	String collegeName;
-	int collegeSeats;
+	int noOfSeatsInCollege;
 	
 	/**
 	 * College Constructor
@@ -26,7 +26,7 @@ public class College extends BaseEntity{
 	public College(int id, String name, int seats) {
 		collegeID = id;
 		collegeName = name;
-		collegeSeats = seats;
+		noOfSeatsInCollege = seats;
 	}
 	
 	/**
@@ -49,8 +49,8 @@ public class College extends BaseEntity{
 	 * sets the college empty seats
 	 * @param seats
 	 */
-	public void setCollegeSeats(int seats) {
-		collegeSeats = seats;
+	public void setNoOfSeatsInCollege(int seats) {
+		noOfSeatsInCollege = seats;
 	}
 	
 	/**
@@ -73,7 +73,7 @@ public class College extends BaseEntity{
 	 * retruns the college empty seats
 	 * @return
 	 */
-	public int getCollegeSeats() {
-		return collegeSeats;
+	public int getNoOfSeatsInCollege() {
+		return noOfSeatsInCollege;
 	}
 }

@@ -25,7 +25,7 @@ public class AddCollege implements Action {
 		
 		while (true) {
 			try {
-				System.out.println("Enter College Seats");
+				System.out.println("Enter No of Seats in College");
 				collegeSeats = sc.nextInt();
 				
 				if (collegeSeats <= 0) {

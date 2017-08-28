@@ -7,6 +7,7 @@ import com.metacube.menu.Menu;
 import com.metacube.menu.MenuItem;
 
 public class MainClass {
+
 	/**
 	 * sets the PreOrderTreeTraversal Object
 	 */
@@ -86,7 +87,7 @@ public class MainClass {
 					throw new Exception();
 				}
 			} catch (Exception e) {
-				System.out.println("Please Enter a Valid Number !!");
+				System.out.println("Please Enter a Valid Choice !!");
 				scan.nextLine();
 				continue;
 			}
