@@ -141,7 +141,12 @@ public class QueueProgram implements QueueInterface{
 	 */
 	@Override
 	public Object remove() {
-		return queue.removeFirst();
+		try {
+			return queue.removeFirst();
+			
+		} catch (Exception e) {
+			return "Queue is Empty";
+		}
 	}
 
 	/**
