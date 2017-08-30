@@ -2,8 +2,9 @@ package com.metacube.test;
 import static org.junit.Assert.*;
 import java.util.Iterator;
 import org.junit.Test;
-import com.metacube.collectionOne.NaturalSorting;
+
 import com.metacube.model.Employee;
+import com.metacube.views.NaturalSorting;
 
 /**
  * Test class for NaturalSorting Class

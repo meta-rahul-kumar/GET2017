@@ -1,7 +1,7 @@
 package com.metacube.test;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import com.metacube.collectionThree.UniqueEmployees;
+import com.metacube.views.UniqueEmployees;
 import com.metacube.model.Employee;
 
 /**

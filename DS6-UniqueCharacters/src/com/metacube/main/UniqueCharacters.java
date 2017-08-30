@@ -9,7 +9,7 @@ import java.util.Set;
  * @author Rahul Kumar
  *
  */
-public class UniqueWords {
+public class UniqueCharacters {
 	Map<String, Integer> savedStrings = new HashMap<>();
 	
 	/**
@@ -21,16 +21,16 @@ public class UniqueWords {
 		if (savedStrings.containsKey(inputString)) {
 			return savedStrings.get(inputString);
 		} else {
-			Set<Character> uniqueWords = new HashSet<>();
+			Set<Character> uniqueCharacters = new HashSet<>();
 			
 			for (int i = 0; i < inputString.length(); i++) {
 				if (inputString.charAt(i) != ' ') {
-					uniqueWords.add(inputString.charAt(i));
+					uniqueCharacters.add(inputString.charAt(i));
 				}
 			}
 			
-			savedStrings.put(inputString, uniqueWords.size());
-			return uniqueWords.size();
+			savedStrings.put(inputString, uniqueCharacters.size());
+			return uniqueCharacters.size();
 		}
 	}
 }

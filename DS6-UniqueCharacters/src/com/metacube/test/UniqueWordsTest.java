@@ -1,7 +1,7 @@
 package com.metacube.test;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import com.metacube.main.UniqueWords;
+import com.metacube.main.UniqueCharacters;
 
 /**
  * Test Case Class for UniqueWords Class Methods
@@ -12,7 +12,7 @@ public class UniqueWordsTest {
 	
 	@Test
 	public void getUniqueCharactersTest_True() {
-		UniqueWords uniqueWords = new UniqueWords();
+		UniqueCharacters uniqueWords = new UniqueCharacters();
 		String inputString = "hello world";
 		int expected = 7;
 		assertEquals(expected, uniqueWords.getUniqueCharacters(inputString));
@@ -20,7 +20,7 @@ public class UniqueWordsTest {
 	
 	@Test
 	public void getUniqueCharactersTest_False() {
-		UniqueWords uniqueWords = new UniqueWords();
+		UniqueCharacters uniqueWords = new UniqueCharacters();
 		String inputString = "hello world";
 		int expected = 8;
 		assertNotEquals(expected, uniqueWords.getUniqueCharacters(inputString));

@@ -5,10 +5,10 @@ package com.metacube.main;
  * @author Rahul Kumar
  *
  */
-public class MainClass {
+public class Main {
 	public static void main(String[] args) {
-		UniqueWords uniqueWords = new UniqueWords();
-		System.out.println(uniqueWords.getUniqueCharacters("aaaaa"));
+		UniqueCharacters uniqueWords = new UniqueCharacters();
+		System.out.println(uniqueWords.getUniqueCharacters("aaaaabbbb"));
 		System.out.println(uniqueWords.getUniqueCharacters("aaaaa"));
 	}
 }
