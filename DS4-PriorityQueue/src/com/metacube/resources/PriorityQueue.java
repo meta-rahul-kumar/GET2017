@@ -1,7 +1,5 @@
 package com.metacube.resources;
 
-import java.util.HashMap;
-
 public class PriorityQueue {
 	Job[] jobs;
 	int queueSize;
@@ -86,5 +84,9 @@ public class PriorityQueue {
 		maxHeapify(0);
 		
 		return removeJob;
+	}
+	
+	public  int size() {
+		return queueSize;
 	}
 }

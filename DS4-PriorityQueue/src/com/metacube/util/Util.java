@@ -1,32 +1,12 @@
 package com.metacube.util;
-
 import java.util.Scanner;
+import com.metacube.resources.PriorityQueue;
 
 public class Util {
 	public static Scanner sc = new Scanner(System.in);
 	
-	public static int getJobId(int number) {
-		int id;
-		
-		while (true)  {
-			try {
-				System.out.println("Enter Job Id for Job " + number);
-				id = Util.sc.nextInt();
-				
-				if (id <= 0 ) {
-					throw new Exception();
-				}
-				
-				break;
-				
-			} catch (Exception e) {
-				System.out.println("Please enter a valid number");
-				sc.nextLine();
-
-			}
-		}
-		
-		return id;
+	public static int getJobId(PriorityQueue queue , int number) {
+		return queue.size() + 1;
 	}
 
 	public static int getJobPriority(int number) {

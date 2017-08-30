@@ -10,9 +10,13 @@ public class AddGuest implements Action {
 
 	@Override
 	public void performAction() {
-		Input input = new Input();
-		input.addGuest();
-
+		Output output = new Output();
+		if (output.getTotalNumberOfGuests() != output.getTotalNumberOfRooms()) {
+			Input input = new Input();
+			input.addGuest();
+		} else {
+			System.out.println("There are Only " + output.getTotalNumberOfRooms() + " Rooms. Unable to add Guest.");
+		}
 	}
 
 }

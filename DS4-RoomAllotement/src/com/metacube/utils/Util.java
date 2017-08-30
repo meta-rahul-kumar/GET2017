@@ -41,7 +41,7 @@ public class Util {
 		
 		while (true)  {
 			try {
-				System.out.println("Enter How Many Rooms are available in Hotel [Must be prime number");
+				System.out.println("Enter How Many Rooms are available in Hotel [Must be prime number]");
 				rooms = Util.sc.nextInt();
 				
 				if (!Util.isPrime(rooms)) {
@@ -50,10 +50,6 @@ public class Util {
 				
 				if (rooms <= 0 ) {
 					throw new Exception("Total number of rooms must be greater than 0");
-				}
-				
-				if (rooms < Util.totalNumberOfGuests()) {
-					throw new Exception("Room must be greater or equal than total number of users");
 				}
 				
 				break;
@@ -69,15 +65,6 @@ public class Util {
 		}
 	
 		return rooms;
-	}
-	
-	/**
-	 * returns total Number of Guests
-	 * @return
-	 */
-	private static int totalNumberOfGuests() {
-		Output output = new Output();
-		return output.getTotalNumberOfGuests();
 	}
 	
 	/**
