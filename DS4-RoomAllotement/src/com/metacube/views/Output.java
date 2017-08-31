@@ -61,4 +61,9 @@ public class Output {
 		return roomsController.getTotalNumberOfRooms();
 	}
 
+	public void flushValues() {
+		RoomsController roomsController = new RoomsController();
+		roomsController.flushValues();
+	}
+
 }

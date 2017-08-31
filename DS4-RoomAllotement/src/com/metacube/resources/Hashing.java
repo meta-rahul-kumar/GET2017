@@ -43,4 +43,8 @@ public class Hashing {
 			return getHashResult(age + 1);
 		}
 	}
+
+	public void flushValues() {
+		keys.clear();
+	}
 }

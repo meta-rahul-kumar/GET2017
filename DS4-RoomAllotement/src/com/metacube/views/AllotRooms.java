@@ -14,6 +14,7 @@ public class AllotRooms implements Action {
 		if (output.getTotalNumberOfGuests() == 0 || output.getTotalNumberOfRooms() == 0) {
 			System.out.println("Not Enought Data For Allotment of Rooms");
 		} else {
+			output.flushValues();
 			output.allotRooms();
 			output.showAllotedRooms();
 		}

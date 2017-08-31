@@ -39,4 +39,8 @@ public class RoomsFacade {
 		}
 		
 	}
+
+	public void flushValues() {
+		Hashing.getInstance().flushValues();
+	}
 }

@@ -34,4 +34,9 @@ public class RoomsController {
 		return roomsFacade.getNoOfRooms();
 	}
 
+	public void flushValues() {
+		RoomsFacade roomsFacade = new RoomsFacade();
+		roomsFacade.flushValues();
+	}
+
 }
