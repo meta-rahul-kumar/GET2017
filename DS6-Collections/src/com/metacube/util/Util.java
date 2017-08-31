@@ -39,6 +39,7 @@ public class Util {
 	 */
 	public static int getId() {
 		int input = 0;
+		
 		while (true) {
 			try {
 				System.out.println("Enter ID");
@@ -54,6 +55,7 @@ public class Util {
 				sc.nextLine();
 			}
 		}
+		
 		return input;
 	}
 
