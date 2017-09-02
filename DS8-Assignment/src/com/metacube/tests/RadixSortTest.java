@@ -1,32 +1,33 @@
-package com.metacube.test;
+package com.metacube.tests;
 
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertNotEquals;
 import org.junit.Test;
-import com.metacube.sortings.CountingSort;
-import static org.junit.Assert.*;
+
+import com.metacube.sortAlgorithms.RadixSort;
 
 /**
- * Counting Sort methods Test Class
+ * Radix Sort Methods Test Class
  * 
  * @author Rahul Kumar
  *
  */
-public class CountingSortTest {
-
+public class RadixSortTest {
 	@Test
 	public void sortTest_True() {
-		CountingSort countingSort = new CountingSort();
+		RadixSort radixSort = new RadixSort();
 		int[] input = { 7, 3, 9, 2, 1 };
 		int[] expected = { 1, 2, 3, 7, 9 };
-		countingSort.sort(input);
+		radixSort.sort(input);
 		assertArrayEquals(expected, input);
 	}
 
 	@Test
 	public void sortTest_False() {
-		CountingSort countingSort = new CountingSort();
+		RadixSort radixSort = new RadixSort();
 		int[] input = { 7, 3, 9, 2, 1 };
 		int[] expected = { 1, 2, 7, 3, 9 };
-		countingSort.sort(input);
+		radixSort.sort(input);
 		assertNotEquals(expected, input);
 	}
 }

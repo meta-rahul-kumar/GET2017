@@ -1,9 +1,10 @@
-package com.metacube.test;
+package com.metacube.tests;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertNotEquals;
 import org.junit.Test;
-import com.metacube.sortings.QuickSort;
+
+import com.metacube.sortAlgorithms.QuickSort;
 
 /**
  * Quick Sort Methods Test Class

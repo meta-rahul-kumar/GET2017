@@ -72,19 +72,25 @@ public class Util {
 	 * @return
 	 */
 	public static int[] getArrayInputs(int[] inputArray) {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
 		for (int i = 0; i < inputArray.length; i++) {
-			System.out.println("Enter Element " + i);
+			System.out.println("Enter Element " + (i+1));
 			boolean flag = true;
 			while (flag) {
+				if(sc.hasNextLine() && i != 0) {
+					sc.nextLine();
+				}
 				while (!sc.hasNextInt()) {
 					System.out.println("Please Enter a Valid Number");
 					sc.nextLine();
 				}
 
-				inputArray[i] = Util.sc.nextInt();
+				inputArray[i] = sc.nextInt();
 
 				if (inputArray[i] < 0) {
 					System.out.println("Please Enter a Positive Number.");
+					sc.nextLine();
 				} else {
 					flag = false;
 				}

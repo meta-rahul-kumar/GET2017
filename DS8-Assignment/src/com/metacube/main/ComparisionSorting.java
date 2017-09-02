@@ -1,8 +1,8 @@
 package com.metacube.main;
 
 import com.metacube.menu.Action;
-import com.metacube.sortings.BubbleSort;
-import com.metacube.sortings.QuickSort;
+import com.metacube.sortAlgorithms.BubbleSort;
+import com.metacube.sortAlgorithms.QuickSort;
 
 /**
  * Class Performs the Comparison Sortings

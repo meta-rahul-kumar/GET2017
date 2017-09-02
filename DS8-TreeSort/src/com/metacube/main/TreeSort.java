@@ -1,6 +1,5 @@
 package com.metacube.main;
-
-import com.metacube.util.Util;
+import java.util.Scanner;
 
 /**
  * Tree Sort
@@ -59,7 +58,7 @@ public class TreeSort {
 			currentRoot = new Node(student);
 
 		} else {
-			if (student.getRollNo() > currentRoot.getData().getRollNo()) {
+			if (student.getRollNo() >= currentRoot.getData().getRollNo()) {
 				// if roll no is less then current root student roll no.
 				currentRoot.setRightChild(insert(currentRoot.getRightChild(), student));
 			} else if (student.getRollNo() < currentRoot.getData().getRollNo()) {
@@ -69,7 +68,23 @@ public class TreeSort {
 
 		return currentRoot;
 	}
-
+	
+	public boolean isStudentExists(Node currentNode, int rollNo) {
+		
+		if (currentNode == null) {
+			return false;
+		} else if (currentNode != null && currentNode.getData().getRollNo() == rollNo){
+			return true;
+		}
+		
+		if (currentNode.getData().getRollNo() < rollNo) {
+			// if roll no is less then current root student roll no.
+			return isStudentExists(currentNode.getRightChild(), rollNo);
+		} else if (currentNode.getData().getRollNo() > rollNo) {
+			return isStudentExists(currentNode.getLeftChild(), rollNo);
+		}
+		return false; 
+	}
 	/**
 	 * inOrder Traversal
 	 */
@@ -96,13 +111,92 @@ public class TreeSort {
 		}
 	}
 
+	/**
+	 * Takes a integer input
+	 * 
+	 * @return
+	 */
+	public int getNumberOfStudents() {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		int number = 0;
+		boolean flag = true;
+		System.out.println("How many Students do you want to enter ?");
+
+		while (flag) {
+
+			while (!sc.hasNextInt()) {
+				// runs while next Input is not Integer
+				System.out.println("Please Enter a Valid Number");
+				sc.nextLine();
+			}
+			number = sc.nextInt();
+
+			if (number <= 0) {
+				System.out.println("Please Enter a Valid Number");
+				sc.nextLine();
+			} else {
+				flag = false;
+			}
+		}
+		return number;
+	}
+
+	/**
+	 * Takes a Student Roll Number
+	 * 
+	 * @return
+	 */
+	public int getRollNo() {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in); // Problem was in making the Static object of Scanner.
+		int number = 0;
+		boolean flag = true;
+		System.out.println("Enter Student Roll No");
+
+		while (flag) {
+			while (!sc.hasNextInt()) {
+				// runs while next Input is not Integer
+				System.out.println("Please Enter a Valid Number");
+				sc.nextLine();
+			}
+			number = sc.nextInt();
+
+			if (number <= 0) {
+				System.out.println("Please Enter a Valid Roll No.");
+				sc.nextLine();
+			} else if (this.isStudentExists(this.getRootNode(), number)) {
+				System.out.println("Roll No Already Exists !!");
+				System.out.println("Please Enter a Unique Roll No");
+				sc.nextLine();
+			} else {
+				flag = false;
+			}
+		}
+		return number;
+	}
+
+	/**
+	 * Takes the Name of Student
+	 * 
+	 * @return
+	 */
+	public String getName() {
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		String name;
+		System.out.println("Enter Student Name");
+		name = sc.nextLine();
+		return name;
+	}
+	
 	public static void main(String[] args) {
 		TreeSort treeSort = new TreeSort();
-		int noOfStudents = Util.getNumberOfStudents();
+		int noOfStudents = treeSort.getNumberOfStudents();
 
 		for (int i = 0; i < noOfStudents; i++) {
-			int rollNo = Util.getRollNo();
-			String name = Util.getName();
+			int rollNo = treeSort.getRollNo();
+			String name = treeSort.getName();
 			Student student = new Student(rollNo, name);
 			treeSort.insert(student);
 		}
@@ -112,5 +206,6 @@ public class TreeSort {
 		System.out.println("------------------------");
 		treeSort.inOrder();
 		System.out.println("------------------------");
+		
 	}
 }

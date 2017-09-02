@@ -1,7 +1,9 @@
-package com.metacube.test;
+package com.metacube.tests;
 
 import org.junit.Test;
-import com.metacube.sortings.BubbleSort;
+
+import com.metacube.sortAlgorithms.BubbleSort;
+
 import static org.junit.Assert.*;
 
 /**

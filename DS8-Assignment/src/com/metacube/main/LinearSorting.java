@@ -1,8 +1,8 @@
 package com.metacube.main;
 
 import com.metacube.menu.Action;
-import com.metacube.sortings.CountingSort;
-import com.metacube.sortings.RadixSort;
+import com.metacube.sortAlgorithms.CountingSort;
+import com.metacube.sortAlgorithms.RadixSort;
 import com.metacube.util.Util;
 
 /**

@@ -1,4 +1,4 @@
-package com.metacube.sortings;
+package com.metacube.sortAlgorithms;
 
 /**
  * Class Performs the bubble Sorting.

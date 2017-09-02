@@ -1,4 +1,4 @@
-package com.metacube.sortings;
+package com.metacube.sortAlgorithms;
 
 import java.util.Arrays;
 
