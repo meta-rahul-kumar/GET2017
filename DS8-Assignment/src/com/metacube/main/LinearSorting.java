@@ -3,7 +3,6 @@ package com.metacube.main;
 import com.metacube.menu.Action;
 import com.metacube.sortAlgorithms.CountingSort;
 import com.metacube.sortAlgorithms.RadixSort;
-import com.metacube.util.Util;
 
 /**
  * Class Performs the Liner Sortings
@@ -18,7 +17,7 @@ public class LinearSorting implements Action {
 	 */
 	@Override
 	public void performAction(int[] inputArray) {
-		int maxDigits = Util.digitsInMaximumNumber(inputArray); // gets the number of digits in maximum number.
+		int maxDigits = Input.digitsInMaximumNumber(inputArray); // gets the number of digits in maximum number.
 
 		if (maxDigits > 2) {
 			// if number of digits is greater than 2 in maximum number

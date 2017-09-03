@@ -6,7 +6,6 @@ import java.util.Scanner;
 import com.metacube.menu.ActionableMenuItem;
 import com.metacube.menu.Menu;
 import com.metacube.menu.MenuItem;
-import com.metacube.util.Util;
 
 public class Main {
 	int[] inputArray;
@@ -17,9 +16,11 @@ public class Main {
 	public void welcomeMessage() {
 		System.out.println("Welcome to Sorting System");
 		System.out.println("------------------------------------------");
-		int number = Util.getNumber();
+		int number = Input.getNumber();
 		inputArray = new int[number]; // make input array of size [number]
-		inputArray = Util.getArrayInputs(inputArray); // takes input array input
+		for (int i = 0; i < inputArray.length; i++) {
+			inputArray[i] = Input.getArrayElement(i+1); // takes input array input
+		}
 	}
 
 	/**
