@@ -55,8 +55,8 @@ INSERT INTO `book_issue` (`issue_dt`, `accession_no`, `member_id`, `due_date`) V
 INSERT INTO `book_issue` (`issue_dt`, `accession_no`, `member_id`, `due_date`) VALUES (CURRENT_TIMESTAMP, '5', '5', NOW() + INTERVAL 15 DAY);
 
 /* insert dummy data in book_return*/
-INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '1', '1', '2017-09-04 12:44:00');
-INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '2', '2', '2017-09-04 12:44:00');
-INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '3', '3', '2017-09-04 12:44:00');
-INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '4', '4', '2017-09-04 12:44:00');
-INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '5', '5', '2017-09-04 12:44:00');
+INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '1', '1', NOW());
+INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '2', '2', NOW());
+INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '3', '3', NOW());
+INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '4', '4', NOW());
+INSERT INTO `book_return` (`return_dt`, `accession_no`, `member_id`, `issue_dt`) VALUES (CURRENT_TIMESTAMP, '5', '5', NOW());

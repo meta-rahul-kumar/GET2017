@@ -1,6 +1,7 @@
+CREATE DATABASE lis;
 USE lis;
 
-CREATE TABLE members(
+CREATE TABLE IF NOT EXISTS members(
     member_id INT(10) NOT NULL AUTO_INCREMENT,
     member_name VARCHAR(40) NOT NULL,
     addressline1 VARCHAR(50) NOT NULL,
@@ -9,25 +10,25 @@ CREATE TABLE members(
     PRIMARY KEY(member_id)
 );
 
-CREATE TABLE subjects(
+CREATE TABLE IF NOT EXISTS subjects(
     subject_id INT(10) NOT NULL AUTO_INCREMENT,
     subject_nm VARCHAR(50) NOT NULL,
     PRIMARY KEY(subject_id)
 );
 
-CREATE TABLE publishers(
+CREATE TABLE IF NOT EXISTS publishers(
     publisher_id INT(10) NOT NULL AUTO_INCREMENT,
     publisher_nm VARCHAR(50) NOT NULL,
     PRIMARY KEY(publisher_id)
 );
 
-CREATE TABLE authors(
+CREATE TABLE IF NOT EXISTS authors(
     author_id INT(10) NOT NULL AUTO_INCREMENT,
     author_nm VARCHAR(50) NOT NULL,
     PRIMARY KEY(author_id)
 );
 
-CREATE TABLE titles(
+CREATE TABLE IF NOT EXISTS titles(
     title_id INT(10) NOT NULL AUTO_INCREMENT,
     title_name VARCHAR(50) NOT NULL,
     subject_id INT(10) NOT NULL,
@@ -37,7 +38,7 @@ CREATE TABLE titles(
     FOREIGN KEY(publisher_id) REFERENCES publishers(publisher_id) ON DELETE CASCADE
 );
 
-CREATE TABLE title_author(
+CREATE TABLE IF NOT EXISTS title_author(
     title_id INT(10) NOT NULL,
     author_id INT(10) NOT NULL,
     PRIMARY KEY(title_id, author_id),
@@ -45,7 +46,7 @@ CREATE TABLE title_author(
     FOREIGN KEY(author_id) REFERENCES authors(author_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE books(
+CREATE TABLE IF NOT EXISTS books(
     accession_no INT(10) NOT NULL AUTO_INCREMENT,
     title_id INT(10),
     purchase_dt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -55,7 +56,7 @@ CREATE TABLE books(
     FOREIGN KEY(title_id) REFERENCES titles(title_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE book_issue(
+CREATE TABLE IF NOT EXISTS book_issue(
     issue_dt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     accession_no INT(10) NOT NULL,
     member_id INT(10) NOT NULL,
@@ -65,7 +66,7 @@ CREATE TABLE book_issue(
     FOREIGN KEY (member_id) REFERENCES members(member_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE book_return(
+CREATE TABLE IF NOT EXISTS book_return(
     return_dt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     accession_no INT(10) NOT NULL,
     member_id INT(10) NOT NULL,
