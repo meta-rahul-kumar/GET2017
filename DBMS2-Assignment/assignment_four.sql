@@ -21,4 +21,5 @@ INSERT INTO `city_zips` (`zip_code`, `city_name`, `state_id`) VALUES ('301001', 
 
 SELECT Z.zip_code "ZIP Code", Z.city_name AS "City", S.state_name AS "State"
 FROM city_zips AS Z
-INNER JOIN states AS S ON Z.state_id = S.state_id;
+INNER JOIN states AS S ON Z.state_id = S.state_id
+ORDER BY S.state_name,Z.city_name;
