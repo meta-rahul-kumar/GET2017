@@ -33,7 +33,7 @@ title, member name, category, issue date, due date and return
 date. If the books have not been returned, NULL should be
 displayed instead of return date. */
 
-CREATE OR REPLACE VIEW book_transection_details
+CREATE OR REPLACE VIEW book_transaction_details
 AS
 SELECT S.subject_nm, T.title_name, M.member_name, M.category, BI.issue_dt, BI.due_date, IFNULL(BR.return_dt,"NULL") AS "Return Date"
 FROM book_issue AS BI
@@ -44,5 +44,5 @@ LEFT JOIN book_return AS BR ON BI.issue_dt = BR.issue_dt AND BI.accession_no = B
 INNER JOIN subjects AS S ON T.subject_id = S.subject_id;
 
 SELECT * 
-FROM book_transection_details;
+FROM book_transaction_details;
 
