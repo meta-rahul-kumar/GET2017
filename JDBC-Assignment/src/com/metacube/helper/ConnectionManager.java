@@ -2,6 +2,8 @@ package com.metacube.helper;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -51,5 +53,28 @@ public class ConnectionManager {
 
 		Connection connection = DriverManager.getConnection(mysqlURL, userId, password);
 		return connection;
+	}
+	
+	/**
+	 * executes the query
+	 * 
+	 * @param stmt
+	 * @return
+	 * @throws SQLException
+	 */
+	public ResultSet executeQuery(PreparedStatement stmt) throws SQLException {
+		ResultSet rs = stmt.executeQuery();
+		return rs;
+	}
+
+	/**
+	 * deletes all the books which are not issued from 1 year
+	 * 
+	 * @param stmt
+	 * @return
+	 * @throws SQLException
+	 */
+	public int deleteBooks(PreparedStatement stmt) throws SQLException {
+		return stmt.executeUpdate();
 	}
 }
