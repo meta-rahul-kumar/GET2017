@@ -15,7 +15,7 @@ import com.metacube.helper.ConnectionManager;
  * @author Rahul Kumar
  *
  */
-public class ConnectionDAOTest {
+public class ConnectionManagerTest {
 
 	@Test
 	public void executeQueryTest_IsBookIssue_True() throws SQLException {
