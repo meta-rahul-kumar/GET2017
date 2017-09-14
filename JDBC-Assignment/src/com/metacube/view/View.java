@@ -23,32 +23,23 @@ public class View {
 	 * @return
 	 */
 	public int getChoice() {
-		boolean status = true;
-		boolean insideStatus = false;
+		boolean status = false;
 		int choice = 0;
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		while (status) {
-			insideStatus = false;
+		while (!status) {
 			System.out.println("Enter Choice");
 			try {
 				choice = sc.nextInt();
+				if (choice >= 1 && choice <= 3) {
+					status = true;
+				}
 			} catch (InputMismatchException ime) {
 				System.out.println("Please enter a valid choice");
 				sc.nextLine();
-				insideStatus = true;
-			}
-			
-			if ((choice < 1 || choice > 3) && insideStatus == false) {
-				System.out.println("Please enter a valid choice");
-			} else if ((choice < 1 || choice > 3) && insideStatus == true){
-				
-			} else {
-				status = false;
 			}
 		}
-
 		return choice;
 	}
 
@@ -74,7 +65,7 @@ public class View {
 				String authorName = "";
 				System.out.println("Enter Author Name");
 				authorName = sc.nextLine();
-				
+
 				ResultSet result = queriesHelper.getBooksTitlesByAuthorName(authorName);
 				showBookTitlesResult(result);
 				break;
@@ -104,6 +95,7 @@ public class View {
 
 	/**
 	 * Shows the status if book is issued by member or not
+	 * 
 	 * @param resultSet
 	 * @throws SQLException
 	 */
@@ -114,7 +106,7 @@ public class View {
 			resultSet.last();
 			size = resultSet.getRow();
 		}
-		
+
 		if (size > 0) {
 			System.out.println("---------------------------------");
 			System.out.println("Yes Book is Issued By " + resultSet.getString(1));
@@ -128,6 +120,7 @@ public class View {
 
 	/**
 	 * shows the books titles which are written by specified author
+	 * 
 	 * @param result
 	 * @throws NumberFormatException
 	 * @throws SQLException
@@ -148,8 +141,8 @@ public class View {
 			for (Title key : resultTitles) {
 				System.out.println(key.getTitleId() + "\t\t" + key.getTitleName());
 			}
-	
-			System.out.println("------------------------------------------------"); 
+
+			System.out.println("------------------------------------------------");
 		} else {
 			System.out.println("------------------------------------------------");
 			System.out.println("No Book is written by the specified Author.");
