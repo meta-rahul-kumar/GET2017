@@ -1,0 +1,6 @@
+Why used the Linkedlist over ArrayList for Queue Implimentation :
+
+1) Fast Insertion and Deletion - Linkedlist insert a element at first and deletes the element at last in O(1) time complexity , while Arraylist takes O(n) time complexity to
+									Delete an element, because it need to fill the remove element position by swap operations.
+ 
+2) ArrayList is better for storing and accessing data, where LinkedList is better for manipulating data. but in queue we need to access only first element and last element
