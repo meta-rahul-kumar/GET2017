@@ -1,0 +1,165 @@
+@media only screen and (max-width: 500px) {
+	nav.navbar.navbar-inverse.nav-container {
+		min-height: inherit;
+	}
+	
+	div.container-fluid.logo {
+		height: 22%;
+	}
+}
+
+.nav-container{
+	background : #3d3d3d;
+	border-radius: 0;
+	border: 0px solid black;
+}
+
+.active-class{
+	background : #c36464;
+}
+.navbar-inverse .navbar-nav>li>a{
+	color : white;
+}
+
+.logo {
+	background: #c36464;
+	height: 13%;
+}
+
+.footer{
+	background: #c36464;
+	color: white;
+	padding: 1% 0% 1% 0%;
+}
+
+.logo-img {
+	color : white;
+}
+
+.color-red{
+	color: #f06e82;
+}
+
+.color-white{
+	color : white;
+}
+.border-bottom-red{
+	border-bottom: 2px solid #f06e82;
+	margin-top: 1%;
+	margin-bottom: 2%;
+}
+.first-col {
+	background : #b9b739; 
+}
+.second-col {
+	background : #f94c4c; 
+}
+.third-col {
+	background : #119c7e; 
+}
+.forth-col {
+	background : #b739b9; 
+}
+.first-col,.second-col,.third-col,.forth-col{
+	border-radius : 5px;
+}
+.circle{
+	border: 2px solid white;
+	border-radius: 50%;
+	padding: 7%;
+	margin: 5%;
+}
+
+.circle2{
+	border-radius: 50%;
+	padding: 15px;
+	color: white;
+	margin-top: 25px;
+}
+.white-glyph{
+	color: white;
+}
+.glyphicon.glyphicon-camera {
+	font-size: 25px;
+}
+.glyphicon.glyphicon-volume-up {
+	font-size: 25px;
+}
+.glyphicon.glyphicon-heart {
+	font-size: 25px;
+}
+.glyphicon.glyphicon-bell {
+	font-size: 25px;
+}
+
+.divider-line {
+	margin: 5%;
+	border-top: 2px solid white; 
+}
+.notific-text{
+	padding: 2% 7% 7% 7%;
+	color: white;
+	text-transform: capitalize;
+}
+.border-radius-0 {
+	border-radius: 0;
+}
+.clear{
+	clear: both;
+}
+.btn-setting {
+	padding : 4% 15%;
+	height: auto;
+}
+.btn-facebook {
+	background : #6279a7;
+	border: 1px solid #6279a7;
+}
+
+.btn-facebook:hover{
+	background : #3c5588;
+	border: 1px solid #3c5588;
+}
+
+.label{
+	line-height: 2;
+}
+
+.share-margin{
+	margin: 2% 0% 2% 0%;
+}
+
+.padding{
+	padding-bottom: 4%;
+}
+span.glyphicon.glyphicon-align-left{
+	color : #4CAF50;
+}
+span.glyphicon.glyphicon-info-sign{
+	color : #CF6363;
+}
+span.glyphicon.glyphicon-comment{
+	color : #B8860B;
+}
+span.glyphicon.glyphicon-edit{
+	color : #CF6363;
+}
+
+.square{
+	border : 1px solid #ddd;
+	padding: 2%;
+	font-size: 13px;
+	margin-right: 3%;
+}
+
+.white-back{
+	background-color:white;
+}
+
+.collepse-border {
+border : 1px solid black;
+}
+
+.back-color{
+	background : #f0677c;
+}
