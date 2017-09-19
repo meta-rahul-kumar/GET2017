@@ -147,9 +147,9 @@ span.glyphicon.glyphicon-edit{
 
 .square{
 	border : 1px solid #ddd;
-	padding: 2%;
+	padding: 1%;
 	font-size: 13px;
-	margin-right: 3%;
+	margin-right: 2%;
 }
 
 .white-back{
@@ -162,4 +162,8 @@ border : 1px solid black;
 
 .back-color{
 	background : #f0677c;
+}
+
+.btn-small{
+	padding : 0.3% 1% 0.3% 1%; 
 }
