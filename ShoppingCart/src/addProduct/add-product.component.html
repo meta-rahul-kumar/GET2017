@@ -1,0 +1,22 @@
+<div class="w3-container w3-animate-top">
+    <div class="w3-teal w3-card w3-padding-16 w3-center"><h2>Add Product</h2></div>
+    <div class="w3-ul w3-border">
+      <label>id: </label>
+      <input #productID class="w3-input" placeholder="ID"/>
+    <div>
+      <label>Name: </label>
+      <input #productName placeholder="Name" class="w3-input"/>
+      <label>Price: </label>
+      <input #productPrice placeholder="Price" class="w3-input"/>
+      <label>Quantity: </label>
+      <input #productQuantity placeholder="Quantity" class="w3-input" />
+      <label>Rating: </label>
+      <input  #productRating placeholder="Rating" class="w3-input" />
+      <label>Seller: </label>
+      <input  #productSeller placeholder="Seller" class="w3-input"/>
+      <label>Thumbnail Link: </label>
+      <input  #productThumbnail placeholder="Thumbnail" class="w3-input"/>
+     </div>
+    <button (click)="goBack()" class="w3-btn w3-red"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+    <button (click)="add(productID.value,productName.value,productPrice.value,productQuantity.value,productRating.value,productSeller.value,productThumbnail.value);" class="w3-btn w3-green"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+  </div>

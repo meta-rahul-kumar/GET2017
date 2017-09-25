@@ -1,0 +1,18 @@
+<div class="w3-container w3-animate-zoom">
+<div class="w3-teal w3-card w3-padding-16 w3-center"><i class="fa fa-search" aria-hidden="true"></i> Search</div>
+<table class="w3-table-all">
+<tbody>
+    <tr>
+    <td>Search</td>
+    <td> <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+        <div style="position:absolute;z-index: 10;">
+            <div *ngFor="let product of products | async"
+                (click)="gotoDetail(product)" class="search-result" >
+            {{product.name}}
+            </div>
+        </div>
+    </td>
+    </tr>
+</tbody>
+</table>
+</div>
