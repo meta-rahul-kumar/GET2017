@@ -1,0 +1,39 @@
+<table *ngIf="product" class="w3-table w3-bordered w3-striped w3-border test w3-hoverable w3-animate-zoom">
+    <tbody><tr class="w3-green">
+      <th>Property</th>
+      <th>Value</th>
+    </tr>
+    </tbody><tbody>
+    <tr>
+      <td>Product ID</td>
+      <td>{{product.id}}</td>
+    </tr>
+    <tr>
+      <td>Product Name</td>
+      <td>{{product.name}}</td>
+    </tr>
+    <tr>
+      <td>Product Price</td>
+      <td>{{product.price | currency:'INR':true}}</td>
+    </tr>
+    <tr>
+      <td>Product Quantity</td>
+      <td>{{product.quantity}}</td>
+    </tr>
+    <tr>
+        <td>Product Rating</td>
+        <td>{{product.rating}}/10</td>
+    </tr>
+    <tr>
+        <td>Product Seller</td>
+        <td>{{product.seller}}</td>
+    </tr>
+    <tr>
+      <td>Product Thumbnail</td>
+      <td><img [src]="product.thumbnail" style="width:100px; height:100px;"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button (click)="goBack()" class="w3-btn w3-red"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button></td>
+    </tr>
+    </tbody>
+    </table>

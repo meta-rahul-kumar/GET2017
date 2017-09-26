@@ -1,0 +1,20 @@
+<router-outlet></router-outlet>
+
+<div class="w3-container w3-padding-16" style="padding-left: 10%;">
+  <div class="w3-row">
+    <div class="w3-col m4 w3-padding-16 w3-animate-right" *ngFor="let product of products" (click)="onSelect(product)">
+      <div class="w3-card-4 test" style="width:92%;max-width:300px;cursor:pointer;" [routerLink]="['/product-detail', product.id]">
+        <img [src]="product.thumbnail" alt="{{product.name}}" style="height:20%;width:100%;opacity:0.85">
+        <div class="w3-container w3-teal">
+          <h4><b>{{product.name}}</b></h4>
+          <div class="w3-half w3-padding-small">
+            {{product.price | currency:'INR':true}}
+          </div>
+          <div class="w3-half w3-padding-small">
+            <i class="fa fa-bars" aria-hidden="true"></i> {{product.quantity}}
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

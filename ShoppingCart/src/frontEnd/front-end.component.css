@@ -1,0 +1,7 @@
+.product-img{
+    width : 150px;
+    height: 150px;
+}
+.w3-card-4:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.5);
+}
