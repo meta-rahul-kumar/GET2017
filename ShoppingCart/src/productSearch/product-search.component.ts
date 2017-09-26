@@ -52,6 +52,9 @@ export class ProductSearchComponent implements OnInit {
 
   gotoDetail(product: Product): void {
     let link = ['/detail', product.id];
+    this.searchTerms.next(null);
     this.router.navigate(link);
+    (document.getElementById("search-box")  as HTMLTextAreaElement ).value="";
   }
+
 }

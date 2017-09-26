@@ -14,7 +14,11 @@ import { ProductDetailComponent }  from '../productDetail/product-detail.compone
 import { EditProductDetailComponent }  from '../editProduct/edit-product-detail.component';
 import { ProductService} from '../products/product.service';
 import { AddProductComponent }  from '../addProduct/add-product.component';
-import {ProductSearchComponent} from '../productSearch/product-search.component'
+import {ProductSearchComponent} from '../productSearch/product-search.component';
+import { FrontEndProductListComponent } from '../frontEnd/front-end.component';
+import { FrontEndProductDetailComponent }  from '../frontEndProductDetail/front-end-product-detail.component';
+import { StarRatingModule } from 'angular-star-rating';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import {ProductSearchComponent} from '../productSearch/product-search.component'
     ProductDetailComponent,
     EditProductDetailComponent,
     AddProductComponent,
-    ProductSearchComponent
+    ProductSearchComponent,
+    FrontEndProductListComponent,
+    FrontEndProductDetailComponent,
   ],
   imports: [
     BrowserModule, 
@@ -33,7 +39,8 @@ import {ProductSearchComponent} from '../productSearch/product-search.component'
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    StarRatingModule.forRoot()
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

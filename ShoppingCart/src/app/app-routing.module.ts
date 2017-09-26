@@ -8,6 +8,8 @@ import { ProductListComponent }  from '../products/productlist.component';
 import { ProductDetailComponent }  from '../productDetail/product-detail.component';
 import { EditProductDetailComponent }  from '../editProduct/edit-product-detail.component';
 import { AddProductComponent }  from '../addProduct/add-product.component';
+import { FrontEndProductListComponent } from '../frontEnd/front-end.component';
+import { FrontEndProductDetailComponent }  from '../frontEndProductDetail/front-end-product-detail.component';
  
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -17,6 +19,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: ProductDetailComponent },
   { path: 'edit-product/:id', component: EditProductDetailComponent },
   { path: 'add-product', component: AddProductComponent },
+  { path: 'home', component: FrontEndProductListComponent },
+  { path: 'product-detail/:id', component: FrontEndProductDetailComponent },
 ];
  
 @NgModule({
