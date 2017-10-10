@@ -34,12 +34,10 @@ public class Product implements BaseModel {
 	@Column(name = "quantity", nullable = false)
 	private int quantity;
 	
-	@Column(name = "xyz", nullable = false)
-	private int xyz;
 	
 	public Product() { }
 	
-	public Product(int id, String name, float price, String seller, String thumbnail, int quantity, float rating, int xyz) {
+	public Product(int id, String name, float price, String seller, String thumbnail, int quantity, float rating) {
 		setId(id);
 		setName(name);
 		setPrice(price);
@@ -47,7 +45,6 @@ public class Product implements BaseModel {
 		setThumbnail(thumbnail);
 		setQuantity(quantity);
 		setRating(rating);
-		setXyz(xyz);
 	}
 	
 	public float getRating() {
@@ -58,13 +55,6 @@ public class Product implements BaseModel {
 		this.rating = rating;
 	}
 	
-	public int getXyz() {
-		return xyz;
-	}
-	
-	public void setXyz(int xyz) {
-		this.xyz = xyz;
-	}
 	public int getId() {
 		return id;
 	}
