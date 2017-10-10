@@ -2,6 +2,7 @@ package main.java.com.metacube.layeredArchitecture.dao;
 
 import java.util.List;
 import main.java.com.metacube.layeredArchitecture.model.BaseModel;
+import main.java.com.metacube.layeredArchitecture.model.Product;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -59,5 +60,15 @@ public abstract class GenericHibernateDao <T extends BaseModel> implements BaseD
 		Criteria criteria = session.createCriteria(getModelClass());
 		session.delete(criteria.add(Restrictions.eq("id", primaryKey)).uniqueResult());
 		return 1;
+	}
+	
+	public void update(T t) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.update(t);
+	}
+
+	public void create(T t) {
+		Session session = getSessionFactory().getCurrentSession();
+		session.save(t);
 	}
 }

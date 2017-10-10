@@ -15,23 +15,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 @RequestMapping("/service/product")
 public class ProductController {
-@Autowired
-ProductFacade productFacade;
+	@Autowired
+	ProductFacade productFacade;
 
-@RequestMapping(value = "/list", produces = "application/json", method = RequestMethod.GET)
-public @ResponseBody List<ProductDto> getProducts() {
-return productFacade.getAllProducts();
-}
+	@RequestMapping(value = "/list", produces = "application/json", method = RequestMethod.GET)
+	public @ResponseBody List<ProductDto> getProducts() {
+		return productFacade.getAllProducts();
+	}
 
-@RequestMapping(value = "/{productId}", produces = "application/json", method = RequestMethod.GET)
-public @ResponseBody ProductDto getProductById(@PathVariable("productId") int id) {
-return productFacade.getProductById(id);
-}
+	@RequestMapping(value = "/{productId}", produces = "application/json", method = RequestMethod.GET)
+	public @ResponseBody ProductDto getProductById(@PathVariable("productId") int id) {
+		return productFacade.getProductById(id);
+	}
 
-
-@RequestMapping(value = "/deleteProduct/{id}", produces = "application/json", method = RequestMethod.DELETE)
-public @ResponseBody int deleteProductById(@PathVariable("id") int id){
-return productFacade.deleteProductById(id);
-}
+	@RequestMapping(value = "/deleteProduct/{id}", produces = "application/json", method = RequestMethod.DELETE)
+	public @ResponseBody int deleteProductById(@PathVariable("id") int id) {
+		return productFacade.deleteProductById(id);
+	}
 
 }

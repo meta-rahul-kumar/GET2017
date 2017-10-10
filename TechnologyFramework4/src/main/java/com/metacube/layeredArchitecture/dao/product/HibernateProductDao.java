@@ -12,14 +12,14 @@ public class HibernateProductDao extends GenericHibernateDao<Product> implements
 		super(Product.class);
 	}
 
-	public void update(Product product) {
-		Session session = getSessionFactory().getCurrentSession();
-		session.update(product);
-	}
-
-	public void create(Product product) {
-		Session session = getSessionFactory().getCurrentSession();
-		session.save(product);
-	}
+//	public void update(Product product) {
+//		Session session = getSessionFactory().getCurrentSession();
+//		session.update(product);
+//	}
+//
+//	public void create(Product product) {
+//		Session session = getSessionFactory().getCurrentSession();
+//		session.save(product);
+//	}
 
 }

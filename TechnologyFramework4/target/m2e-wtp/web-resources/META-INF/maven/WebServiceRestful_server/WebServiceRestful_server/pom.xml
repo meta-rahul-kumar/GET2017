@@ -8,6 +8,7 @@
   <properties>
         <spring.version>4.1.1.RELEASE</spring.version>
         <hibernate.core.version>4.3.10.Final</hibernate.core.version>
+        <property name="hibernate.hbm2ddl.auto">update</property>
     </properties>
   <dependencies>
 <dependency>
