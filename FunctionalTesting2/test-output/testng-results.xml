@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="21551" started-at="2017-10-11T12:21:06Z" finished-at="2017-10-11T12:21:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="21551" started-at="2017-10-11T12:21:06Z" finished-at="2017-10-11T12:21:27Z">
+      <class name="TestNg_Tests.TestNG_LoginCheck">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestNg_Tests.TestNG_LoginCheck@1ceabc1]" name="beforeTest" is-config="true" duration-ms="10345" started-at="2017-10-11T17:51:06Z" finished-at="2017-10-11T17:51:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="testAccountCreation()[pri:1, instance:TestNg_Tests.TestNG_LoginCheck@1ceabc1]" name="testAccountCreation" duration-ms="5553" started-at="2017-10-11T17:51:16Z" finished-at="2017-10-11T17:51:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAccountCreation -->
+        <test-method status="PASS" signature="testForgotPassword()[pri:2, instance:TestNg_Tests.TestNG_LoginCheck@1ceabc1]" name="testForgotPassword" duration-ms="3792" started-at="2017-10-11T17:51:22Z" finished-at="2017-10-11T17:51:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPassword -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestNg_Tests.TestNG_LoginCheck@1ceabc1]" name="afterTest" is-config="true" duration-ms="1837" started-at="2017-10-11T17:51:25Z" finished-at="2017-10-11T17:51:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestNg_Tests.TestNG_LoginCheck -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
