@@ -1,0 +1,23 @@
+<navbar></navbar>
+<div *ngIf="product" class="w3-container w3-animate-top">
+    <div class="w3-teal w3-card w3-padding-16 w3-center"><h2>Edit {{product.name}} details!</h2></div>
+    <div class="w3-ul w3-border">
+      <label>id: </label>
+      <input [(ngModel)]="product.id" placeholder="{{product.id}}" class="w3-input w3-disabled" disabled/>
+    <div>
+      <label>Name: </label>
+      <input [(ngModel)]="product.name" placeholder="Name" class="w3-input" />
+      <label>Price: </label>
+      <input [(ngModel)]="product.price" placeholder="Price" class="w3-input" />
+      <label>Quantity: </label>
+      <input [(ngModel)]="product.quantity" placeholder="Quantity" class="w3-input" />
+      <label>Thumbnail Link: </label>
+      <input [(ngModel)]="product.thumbnail" placeholder="Thumbnail" class="w3-input" />
+      <label>Rating: </label>
+      <input [(ngModel)]="product.rating" placeholder="Rating" class="w3-input" />
+      <label>Seller: </label>
+      <input [(ngModel)]="product.seller" placeholder="Seller" class="w3-input" />
+     </div>
+    <button (click)="goBack()" class="w3-btn w3-red"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+    <button (click)="save()" class="w3-btn w3-green"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+  </div>

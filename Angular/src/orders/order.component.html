@@ -1,0 +1,21 @@
+<navbar></navbar>
+<div class="w3-container w3-animate-left w3-margin-top">
+        
+    </div>
+    <div class="w3-container w3-animate-zoom">
+            <div class="w3-teal w3-card w3-padding-16" style="padding-left: 5px;font-size: 18px;"><div class="text-left" style="width: 70%;display: inline;"><i class="fa fa-list" aria-hidden="true"></i> Orders</div></div>
+              <table class="w3-table-all w3-hoverable"><thead>
+                      <tr>
+                      <th>Order ID</th>
+                      <th>Order Date</th>
+                      <th>Order Total</th>
+                      </tr>
+                    </thead><tbody><tr *ngFor="let order of orders" (click)="onSelect(order)" [routerLink]="['/order-detail', order.id]">
+                      <td>{{order.id}}</td>
+                      <td>{{order.date}}</td>
+                      <td>{{order.total | currency:'INR':true}}</td>
+                      </tr></tbody>
+              </table>
+            
+    </div>
+    

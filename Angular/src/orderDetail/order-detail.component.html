@@ -1,0 +1,23 @@
+<navbar></navbar>
+<router-outlet></router-outlet>
+<!--<product-search></product-search> -->
+<div class="w3-container w3-animate-left w3-margin-top">
+    
+</div>
+<div class="w3-container w3-animate-zoom">
+        <div class="w3-teal w3-card w3-padding-16" style="padding-left: 5px;font-size: 18px;"><div class="text-left" style="width: 70%;display: inline;"><i class="fa fa-list" aria-hidden="true"></i> Order Detail for #</div> </div>
+          <table class="w3-table-all w3-hoverable"><thead>
+                  <tr>
+                  <th>ID</th>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  </tr>
+                </thead><tbody><tr *ngFor="let product of orderProducts">
+                  <td>{{product.id}}</td>
+                  <td><img [src]="product.thumbnail" style="height: 50px;width: 50px;"></td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.price | currency:'INR':true}}</td>
+                  </tr></tbody>
+          </table>
+</div>

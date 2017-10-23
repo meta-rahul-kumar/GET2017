@@ -1,0 +1,19 @@
+<navbar></navbar>
+<div *ngIf="product" class="w3-container w3-margin w3-border w3-padding-16 w3-animate-top w3-card-4">
+  <div class="row">
+      <div class="w3-col m4 w3-center w3-lobster">
+          <img [src]="product.thumbnail" style="width:500px; height:500px;" class="w3-padding">
+          <div class="w3-col m6"><button class="w3-button w3-round w3-block w3-red w3-padding-16 w3-margin-top w3-margin-right"><i class="fa fa-bolt" aria-hidden="true"></i> Buy Now</button></div><div class="w3-col m6"><button
+           (click)="addToCart(product)" class="w3-button w3-round w3-block w3-orange w3-padding-16 w3-margin-top w3-margin-left w3-text-white "><i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart</button></div>
+      </div>
+      <div class="w3-col m8" style="padding-left: 50px;">
+        <button (click)="goBack()" class="w3-btn w3-red w3-display-topright w3-lobster"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+        <h2>{{product.name}}</h2>
+        <span class="w3-tag w3-round w3-teal"> <i class="fa fa-star" aria-hidden="true"></i> {{product.rating}} 
+        </span>
+        <h2>{{product.price | currency:'INR':true}}</h2>
+        <p class="w3-medium"><i class="fa fa-tag w3-text-teal" aria-hidden="true"></i> <strong>Special</strong> PriceGet extra 5% off (price inclusive of discount)</p>
+        <p class="w3-medium"><i class="fa fa-tag w3-text-teal" aria-hidden="true"></i> <strong>Bank Offer</strong> Extra 5% off* on Axis Bank Buzz Credit Cards</p>
+        <p><strong>Product Seller</strong> {{product.seller}}</p>
+        </div>
+  </div>

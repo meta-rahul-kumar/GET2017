@@ -1,0 +1,10 @@
+
+<input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Enter keyword to search a product" class="w3-input" />
+        <div style="position:absolute;z-index: 10;">
+            <div *ngFor="let product of products | async"
+                (click)="gotoDetail(product)" class="search-result" >
+            {{product.name}}
+            </div>
+        </div>
+
+   
