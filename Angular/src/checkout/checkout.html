@@ -1,0 +1,24 @@
+<navbar></navbar>
+<div class="w3-container w3-margin">
+        <div class="w3-col m4">&nbsp;</div>
+    <div class="w3-col m4">
+            <div class="w3-teal w3-card w3-padding-16 w3-center" style="padding-left: 5px;font-size: 18px;"><div class="text-left" style="width: 70%;display: inline;"><i class="fa fa-credit-card" aria-hidden="true"></i> Payment Details</div></div>
+<form class="w3-container w3-card-4">
+    
+    <p>
+    <input class="w3-input" type="number" style="width:90%" onkeypress="checkCard();" id="cardNumber" required>
+    <label>Card Number</label></p>
+    <p>
+    <input class="w3-input" type="date" style="width:90%" id="validTill" required>
+    <label>Valid Till</label></p>
+
+    <p>
+        <input class="w3-input" type="password" style="width:90%" id="cvv" required>
+        <label>CVV Code</label></p>
+
+    <p class="w3-center">
+    <button class="w3-button w3-section w3-teal w3-ripple w3-center" (click)="placeOrder();"> Place Order </button></p>
+    
+    </form>
+</div>
+</div>
